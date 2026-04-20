@@ -1,65 +1,229 @@
-import Image from "next/image";
+'use client';
+
+import { useState, useCallback, useEffect } from 'react';
+import { GridCell, DailyPuzzle, Player } from '@/types/game';
+import { getDailyPuzzle } from '@/lib/dailyPuzzle';
+import { satisfiesCriterion, getValidPlayers, getRarityScore } from '@/lib/gameLogic';
+import { getAllPlayers } from '@/lib/playerUtils';
+import GameGrid from '@/components/GameGrid';
+import CellModal from '@/components/CellModal';
+import Timer from '@/components/Timer';
+import ResultsScreen from '@/components/ResultsScreen';
+
+const GAME_DURATION = 180; // 3 minutes
+
+function makeEmptyCells(): GridCell[][] {
+  return Array.from({ length: 3 }, (_, row) =>
+    Array.from({ length: 3 }, (_, col) => ({
+      row,
+      col,
+      locked: false,
+    }))
+  );
+}
 
 export default function Home() {
+  const [puzzle, setPuzzle] = useState<DailyPuzzle | null>(null);
+  const [cells, setCells] = useState<GridCell[][]>(makeEmptyCells());
+  const [score, setScore] = useState(0);
+  const [timeLeft, setTimeLeft] = useState(GAME_DURATION);
+  const [gameOver, setGameOver] = useState(false);
+  const [started, setStarted] = useState(false);
+  const [selectedCell, setSelectedCell] = useState<{ row: number; col: number } | null>(null);
+  const [cellFeedback, setCellFeedback] = useState<boolean | undefined>(undefined);
+
+  // Load daily puzzle on mount
+  useEffect(() => {
+    const p = getDailyPuzzle();
+    setPuzzle(p);
+  }, []);
+
+  const handleGameOver = useCallback(() => {
+    setGameOver(true);
+    setSelectedCell(null);
+  }, []);
+
+  const handleStart = () => {
+    setStarted(true);
+  };
+
+  const handleCellClick = (row: number, col: number) => {
+    if (!started || gameOver) return;
+    const cell = cells[row][col];
+    if (cell.locked || cell.correct) return;
+    setSelectedCell({ row, col });
+    setCellFeedback(undefined);
+  };
+
+  const handleAnswer = useCallback(
+    (player: Player) => {
+      if (!puzzle || !selectedCell) return;
+      const { row, col } = selectedCell;
+      const rowCriterion = puzzle.rowCriteria[row];
+      const colCriterion = puzzle.colCriteria[col];
+
+      const correct =
+        satisfiesCriterion(player, rowCriterion) &&
+        satisfiesCriterion(player, colCriterion);
+
+      setCellFeedback(correct);
+
+      if (correct) {
+        // Calculate rarity score for this cell
+        const allPlayers = getAllPlayers();
+        const validCount = getValidPlayers(allPlayers, rowCriterion, colCriterion).length;
+        const points = getRarityScore(validCount);
+
+        setCells(prev => {
+          const next = prev.map(r => r.map(c => ({ ...c })));
+          next[row][col] = {
+            ...next[row][col],
+            playerId: player.id,
+            playerName: player.name,
+            correct: true,
+            locked: true,
+          };
+          return next;
+        });
+        setScore(prev => prev + points);
+
+        // Close modal after short delay
+        setTimeout(() => {
+          setSelectedCell(null);
+          setCellFeedback(undefined);
+        }, 800);
+      } else {
+        // Close modal after showing error
+        setTimeout(() => {
+          setCellFeedback(undefined);
+        }, 1200);
+      }
+    },
+    [puzzle, selectedCell]
+  );
+
+  const handleModalClose = useCallback(() => {
+    setSelectedCell(null);
+    setCellFeedback(undefined);
+  }, []);
+
+  const handleResultsClose = useCallback(() => {
+    setGameOver(false);
+  }, []);
+
+  if (!puzzle) {
+    return (
+      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+        <div className="text-orange-400 text-xl animate-pulse">Loading today&apos;s puzzle…</div>
+      </div>
+    );
+  }
+
+  const isModalOpen = selectedCell !== null;
+  const modalRow = selectedCell?.row ?? 0;
+  const modalCol = selectedCell?.col ?? 0;
+
+  // Check immaculate grid
+  const correctCount = cells.flat().filter(c => c.correct).length;
+  const isImmaculate = correctCount === 9;
+  const finalScore = isImmaculate ? score + 200 : score;
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="min-h-screen bg-gray-900 text-white flex flex-col">
+      {/* Header */}
+      <header className="border-b border-gray-800 px-4 py-3 flex items-center justify-between max-w-2xl mx-auto w-full">
+        <div className="flex items-center gap-2">
+          <span className="text-2xl">🏀</span>
+          <h1 className="text-xl font-bold text-white tracking-tight">
+            Hoops<span className="text-orange-500">Box</span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+        <div className="flex items-center gap-4">
+          {started && !gameOver && (
+            <Timer timeLeft={timeLeft} onExpire={handleGameOver} />
+          )}
+          <div className="text-sm text-gray-400">
+            Score: <span className="text-orange-400 font-bold">{score}</span>
+          </div>
+        </div>
+      </header>
+
+      {/* Main content */}
+      <main className="flex-1 flex flex-col items-center justify-center px-4 py-8 gap-6 max-w-2xl mx-auto w-full">
+        {!started ? (
+          /* Start screen */
+          <div className="flex flex-col items-center gap-6 text-center">
+            <div className="text-6xl">🏀</div>
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-2">HoopsBox</h2>
+              <p className="text-gray-400 text-lg">Basketball Box2Box Daily Puzzle</p>
+            </div>
+            <div className="bg-gray-800 rounded-2xl p-6 text-left max-w-sm w-full border border-gray-700">
+              <h3 className="text-white font-semibold mb-3">How to play</h3>
+              <ul className="text-gray-300 text-sm space-y-2">
+                <li>🏀 Fill the 3×3 grid by naming a basketball player</li>
+                <li>✅ Each player must match <strong>both</strong> the row AND column criteria</li>
+                <li>⏱️ You have <strong>3 minutes</strong> to complete the grid</li>
+                <li>⭐ Rarer answers score more points</li>
+                <li>🎯 Fill all 9 cells for the Immaculate Grid bonus!</li>
+              </ul>
+            </div>
+            <button
+              onClick={handleStart}
+              className="bg-orange-500 hover:bg-orange-400 active:scale-95 text-white font-bold text-lg px-10 py-4 rounded-2xl transition-all shadow-lg shadow-orange-500/20"
+            >
+              Start Today&apos;s Puzzle
+            </button>
+            <p className="text-gray-600 text-xs">
+              {new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+            </p>
+          </div>
+        ) : (
+          /* Game screen */
+          <div className="w-full flex flex-col gap-4">
+            <GameGrid
+              puzzle={puzzle}
+              cells={cells}
+              gameOver={gameOver}
+              onCellClick={handleCellClick}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+
+            <div className="flex items-center justify-between text-sm text-gray-500 px-1">
+              <span>{correctCount}/9 cells correct</span>
+              {gameOver && (
+                <button
+                  onClick={() => setGameOver(true)}
+                  className="text-orange-400 hover:text-orange-300 transition-colors"
+                >
+                  View results →
+                </button>
+              )}
+            </div>
+          </div>
+        )}
       </main>
+
+      {/* Cell answer modal */}
+      {isModalOpen && puzzle && (
+        <CellModal
+          isOpen={isModalOpen}
+          onClose={handleModalClose}
+          rowCriterion={puzzle.rowCriteria[modalRow]}
+          colCriterion={puzzle.colCriteria[modalCol]}
+          onAnswer={handleAnswer}
+          isCorrect={cellFeedback}
+        />
+      )}
+
+      {/* Results screen */}
+      {gameOver && (
+        <ResultsScreen
+          score={finalScore}
+          cells={cells}
+          puzzle={puzzle}
+          onClose={handleResultsClose}
+        />
+      )}
     </div>
   );
 }

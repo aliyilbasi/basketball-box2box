@@ -22,3 +22,12 @@ export function getPlayerById(id: string): Player | undefined {
 export function getPlayerByName(name: string): Player | undefined {
   return players.find(p => p.name.toLowerCase() === name.toLowerCase());
 }
+
+export function getPlayerImageUrl(player: Player): string | undefined {
+  if (!player.nbaId) return undefined;
+  return `https://cdn.nba.com/headshots/nba/latest/260x190/${player.nbaId}.png`;
+}
+
+export function getPlayerInitials(name: string): string {
+  return name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
+}

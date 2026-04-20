@@ -104,6 +104,14 @@ export default function GameGrid({ puzzle, cells, gameOver, onCellClick }: GameG
               >
                 {isCorrect ? (
                   <>
+                    {cell.playerImageUrl && (
+                      <img
+                        src={cell.playerImageUrl}
+                        alt={cell.playerName ?? ''}
+                        className="w-10 h-10 rounded-lg object-cover"
+                        onError={(e) => { (e.target as HTMLImageElement).style.display='none'; }}
+                      />
+                    )}
                     <span className="text-green-400 text-xs font-semibold leading-tight line-clamp-2">
                       {cell.playerName}
                     </span>

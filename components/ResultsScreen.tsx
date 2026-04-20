@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { DailyPuzzle, GridCell } from '@/types/game';
 import ShareButton from './ShareButton';
+import { useI18n } from '@/lib/i18n';
 
 interface ResultsScreenProps {
   score: number;
@@ -22,6 +23,7 @@ function countCorrect(cells: GridCell[][]): number {
 }
 
 export default function ResultsScreen({ score, cells, puzzle, onClose }: ResultsScreenProps) {
+  const { t } = useI18n();
   const correctCount = countCorrect(cells);
   const isImmaculate = correctCount === 9;
   const emojiGrid = buildEmojiGrid(cells);
@@ -60,7 +62,7 @@ export default function ResultsScreen({ score, cells, puzzle, onClose }: Results
         {/* Close button */}
         <button
           onClick={onClose}
-          aria-label="Close results"
+          aria-label={t('closeResults')}
           className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors text-xl leading-none"
         >
           ✕
@@ -72,13 +74,13 @@ export default function ResultsScreen({ score, cells, puzzle, onClose }: Results
             <>
               <span className="text-4xl">🎉</span>
               <h2 id="results-title" className="text-2xl font-extrabold text-white">
-                Immaculate Grid!
+                {t('immaculateGrid')}
               </h2>
-              <p className="text-orange-400 text-sm font-medium">Perfect score — all 9 cells!</p>
+              <p className="text-orange-400 text-sm font-medium">{t('immaculateSubtitle')}</p>
             </>
           ) : (
             <h2 id="results-title" className="text-2xl font-extrabold text-white">
-              Game Over
+              {t('gameOver')}
             </h2>
           )}
         </div>
@@ -86,7 +88,7 @@ export default function ResultsScreen({ score, cells, puzzle, onClose }: Results
         {/* Score */}
         <div className="flex flex-col items-center gap-0.5">
           <span className="text-5xl font-black text-orange-500 tabular-nums">{score}</span>
-          <span className="text-gray-400 text-sm">points</span>
+          <span className="text-gray-400 text-sm">{t('points')}</span>
           <span className="text-gray-300 text-sm mt-1">
             {correctCount} / 9 correct
           </span>
@@ -98,11 +100,25 @@ export default function ResultsScreen({ score, cells, puzzle, onClose }: Results
           aria-label="Results grid"
         >
           {cells.map((row, rIdx) => (
-            <div key={rIdx} className="flex gap-1 justify-center">
+            <div key={rIdx} className="flex gap-2 justify-center">
               {row.map((cell, cIdx) => (
-                <span key={cIdx} className="text-2xl" role="img" aria-label={cell.correct ? 'correct' : 'incorrect'}>
-                  {cell.correct ? '✅' : '❌'}
-                </span>
+                <div key={cIdx} className="flex flex-col items-center gap-1 w-16">
+                  {cell.correct && cell.playerImageUrl ? (
+                    <img
+                      src={cell.playerImageUrl}
+                      alt={cell.playerName ?? ''}
+                      className="w-12 h-12 rounded-lg object-cover border-2 border-green-500"
+                      onError={(e) => { (e.target as HTMLImageElement).style.display='none'; }}
+                    />
+                  ) : (
+                    <div className="w-12 h-12 rounded-lg bg-gray-700 flex items-center justify-center">
+                      <span className="text-xl">{cell.correct ? '✅' : '❌'}</span>
+                    </div>
+                  )}
+                  {cell.correct && (
+                    <span className="text-xs text-gray-400 text-center leading-tight line-clamp-2">{cell.playerName}</span>
+                  )}
+                </div>
               ))}
             </div>
           ))}
@@ -110,7 +126,7 @@ export default function ResultsScreen({ score, cells, puzzle, onClose }: Results
 
         {/* Come back tomorrow */}
         <p className="text-gray-400 text-sm">
-          Come back tomorrow for a new puzzle! 📅
+          {t('comeBack')}
         </p>
 
         {/* Actions */}
@@ -120,7 +136,7 @@ export default function ResultsScreen({ score, cells, puzzle, onClose }: Results
             onClick={onClose}
             className="px-5 py-2.5 rounded-lg text-sm font-semibold text-gray-300 border border-gray-600 hover:border-gray-400 hover:text-white transition-colors"
           >
-            View Grid
+            {t('viewGrid')}
           </button>
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState, KeyboardEvent } from 'react';
 import { Player } from '@/types/game';
-import { searchPlayers } from '@/lib/playerUtils';
+import { searchPlayers, getPlayerImageUrl, getPlayerInitials } from '@/lib/playerUtils';
 
 interface PlayerSearchProps {
   onSelect: (player: Player) => void;
@@ -115,33 +115,42 @@ export default function PlayerSearch({
           role="listbox"
           className="absolute z-50 w-full mt-1 rounded-lg bg-gray-800 border border-gray-600 shadow-xl max-h-64 overflow-y-auto"
         >
-          {suggestions.map((player, idx) => (
-            <li
-              key={player.id}
-              role="option"
-              aria-selected={idx === activeIndex}
-              onMouseDown={e => {
-                // Prevent input blur before click registers
-                e.preventDefault();
-                handleSelect(player);
-              }}
-              onMouseEnter={() => setActiveIndex(idx)}
-              className={`px-4 py-3 cursor-pointer transition-colors flex items-center gap-3 ${
-                idx === activeIndex
-                  ? 'bg-orange-500 text-white'
-                  : 'text-gray-200 hover:bg-gray-700'
-              } ${idx < suggestions.length - 1 ? 'border-b border-gray-700' : ''}`}
-            >
-              <span className="font-medium">{player.name}</span>
-              <span
-                className={`text-xs ml-auto ${
-                  idx === activeIndex ? 'text-orange-100' : 'text-gray-400'
-                }`}
+          {suggestions.map((player, idx) => {
+            const imgUrl = getPlayerImageUrl(player);
+            const initials = getPlayerInitials(player.name);
+            return (
+              <li
+                key={player.id}
+                role="option"
+                aria-selected={idx === activeIndex}
+                onMouseDown={e => {
+                  // Prevent input blur before click registers
+                  e.preventDefault();
+                  handleSelect(player);
+                }}
+                onMouseEnter={() => setActiveIndex(idx)}
+                className={`px-4 py-3 cursor-pointer transition-colors flex items-center gap-3 ${
+                  idx === activeIndex
+                    ? 'bg-orange-500 text-white'
+                    : 'text-gray-200 hover:bg-gray-700'
+                } ${idx < suggestions.length - 1 ? 'border-b border-gray-700' : ''}`}
               >
-                {player.position} · {player.nationality}
-              </span>
-            </li>
-          ))}
+                {/* Avatar */}
+                <div className="w-9 h-9 rounded-full overflow-hidden flex-shrink-0 bg-gray-700 flex items-center justify-center">
+                  {imgUrl ? (
+                    <img src={imgUrl} alt={player.name} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display='none'; }} />
+                  ) : (
+                    <span className="text-xs font-bold text-gray-400">{initials}</span>
+                  )}
+                </div>
+                {/* Name + info */}
+                <div className="flex-1 min-w-0">
+                  <span className="font-medium block truncate">{player.name}</span>
+                  <span className="text-xs text-gray-400">{player.position} · {player.nationality}</span>
+                </div>
+              </li>
+            );
+          })}
         </ul>
       )}
     </div>

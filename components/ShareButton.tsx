@@ -1,12 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import { useI18n } from '@/lib/i18n';
 
 interface ShareButtonProps {
   text: string;
 }
 
 export default function ShareButton({ text }: ShareButtonProps) {
+  const { t } = useI18n();
   const [copied, setCopied] = useState(false);
 
   async function handleShare() {
@@ -49,12 +51,12 @@ export default function ShareButton({ text }: ShareButtonProps) {
       {copied ? (
         <>
           <span>✓</span>
-          <span>Copied!</span>
+          <span>{t('copied')}</span>
         </>
       ) : (
         <>
           <span>📤</span>
-          <span>Share Result</span>
+          <span>{t('shareResult')}</span>
         </>
       )}
     </button>

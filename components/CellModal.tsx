@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { Criterion, Player } from '@/types/game';
 import PlayerSearch from './PlayerSearch';
+import { useI18n } from '@/lib/i18n';
 
 const CRITERION_ICONS: Record<string, string> = {
   team: '🏀',
@@ -20,6 +21,10 @@ interface CellModalProps {
   colCriterion: Criterion;
   onAnswer: (player: Player) => void;
   isCorrect?: boolean;
+  validCount?: number;
+  firstLetter?: string;
+  hintRevealed?: boolean;
+  onRevealHint?: () => void;
 }
 
 export default function CellModal({
@@ -29,7 +34,12 @@ export default function CellModal({
   colCriterion,
   onAnswer,
   isCorrect,
+  validCount,
+  firstLetter,
+  hintRevealed,
+  onRevealHint,
 }: CellModalProps) {
+  const { t } = useI18n();
   const backdropRef = useRef<HTMLDivElement>(null);
   // Track whether feedback (isCorrect) has been set so we can show it
   const hasFeedback = isCorrect !== undefined;
@@ -80,7 +90,7 @@ export default function CellModal({
         {/* Close button */}
         <button
           onClick={onClose}
-          aria-label="Close modal"
+          aria-label={t('closeModal')}
           className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors text-xl leading-none"
         >
           ✕
@@ -88,12 +98,12 @@ export default function CellModal({
 
         {/* Title */}
         <h2 id="cell-modal-title" className="text-lg font-bold text-white pr-8">
-          Name a Player
+          {t('nameAPlayer')}
         </h2>
 
         {/* Criteria requirement */}
         <div className="flex flex-col gap-2 rounded-xl bg-gray-900 border border-gray-700 p-4">
-          <p className="text-xs text-gray-400 uppercase tracking-wider">Must satisfy BOTH:</p>
+          <p className="text-xs text-gray-400 uppercase tracking-wider">{t('mustSatisfy')}</p>
           <div className="flex flex-col gap-2 mt-1">
             <div className="flex items-center gap-2">
               <span className="text-base" aria-hidden="true">{rowIcon}</span>
@@ -122,18 +132,38 @@ export default function CellModal({
           >
             <span className="text-lg">{isCorrect ? '✅' : '❌'}</span>
             {isCorrect
-              ? 'Correct! Great pick.'
-              : 'That player does not satisfy both criteria.'}
+              ? t('correctFeedback')
+              : t('wrongFeedback')}
+          </div>
+        )}
+
+        {/* Hint section */}
+        {isCorrect === false && validCount !== undefined && (
+          <div className="flex items-center gap-2 text-xs text-gray-400 flex-wrap">
+            <span>💡 {t('hintCount', { count: validCount })}</span>
+            {!hintRevealed && onRevealHint && (
+              <button
+                onClick={onRevealHint}
+                className="text-orange-400 hover:text-orange-300 underline transition-colors"
+              >
+                {t('revealHint')}
+              </button>
+            )}
+            {hintRevealed && firstLetter && (
+              <span className="text-orange-300">
+                {t('firstLetter')} <strong className="text-white">{firstLetter}</strong>
+              </span>
+            )}
           </div>
         )}
 
         {/* Search */}
         {!isCorrect && (
           <div>
-            <label className="block text-sm text-gray-400 mb-2">Search player name:</label>
+            <label className="block text-sm text-gray-400 mb-2">{t('searchLabel')}</label>
             <PlayerSearch
               onSelect={onAnswer}
-              placeholder="e.g. LeBron James…"
+              placeholder={t('searchPlaceholder')}
             />
           </div>
         )}

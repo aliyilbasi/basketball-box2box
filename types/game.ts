@@ -20,6 +20,7 @@ export interface Player {
   position: string;
   active: boolean;
   era: string[];             // e.g. ['1990s', '2000s']
+  nbaId?: string;
 }
 
 export interface GridCell {
@@ -27,6 +28,7 @@ export interface GridCell {
   col: number;    // 0-2
   playerId?: string;
   playerName?: string;
+  playerImageUrl?: string;
   correct?: boolean;
   locked: boolean;
 }

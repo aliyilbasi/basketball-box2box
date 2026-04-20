@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useI18n } from '@/lib/i18n';
 
 interface TimerProps {
   timeLeft: number;
@@ -8,6 +9,7 @@ interface TimerProps {
 }
 
 export default function Timer({ timeLeft: initialTimeLeft, onExpire }: TimerProps) {
+  const { t } = useI18n();
   const [timeLeft, setTimeLeft] = useState(initialTimeLeft);
   const onExpireRef = useRef(onExpire);
   const expiredRef = useRef(false);
@@ -57,7 +59,7 @@ export default function Timer({ timeLeft: initialTimeLeft, onExpire }: TimerProp
       </span>
       <div className="flex flex-col items-center">
         <span className="text-xs text-gray-400 uppercase tracking-wider leading-none mb-0.5">
-          Time Left
+          {t('timeLeft')}
         </span>
         <span
           className={`text-xl font-mono font-bold tabular-nums transition-colors duration-300 ${

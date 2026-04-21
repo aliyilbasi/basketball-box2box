@@ -11,6 +11,33 @@ const CRITERION_ICONS: Record<CriterionType, string> = {
   era: '📅',
 };
 
+const CRITERION_LOGOS: Record<string, string> = {
+  // NBA teams
+  team_lakers:       'https://a.espncdn.com/i/teamlogos/nba/500/lal.png',
+  team_bulls:        'https://a.espncdn.com/i/teamlogos/nba/500/chi.png',
+  team_celtics:      'https://a.espncdn.com/i/teamlogos/nba/500/bos.png',
+  team_warriors:     'https://a.espncdn.com/i/teamlogos/nba/500/gs.png',
+  team_spurs:        'https://a.espncdn.com/i/teamlogos/nba/500/sa.png',
+  team_heat:         'https://a.espncdn.com/i/teamlogos/nba/500/mia.png',
+  team_cavs:         'https://a.espncdn.com/i/teamlogos/nba/500/cle.png',
+  team_thunder:      'https://a.espncdn.com/i/teamlogos/nba/500/okc.png',
+  team_sixers:       'https://a.espncdn.com/i/teamlogos/nba/500/phi.png',
+  team_rockets:      'https://a.espncdn.com/i/teamlogos/nba/500/hou.png',
+  team_knicks:       'https://a.espncdn.com/i/teamlogos/nba/500/ny.png',
+  team_mavs:         'https://a.espncdn.com/i/teamlogos/nba/500/dal.png',
+  team_nuggets:      'https://a.espncdn.com/i/teamlogos/nba/500/den.png',
+  team_bucks:        'https://a.espncdn.com/i/teamlogos/nba/500/mil.png',
+  team_pistons:      'https://a.espncdn.com/i/teamlogos/nba/500/det.png',
+  // Awards
+  award_allstar:     'https://a.espncdn.com/i/teamlogos/nba/500/allstar.png',
+  // Eras
+  era_2000s:         'https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Nba_logo.svg/240px-Nba_logo.svg.png',
+};
+
+function playerInitials(name: string): string {
+  return name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
+}
+
 interface GameGridProps {
   puzzle: DailyPuzzle;
   cells: GridCell[][];
@@ -36,21 +63,36 @@ export default function GameGrid({ puzzle, cells, gameOver, onCellClick }: GameG
       </div>
 
       {/* Column criteria headers */}
-      {colCriteria.map((criterion, colIdx) => (
-        <div
-          key={criterion.id}
-          role="columnheader"
-          aria-label={`Column ${colIdx + 1}: ${criterion.label}`}
-          className="flex flex-col items-center justify-center gap-1 rounded-xl bg-gray-800 border border-gray-700 p-2 min-h-[72px] text-center"
-        >
-          <span className="text-xl" aria-hidden="true">
-            {CRITERION_ICONS[criterion.type]}
-          </span>
-          <span className="text-xs text-gray-300 font-medium leading-tight">
-            {criterion.label}
-          </span>
-        </div>
-      ))}
+      {colCriteria.map((criterion, colIdx) => {
+        const logo = CRITERION_LOGOS[criterion.id];
+        return (
+          <div
+            key={criterion.id}
+            role="columnheader"
+            aria-label={`Column ${colIdx + 1}: ${criterion.label}`}
+            className="flex flex-col items-center justify-center gap-1 rounded-xl bg-gray-800 border border-gray-700 p-2 min-h-[72px] text-center"
+          >
+            {logo ? (
+              <img
+                src={logo}
+                alt={criterion.label}
+                className="w-8 h-8 object-contain"
+                onError={(e) => {
+                  const img = e.target as HTMLImageElement;
+                  img.style.display = 'none';
+                  img.nextElementSibling?.classList.remove('hidden');
+                }}
+              />
+            ) : null}
+            <span className={`text-xl ${logo ? 'hidden' : ''}`} aria-hidden="true">
+              {CRITERION_ICONS[criterion.type]}
+            </span>
+            <span className="text-xs text-gray-300 font-medium leading-tight">
+              {criterion.label}
+            </span>
+          </div>
+        );
+      })}
 
       {/* ── Rows 1-3: row header + 3 grid cells ── */}
       {Array.from({ length: 3 }, (_, rowIdx) => (
@@ -62,7 +104,19 @@ export default function GameGrid({ puzzle, cells, gameOver, onCellClick }: GameG
             aria-label={`Row ${rowIdx + 1}: ${rowCriteria[rowIdx].label}`}
             className="flex flex-col items-center justify-center gap-1 rounded-xl bg-gray-800 border border-gray-700 p-2 min-h-[72px] text-center"
           >
-            <span className="text-xl" aria-hidden="true">
+            {CRITERION_LOGOS[rowCriteria[rowIdx].id] ? (
+              <img
+                src={CRITERION_LOGOS[rowCriteria[rowIdx].id]}
+                alt={rowCriteria[rowIdx].label}
+                className="w-8 h-8 object-contain"
+                onError={(e) => {
+                  const img = e.target as HTMLImageElement;
+                  img.style.display = 'none';
+                  img.nextElementSibling?.classList.remove('hidden');
+                }}
+              />
+            ) : null}
+            <span className={`text-xl ${CRITERION_LOGOS[rowCriteria[rowIdx].id] ? 'hidden' : ''}`} aria-hidden="true">
               {CRITERION_ICONS[rowCriteria[rowIdx].type]}
             </span>
             <span className="text-xs text-gray-300 font-medium leading-tight">
@@ -104,14 +158,19 @@ export default function GameGrid({ puzzle, cells, gameOver, onCellClick }: GameG
               >
                 {isCorrect ? (
                   <>
-                    {cell.playerImageUrl && (
-                      <img
-                        src={cell.playerImageUrl}
-                        alt={cell.playerName ?? ''}
-                        className="w-10 h-10 rounded-lg object-cover"
-                        onError={(e) => { (e.target as HTMLImageElement).style.display='none'; }}
-                      />
-                    )}
+                    <div className="relative w-10 h-10 rounded-lg overflow-hidden flex-shrink-0">
+                      <div className="absolute inset-0 bg-gray-600 flex items-center justify-center text-white text-xs font-bold">
+                        {playerInitials(cell.playerName ?? '')}
+                      </div>
+                      {cell.playerImageUrl && (
+                        <img
+                          src={cell.playerImageUrl}
+                          alt={cell.playerName ?? ''}
+                          className="absolute inset-0 w-full h-full object-cover"
+                          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                        />
+                      )}
+                    </div>
                     <span className="text-green-400 text-xs font-semibold leading-tight line-clamp-2">
                       {cell.playerName}
                     </span>

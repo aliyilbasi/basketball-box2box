@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useEffect, useMemo } from 'react';
+import { useState, useCallback, useEffect, useMemo, useRef } from 'react';
 import { GridCell, DailyPuzzle, Player } from '@/types/game';
 import { getDailyPuzzle } from '@/lib/dailyPuzzle';
 import { satisfiesCriterion, getValidPlayers, getRarityScore } from '@/lib/gameLogic';
@@ -14,6 +14,12 @@ import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const GAME_DURATION = 180; // 3 minutes
 const HINT_COST = 50;
+
+const LINES: [number, number][][] = [
+  [[0,0],[0,1],[0,2]], [[1,0],[1,1],[1,2]], [[2,0],[2,1],[2,2]], // rows
+  [[0,0],[1,0],[2,0]], [[0,1],[1,1],[2,1]], [[0,2],[1,2],[2,2]], // columns
+  [[0,0],[1,1],[2,2]], [[0,2],[1,1],[2,0]],                      // diagonals
+];
 
 function makeEmptyCells(): GridCell[][] {
   return Array.from({ length: 3 }, (_, row) =>
@@ -32,17 +38,39 @@ export default function Home() {
   const [selectedCell, setSelectedCell] = useState<{ row: number; col: number } | null>(null);
   const [cellFeedback, setCellFeedback] = useState<boolean | undefined>(undefined);
   const [hintRevealedCells, setHintRevealedCells] = useState<Set<string>>(new Set());
+  const [timerEnabled, setTimerEnabled] = useState(true);
+  const [lineCompletePrompt, setLineCompletePrompt] = useState(false);
+  const announcedLinesRef = useRef<Set<number>>(new Set());
 
   const allPlayers = useMemo(() => getAllPlayers(), []);
+
+  const handleGameOver = useCallback(() => {
+    setGameOver(true);
+    setSelectedCell(null);
+    setLineCompletePrompt(false);
+  }, []);
 
   useEffect(() => {
     setPuzzle(getDailyPuzzle());
   }, []);
 
-  const handleGameOver = useCallback(() => {
-    setGameOver(true);
-    setSelectedCell(null);
-  }, []);
+  useEffect(() => {
+    if (!started || gameOver) return;
+    const correctCount = cells.flat().filter(c => c.correct).length;
+    if (correctCount === 9) {
+      setTimeout(handleGameOver, 800);
+      return;
+    }
+    const newLine = LINES.findIndex(
+      (line, idx) =>
+        !announcedLinesRef.current.has(idx) &&
+        line.every(([r, c]) => cells[r][c]?.correct)
+    );
+    if (newLine !== -1) {
+      announcedLinesRef.current.add(newLine);
+      setTimeout(() => setLineCompletePrompt(true), 900);
+    }
+  }, [cells, started, gameOver, handleGameOver]);
 
   const handleCellClick = (row: number, col: number) => {
     if (!started || gameOver) return;
@@ -122,7 +150,6 @@ export default function Home() {
   const modalCol = selectedCell?.col ?? 0;
   const modalCellKey = `${modalRow}-${modalCol}`;
 
-  // Hint data for the open cell
   const modalValidPlayers = isModalOpen
     ? getValidPlayers(allPlayers, puzzle.rowCriteria[modalRow], puzzle.colCriteria[modalCol])
     : [];
@@ -145,7 +172,7 @@ export default function Home() {
             </h1>
           </div>
           <div className="flex items-center gap-3">
-            {started && !gameOver && (
+            {started && !gameOver && timerEnabled && (
               <Timer timeLeft={GAME_DURATION} onExpire={handleGameOver} />
             )}
             <div className="text-sm text-gray-400">
@@ -153,13 +180,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* Language switcher below title row */}
         <div className="mt-2 flex justify-end">
           <LanguageSwitcher />
         </div>
       </header>
 
-      {/* Main content */}
       <main className="flex-1 flex flex-col items-center justify-center px-4 py-8 gap-6 max-w-2xl mx-auto w-full">
         {!started ? (
           <div className="flex flex-col items-center gap-6 text-center">
@@ -178,6 +203,15 @@ export default function Home() {
                 <li>🎯 {t('rule5')}</li>
               </ul>
             </div>
+            <label className="flex items-center gap-2 cursor-pointer select-none text-sm text-gray-400 hover:text-gray-300 transition-colors">
+              <input
+                type="checkbox"
+                checked={timerEnabled}
+                onChange={(e) => setTimerEnabled(e.target.checked)}
+                className="w-4 h-4 rounded accent-orange-500"
+              />
+              {t('timerEnabled')}
+            </label>
             <button
               onClick={() => setStarted(true)}
               className="bg-orange-500 hover:bg-orange-400 active:scale-95 text-white font-bold text-lg px-10 py-4 rounded-2xl transition-all shadow-lg shadow-orange-500/20"
@@ -225,6 +259,31 @@ export default function Home() {
           hintRevealed={modalHintRevealed}
           onRevealHint={handleRevealHint}
         />
+      )}
+
+      {/* Line complete prompt */}
+      {lineCompletePrompt && !gameOver && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+          <div className="bg-gray-800 border border-gray-600 rounded-2xl p-6 max-w-sm w-full text-center shadow-2xl">
+            <div className="text-4xl mb-3">🎯</div>
+            <h2 className="text-xl font-bold text-white mb-2">{t('lineComplete')}</h2>
+            <p className="text-gray-400 text-sm mb-6">{t('lineCompleteMsg')}</p>
+            <div className="flex gap-3">
+              <button
+                onClick={handleGameOver}
+                className="flex-1 bg-orange-500 hover:bg-orange-400 active:scale-95 text-white font-bold py-3 rounded-xl transition-all"
+              >
+                {t('finishGame')}
+              </button>
+              <button
+                onClick={() => setLineCompletePrompt(false)}
+                className="flex-1 bg-gray-700 hover:bg-gray-600 active:scale-95 text-white font-semibold py-3 rounded-xl transition-all"
+              >
+                {t('keepPlaying')}
+              </button>
+            </div>
+          </div>
+        </div>
       )}
 
       {/* Results screen */}

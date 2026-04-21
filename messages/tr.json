@@ -31,5 +31,10 @@
   "firstLetter": "İlk harf:",
   "subtitle": "Günlük Basketbol Box2Box Bulmacası",
   "closeModal": "Modalı kapat",
-  "closeResults": "Sonuçları kapat"
+  "closeResults": "Sonuçları kapat",
+  "timerEnabled": "Zamanlayıcıyı Etkinleştir (3 dk)",
+  "lineComplete": "Sıra Tamamlandı!",
+  "lineCompleteMsg": "Bir satır, sütun veya köşegen tamamladınız. Burada bitirir misiniz, yoksa tüm ızgarayı doldurmaya devam eder misiniz?",
+  "finishGame": "Oyunu Bitir",
+  "keepPlaying": "Devam Et"
 }

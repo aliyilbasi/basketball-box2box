@@ -31,5 +31,10 @@
   "firstLetter": "First letter:",
   "subtitle": "Basketball Box2Box Daily Puzzle",
   "closeModal": "Close modal",
-  "closeResults": "Close results"
+  "closeResults": "Close results",
+  "timerEnabled": "Enable Timer (3 min)",
+  "lineComplete": "Line Complete!",
+  "lineCompleteMsg": "You completed a row, column, or diagonal. Finish here or keep going for the full grid?",
+  "finishGame": "Finish Game",
+  "keepPlaying": "Keep Playing"
 }

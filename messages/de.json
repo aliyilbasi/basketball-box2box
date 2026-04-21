@@ -31,5 +31,10 @@
   "firstLetter": "Erster Buchstabe:",
   "subtitle": "Tägliches Basketball Box2Box-Rätsel",
   "closeModal": "Fenster schließen",
-  "closeResults": "Ergebnisse schließen"
+  "closeResults": "Ergebnisse schließen",
+  "timerEnabled": "Timer aktivieren (3 Min.)",
+  "lineComplete": "Reihe abgeschlossen!",
+  "lineCompleteMsg": "Du hast eine Zeile, Spalte oder Diagonale vervollständigt. Hier beenden oder das gesamte Raster ausfüllen?",
+  "finishGame": "Spiel beenden",
+  "keepPlaying": "Weiterspielen"
 }

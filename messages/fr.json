@@ -31,5 +31,10 @@
   "firstLetter": "Première lettre :",
   "subtitle": "Puzzle Quotidien de Basketball Box2Box",
   "closeModal": "Fermer la fenêtre",
-  "closeResults": "Fermer les résultats"
+  "closeResults": "Fermer les résultats",
+  "timerEnabled": "Activer le chrono (3 min)",
+  "lineComplete": "Ligne complète !",
+  "lineCompleteMsg": "Vous avez complété une ligne, colonne ou diagonale. Terminer ici ou continuer pour remplir toute la grille ?",
+  "finishGame": "Terminer",
+  "keepPlaying": "Continuer"
 }

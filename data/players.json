@@ -1,163 +1,6386 @@
 [
-  {"id":"lebron_james","name":"LeBron James","nationality":"American","league":"NBA","teams":["Cleveland Cavaliers","Miami Heat","Los Angeles Lakers"],"awards":["NBA MVP","NBA Champion","Finals MVP","NBA All-Star","Olympic Gold","All-NBA First Team"],"draftYear":2003,"draftRound":1,"draftPick":1,"position":"Small Forward","active":true,"era":["2000s","2010s","2020s"],"nbaId":"2544"},
-  {"id":"michael_jordan","name":"Michael Jordan","nationality":"American","league":"NBA","teams":["Chicago Bulls","Washington Wizards"],"awards":["NBA MVP","NBA Champion","Finals MVP","NBA All-Star","Olympic Gold","All-NBA First Team","DPOY","Rookie of the Year"],"draftYear":1984,"draftRound":1,"draftPick":3,"position":"Shooting Guard","active":false,"era":["1980s","1990s"],"nbaId":"893"},
-  {"id":"kobe_bryant","name":"Kobe Bryant","nationality":"American","league":"NBA","teams":["Los Angeles Lakers"],"awards":["NBA Champion","Finals MVP","NBA All-Star","All-NBA First Team","NBA MVP","DPOY"],"draftYear":1996,"draftRound":1,"draftPick":13,"position":"Shooting Guard","active":false,"era":["1990s","2000s","2010s"],"nbaId":"977"},
-  {"id":"magic_johnson","name":"Magic Johnson","nationality":"American","league":"NBA","teams":["Los Angeles Lakers"],"awards":["NBA Champion","Finals MVP","NBA MVP","NBA All-Star","Olympic Gold","All-NBA First Team"],"draftYear":1979,"draftRound":1,"draftPick":1,"position":"Point Guard","active":false,"era":["1980s","1990s"],"nbaId":"1"},
-  {"id":"larry_bird","name":"Larry Bird","nationality":"American","league":"NBA","teams":["Boston Celtics"],"awards":["NBA Champion","Finals MVP","NBA MVP","NBA All-Star","All-NBA First Team","Rookie of the Year"],"draftYear":1978,"draftRound":1,"draftPick":6,"position":"Small Forward","active":false,"era":["1980s","1990s"],"nbaId":"1449"},
-  {"id":"shaquille_oneal","name":"Shaquille O'Neal","nationality":"American","league":"NBA","teams":["Orlando Magic","Los Angeles Lakers","Miami Heat","Phoenix Suns","Cleveland Cavaliers","Boston Celtics"],"awards":["NBA Champion","Finals MVP","NBA MVP","NBA All-Star","All-NBA First Team","Rookie of the Year"],"draftYear":1992,"draftRound":1,"draftPick":1,"position":"Center","active":false,"era":["1990s","2000s"],"nbaId":"406"},
-  {"id":"tim_duncan","name":"Tim Duncan","nationality":"American","league":"NBA","teams":["San Antonio Spurs"],"awards":["NBA Champion","Finals MVP","NBA MVP","NBA All-Star","All-NBA First Team","Rookie of the Year","DPOY"],"draftYear":1997,"draftRound":1,"draftPick":1,"position":"Power Forward","active":false,"era":["1990s","2000s","2010s"],"nbaId":"1495"},
-  {"id":"kevin_durant","name":"Kevin Durant","nationality":"American","league":"NBA","teams":["Oklahoma City Thunder","Golden State Warriors","Brooklyn Nets","Phoenix Suns","Houston Rockets"],"awards":["NBA Champion","Finals MVP","NBA MVP","NBA All-Star","All-NBA First Team","Rookie of the Year","Olympic Gold","NBA Scoring Title"],"draftYear":2007,"draftRound":1,"draftPick":2,"position":"Small Forward","active":true,"era":["2000s","2010s","2020s"],"nbaId":"201142"},
-  {"id":"stephen_curry","name":"Stephen Curry","nationality":"American","league":"NBA","teams":["Golden State Warriors"],"awards":["NBA Champion","Finals MVP","NBA MVP","NBA All-Star","All-NBA First Team","Olympic Gold","NBA Scoring Title"],"draftYear":2009,"draftRound":1,"draftPick":7,"position":"Point Guard","active":true,"era":["2010s","2020s"],"nbaId":"201939"},
-  {"id":"giannis_antetokounmpo","name":"Giannis Antetokounmpo","nationality":"Greek","league":"NBA","teams":["Milwaukee Bucks"],"awards":["NBA Champion","Finals MVP","NBA MVP","NBA All-Star","All-NBA First Team","DPOY","Rookie of the Year"],"draftYear":2013,"draftRound":1,"draftPick":15,"position":"Power Forward","active":true,"era":["2010s","2020s"],"nbaId":"203507"},
-  {"id":"dirk_nowitzki","name":"Dirk Nowitzki","nationality":"German","league":"NBA","teams":["Dallas Mavericks"],"awards":["NBA Champion","Finals MVP","NBA MVP","NBA All-Star","All-NBA First Team"],"draftYear":1998,"draftRound":1,"draftPick":9,"position":"Power Forward","active":false,"era":["1990s","2000s","2010s"],"nbaId":"1717"},
-  {"id":"dwyane_wade","name":"Dwyane Wade","nationality":"American","league":"NBA","teams":["Miami Heat","Chicago Bulls","Cleveland Cavaliers"],"awards":["NBA Champion","Finals MVP","NBA All-Star","All-NBA First Team","Olympic Gold","Rookie of the Year"],"draftYear":2003,"draftRound":1,"draftPick":5,"position":"Shooting Guard","active":false,"era":["2000s","2010s"],"nbaId":"2548"},
-  {"id":"carmelo_anthony","name":"Carmelo Anthony","nationality":"American","league":"NBA","teams":["Denver Nuggets","New York Knicks","Oklahoma City Thunder","Houston Rockets","Portland Trail Blazers","Los Angeles Lakers"],"awards":["NBA All-Star","All-NBA First Team","Olympic Gold","NBA Scoring Title"],"draftYear":2003,"draftRound":1,"draftPick":3,"position":"Small Forward","active":false,"era":["2000s","2010s","2020s"],"nbaId":"2546"},
-  {"id":"chris_paul","name":"Chris Paul","nationality":"American","league":"NBA","teams":["New Orleans Pelicans","Los Angeles Clippers","Houston Rockets","Oklahoma City Thunder","Phoenix Suns","San Antonio Spurs","Golden State Warriors"],"awards":["NBA All-Star","All-NBA First Team","Olympic Gold","DPOY","Rookie of the Year"],"draftYear":2005,"draftRound":1,"draftPick":4,"position":"Point Guard","active":true,"era":["2000s","2010s","2020s"],"nbaId":"101108"},
-  {"id":"russell_westbrook","name":"Russell Westbrook","nationality":"American","league":"NBA","teams":["Oklahoma City Thunder","Houston Rockets","Washington Wizards","Los Angeles Lakers","Los Angeles Clippers","Utah Jazz","Denver Nuggets"],"awards":["NBA MVP","NBA All-Star","All-NBA First Team","Olympic Gold","NBA Scoring Title","Rookie of the Year"],"draftYear":2008,"draftRound":1,"draftPick":4,"position":"Point Guard","active":true,"era":["2000s","2010s","2020s"],"nbaId":"201566"},
-  {"id":"james_harden","name":"James Harden","nationality":"American","league":"NBA","teams":["Oklahoma City Thunder","Houston Rockets","Brooklyn Nets","Philadelphia 76ers","Los Angeles Clippers"],"awards":["NBA MVP","NBA All-Star","All-NBA First Team","Olympic Gold","NBA Scoring Title","DPOY"],"draftYear":2009,"draftRound":1,"draftPick":3,"position":"Shooting Guard","active":true,"era":["2010s","2020s"],"nbaId":"201935"},
-  {"id":"kawhi_leonard","name":"Kawhi Leonard","nationality":"American","league":"NBA","teams":["San Antonio Spurs","Toronto Raptors","Los Angeles Clippers"],"awards":["NBA Champion","Finals MVP","DPOY","NBA All-Star","All-NBA First Team"],"draftYear":2011,"draftRound":1,"draftPick":15,"position":"Small Forward","active":true,"era":["2010s","2020s"],"nbaId":"202695"},
-  {"id":"kevin_garnett","name":"Kevin Garnett","nationality":"American","league":"NBA","teams":["Minnesota Timberwolves","Boston Celtics","Brooklyn Nets"],"awards":["NBA Champion","NBA MVP","NBA All-Star","All-NBA First Team","DPOY"],"draftYear":1995,"draftRound":1,"draftPick":5,"position":"Power Forward","active":false,"era":["1990s","2000s","2010s"],"nbaId":"708"},
-  {"id":"paul_pierce","name":"Paul Pierce","nationality":"American","league":"NBA","teams":["Boston Celtics","Brooklyn Nets","Washington Wizards","Los Angeles Clippers"],"awards":["NBA Champion","Finals MVP","NBA All-Star","All-NBA First Team"],"draftYear":1998,"draftRound":1,"draftPick":10,"position":"Small Forward","active":false,"era":["1990s","2000s","2010s"],"nbaId":"1718"},
-  {"id":"ray_allen","name":"Ray Allen","nationality":"American","league":"NBA","teams":["Milwaukee Bucks","Seattle SuperSonics","Boston Celtics","Miami Heat"],"awards":["NBA Champion","NBA All-Star","All-NBA First Team","Olympic Gold"],"draftYear":1996,"draftRound":1,"draftPick":5,"position":"Shooting Guard","active":false,"era":["1990s","2000s","2010s"],"nbaId":"951"},
-  {"id":"allen_iverson","name":"Allen Iverson","nationality":"American","league":"NBA","teams":["Philadelphia 76ers","Denver Nuggets","Detroit Pistons","Memphis Grizzlies"],"awards":["NBA MVP","NBA All-Star","All-NBA First Team","Rookie of the Year","NBA Scoring Title"],"draftYear":1996,"draftRound":1,"draftPick":1,"position":"Point Guard","active":false,"era":["1990s","2000s","2010s"],"nbaId":"947"},
-  {"id":"charles_barkley","name":"Charles Barkley","nationality":"American","league":"NBA","teams":["Philadelphia 76ers","Phoenix Suns","Houston Rockets"],"awards":["NBA MVP","NBA All-Star","All-NBA First Team","Olympic Gold"],"draftYear":1984,"draftRound":1,"draftPick":5,"position":"Power Forward","active":false,"era":["1980s","1990s"],"nbaId":"787"},
-  {"id":"hakeem_olajuwon","name":"Hakeem Olajuwon","nationality":"Nigerian","league":"NBA","teams":["Houston Rockets","Toronto Raptors"],"awards":["NBA Champion","Finals MVP","NBA MVP","NBA All-Star","All-NBA First Team","DPOY","Rookie of the Year"],"draftYear":1984,"draftRound":1,"draftPick":1,"position":"Center","active":false,"era":["1980s","1990s","2000s"],"nbaId":"165"},
-  {"id":"david_robinson","name":"David Robinson","nationality":"American","league":"NBA","teams":["San Antonio Spurs"],"awards":["NBA Champion","NBA MVP","NBA All-Star","All-NBA First Team","DPOY","Rookie of the Year","Olympic Gold"],"draftYear":1987,"draftRound":1,"draftPick":1,"position":"Center","active":false,"era":["1980s","1990s","2000s"],"nbaId":"7"},
-  {"id":"scottie_pippen","name":"Scottie Pippen","nationality":"American","league":"NBA","teams":["Chicago Bulls","Houston Rockets","Portland Trail Blazers"],"awards":["NBA Champion","NBA All-Star","All-NBA First Team","Olympic Gold"],"draftYear":1987,"draftRound":1,"draftPick":5,"position":"Small Forward","active":false,"era":["1980s","1990s"],"nbaId":"979"},
-  {"id":"gary_payton","name":"Gary Payton","nationality":"American","league":"NBA","teams":["Seattle SuperSonics","Milwaukee Bucks","Los Angeles Lakers","Boston Celtics","Miami Heat"],"awards":["NBA Champion","NBA All-Star","DPOY","Olympic Gold","All-NBA First Team"],"draftYear":1990,"draftRound":1,"draftPick":2,"position":"Point Guard","active":false,"era":["1990s","2000s"],"nbaId":"940"},
-  {"id":"tracy_mcgrady","name":"Tracy McGrady","nationality":"American","league":"NBA","teams":["Toronto Raptors","Orlando Magic","Houston Rockets","New York Knicks","Detroit Pistons"],"awards":["NBA All-Star","All-NBA First Team","NBA Scoring Title"],"draftYear":1997,"draftRound":1,"draftPick":9,"position":"Small Forward","active":false,"era":["1990s","2000s","2010s"],"nbaId":"1488245"},
-  {"id":"vince_carter","name":"Vince Carter","nationality":"American","league":"NBA","teams":["Toronto Raptors","New Jersey Nets","Orlando Magic","Phoenix Suns","Dallas Mavericks","Memphis Grizzlies","Sacramento Kings","Atlanta Hawks"],"awards":["NBA All-Star","Rookie of the Year","Olympic Gold"],"draftYear":1998,"draftRound":1,"draftPick":5,"position":"Shooting Guard","active":false,"era":["1990s","2000s","2010s","2020s"],"nbaId":"1713"},
-  {"id":"jason_kidd","name":"Jason Kidd","nationality":"American","league":"NBA","teams":["Dallas Mavericks","Phoenix Suns","New Jersey Nets","New York Knicks"],"awards":["NBA Champion","NBA All-Star","All-NBA First Team","Olympic Gold","Rookie of the Year","DPOY"],"draftYear":1994,"draftRound":1,"draftPick":2,"position":"Point Guard","active":false,"era":["1990s","2000s","2010s"],"nbaId":"703"},
-  {"id":"patrick_ewing","name":"Patrick Ewing","nationality":"American","league":"NBA","teams":["New York Knicks","Seattle SuperSonics","Orlando Magic"],"awards":["NBA All-Star","All-NBA First Team","Olympic Gold","Rookie of the Year"],"draftYear":1985,"draftRound":1,"draftPick":1,"position":"Center","active":false,"era":["1980s","1990s"],"nbaId":"181"},
-  {"id":"reggie_miller","name":"Reggie Miller","nationality":"American","league":"NBA","teams":["Indiana Pacers"],"awards":["NBA All-Star","Olympic Gold"],"draftYear":1987,"draftRound":1,"draftPick":11,"position":"Shooting Guard","active":false,"era":["1980s","1990s","2000s"],"nbaId":"948"},
-  {"id":"clyde_drexler","name":"Clyde Drexler","nationality":"American","league":"NBA","teams":["Portland Trail Blazers","Houston Rockets"],"awards":["NBA Champion","NBA All-Star","All-NBA First Team","Olympic Gold"],"draftYear":1983,"draftRound":1,"draftPick":14,"position":"Shooting Guard","active":false,"era":["1980s","1990s"],"nbaId":"143"},
-  {"id":"isiah_thomas","name":"Isiah Thomas","nationality":"American","league":"NBA","teams":["Detroit Pistons"],"awards":["NBA Champion","Finals MVP","NBA All-Star","All-NBA First Team"],"draftYear":1981,"draftRound":1,"draftPick":2,"position":"Point Guard","active":false,"era":["1980s","1990s"],"nbaId":"252"},
-  {"id":"karl_malone","name":"Karl Malone","nationality":"American","league":"NBA","teams":["Utah Jazz","Los Angeles Lakers"],"awards":["NBA MVP","NBA All-Star","All-NBA First Team","Olympic Gold"],"draftYear":1985,"draftRound":1,"draftPick":13,"position":"Power Forward","active":false,"era":["1980s","1990s","2000s"],"nbaId":"244"},
-  {"id":"john_stockton","name":"John Stockton","nationality":"American","league":"NBA","teams":["Utah Jazz"],"awards":["NBA All-Star","Olympic Gold","All-NBA First Team"],"draftYear":1984,"draftRound":1,"draftPick":16,"position":"Point Guard","active":false,"era":["1980s","1990s","2000s"],"nbaId":"304"},
-  {"id":"nikola_jokic","name":"Nikola Jokic","nationality":"Serbian","league":"NBA","teams":["Denver Nuggets"],"awards":["NBA Champion","Finals MVP","NBA MVP","NBA All-Star","All-NBA First Team"],"draftYear":2014,"draftRound":2,"draftPick":41,"position":"Center","active":true,"era":["2010s","2020s"],"nbaId":"203999"},
-  {"id":"luka_doncic","name":"Luka Doncic","nationality":"Slovenian","league":"NBA","teams":["Dallas Mavericks"],"awards":["NBA All-Star","All-NBA First Team","Rookie of the Year","NBA MVP","Finals MVP","NBA Champion","EuroLeague Champion","EuroLeague MVP","Olympic Gold"],"draftYear":2018,"draftRound":1,"draftPick":3,"position":"Point Guard","active":true,"era":["2010s","2020s"],"nbaId":"1629029"},
-  {"id":"joel_embiid","name":"Joel Embiid","nationality":"Cameroonian","league":"NBA","teams":["Philadelphia 76ers"],"awards":["NBA MVP","NBA All-Star","All-NBA First Team","NBA Scoring Title","DPOY"],"draftYear":2014,"draftRound":1,"draftPick":3,"position":"Center","active":true,"era":["2010s","2020s"],"nbaId":"203954"},
-  {"id":"jayson_tatum","name":"Jayson Tatum","nationality":"American","league":"NBA","teams":["Boston Celtics"],"awards":["NBA Champion","Finals MVP","NBA All-Star","All-NBA First Team","Olympic Gold"],"draftYear":2017,"draftRound":1,"draftPick":3,"position":"Small Forward","active":true,"era":["2010s","2020s"],"nbaId":"1628369"},
-  {"id":"devin_booker","name":"Devin Booker","nationality":"American","league":"NBA","teams":["Phoenix Suns","Los Angeles Lakers"],"awards":["NBA All-Star","Olympic Gold","All-NBA First Team"],"draftYear":2015,"draftRound":1,"draftPick":13,"position":"Shooting Guard","active":true,"era":["2010s","2020s"],"nbaId":"1626164"},
-  {"id":"damian_lillard","name":"Damian Lillard","nationality":"American","league":"NBA","teams":["Portland Trail Blazers","Milwaukee Bucks"],"awards":["NBA All-Star","All-NBA First Team","Rookie of the Year","NBA Scoring Title","Olympic Gold"],"draftYear":2012,"draftRound":1,"draftPick":6,"position":"Point Guard","active":true,"era":["2010s","2020s"],"nbaId":"203081"},
-  {"id":"jimmy_butler","name":"Jimmy Butler","nationality":"American","league":"NBA","teams":["Chicago Bulls","Minnesota Timberwolves","Philadelphia 76ers","Miami Heat","Golden State Warriors"],"awards":["NBA Champion","NBA All-Star","All-NBA First Team","Olympic Gold"],"draftYear":2011,"draftRound":1,"draftPick":30,"position":"Small Forward","active":true,"era":["2010s","2020s"],"nbaId":"202710"},
-  {"id":"kyrie_irving","name":"Kyrie Irving","nationality":"American","league":"NBA","teams":["Cleveland Cavaliers","Boston Celtics","Brooklyn Nets","Dallas Mavericks"],"awards":["NBA Champion","NBA All-Star","All-NBA First Team","Rookie of the Year","Olympic Gold"],"draftYear":2011,"draftRound":1,"draftPick":1,"position":"Point Guard","active":true,"era":["2010s","2020s"],"nbaId":"202681"},
-  {"id":"anthony_davis","name":"Anthony Davis","nationality":"American","league":"NBA","teams":["New Orleans Pelicans","Los Angeles Lakers"],"awards":["NBA Champion","NBA All-Star","All-NBA First Team","Olympic Gold","DPOY"],"draftYear":2012,"draftRound":1,"draftPick":1,"position":"Power Forward","active":true,"era":["2010s","2020s"],"nbaId":"203076"},
-  {"id":"rudy_gobert","name":"Rudy Gobert","nationality":"French","league":"NBA","teams":["Utah Jazz","Minnesota Timberwolves"],"awards":["DPOY","NBA All-Star","Olympic Gold"],"draftYear":2013,"draftRound":1,"draftPick":27,"position":"Center","active":true,"era":["2010s","2020s"],"nbaId":"203497"},
-  {"id":"victor_wembanyama","name":"Victor Wembanyama","nationality":"French","league":"NBA","teams":["San Antonio Spurs"],"awards":["Rookie of the Year","NBA All-Star"],"draftYear":2023,"draftRound":1,"draftPick":1,"position":"Center","active":true,"era":["2020s"],"nbaId":"1641705"},
-  {"id":"evan_fournier","name":"Evan Fournier","nationality":"French","league":"NBA","teams":["Denver Nuggets","Orlando Magic","Boston Celtics","New York Knicks","Detroit Pistons"],"awards":["Olympic Gold"],"draftYear":2012,"draftRound":2,"draftPick":20,"position":"Shooting Guard","active":true,"era":["2010s","2020s"],"nbaId":"203095"},
-  {"id":"nicolas_batum","name":"Nicolas Batum","nationality":"French","league":"NBA","teams":["Portland Trail Blazers","Houston Rockets","Charlotte Hornets","Los Angeles Clippers","Philadelphia 76ers"],"awards":["Olympic Gold"],"draftYear":2008,"draftRound":1,"draftPick":25,"position":"Small Forward","active":true,"era":["2000s","2010s","2020s"],"nbaId":"201587"},
-  {"id":"frank_ntilikina","name":"Frank Ntilikina","nationality":"French","league":"NBA","teams":["New York Knicks","Dallas Mavericks"],"awards":["Olympic Gold"],"draftYear":2017,"draftRound":1,"draftPick":8,"position":"Point Guard","active":true,"era":["2010s","2020s"],"nbaId":"1628972"},
-  {"id":"tony_parker","name":"Tony Parker","nationality":"French","league":"NBA","teams":["San Antonio Spurs","Charlotte Hornets"],"awards":["NBA Champion","Finals MVP","NBA All-Star","All-NBA First Team"],"draftYear":2001,"draftRound":1,"draftPick":28,"position":"Point Guard","active":false,"era":["2000s","2010s"],"nbaId":"2225"},
-  {"id":"boris_diaw","name":"Boris Diaw","nationality":"French","league":"NBA","teams":["Atlanta Hawks","Phoenix Suns","Charlotte Hornets","San Antonio Spurs","Utah Jazz"],"awards":["NBA Champion"],"draftYear":2003,"draftRound":2,"draftPick":21,"position":"Power Forward","active":false,"era":["2000s","2010s"],"nbaId":"101122"},
-  {"id":"pau_gasol","name":"Pau Gasol","nationality":"Spanish","league":"NBA","teams":["Memphis Grizzlies","Los Angeles Lakers","Chicago Bulls","San Antonio Spurs","Milwaukee Bucks","Portland Trail Blazers"],"awards":["NBA Champion","NBA All-Star","All-NBA First Team","Olympic Gold","EuroBasket Champion","EuroLeague Champion","FIBA World Cup Champion"],"draftYear":2001,"draftRound":1,"draftPick":3,"position":"Power Forward","active":false,"era":["2000s","2010s"],"nbaId":"2200"},
-  {"id":"marc_gasol","name":"Marc Gasol","nationality":"Spanish","league":"NBA","teams":["Memphis Grizzlies","Toronto Raptors","Los Angeles Lakers","Portland Trail Blazers"],"awards":["NBA Champion","NBA All-Star","DPOY","Olympic Gold","EuroBasket Champion","FIBA World Cup Champion"],"draftYear":2007,"draftRound":2,"draftPick":48,"position":"Center","active":false,"era":["2000s","2010s","2020s"],"nbaId":"201188"},
-  {"id":"ricky_rubio","name":"Ricky Rubio","nationality":"Spanish","league":"NBA","teams":["Minnesota Timberwolves","Utah Jazz","Phoenix Suns","Cleveland Cavaliers","Brooklyn Nets"],"awards":["Olympic Gold","EuroBasket Champion","FIBA World Cup Champion"],"draftYear":2009,"draftRound":1,"draftPick":5,"position":"Point Guard","active":false,"era":["2010s","2020s"],"nbaId":"201937"},
-  {"id":"juan_carlos_navarro","name":"Juan Carlos Navarro","nationality":"Spanish","league":"ACB","teams":["FC Barcelona","Memphis Grizzlies"],"awards":["EuroLeague Champion","EuroLeague MVP","EuroBasket Champion","FIBA World Cup Champion","Olympic Gold"],"draftYear":2002,"draftRound":2,"position":"Shooting Guard","active":false,"era":["2000s","2010s"]},
-  {"id":"sergio_rodriguez","name":"Sergio Rodriguez","nationality":"Spanish","league":"ACB","teams":["FC Barcelona","Portland Trail Blazers","Sacramento Kings","New York Knicks","Philadelphia 76ers","Real Madrid Baloncesto","CSKA Moscow","Olimpia Milano","Anadolu Efes"],"awards":["EuroLeague Champion","EuroLeague MVP","EuroBasket Champion","FIBA World Cup Champion"],"draftYear":2006,"draftRound":2,"position":"Point Guard","active":false,"era":["2000s","2010s","2020s"]},
-  {"id":"manu_ginobili","name":"Manu Ginobili","nationality":"Argentine","league":"NBA","teams":["San Antonio Spurs"],"awards":["NBA Champion","NBA All-Star","EuroLeague Champion","Olympic Gold","FIBA World Cup Champion"],"draftYear":1999,"draftRound":2,"draftPick":57,"position":"Shooting Guard","active":false,"era":["2000s","2010s"],"nbaId":"1938"},
-  {"id":"luis_scola","name":"Luis Scola","nationality":"Argentine","league":"NBA","teams":["Houston Rockets","Phoenix Suns","Toronto Raptors","Indiana Pacers","Brooklyn Nets","Fenerbahce Beko"],"awards":["Olympic Gold"],"draftYear":2002,"draftRound":2,"position":"Power Forward","active":false,"era":["2000s","2010s"]},
-  {"id":"andres_nocioni","name":"Andres Nocioni","nationality":"Argentine","league":"NBA","teams":["Chicago Bulls","Sacramento Kings","Philadelphia 76ers","Real Madrid Baloncesto"],"awards":["Olympic Gold","EuroLeague Champion"],"draftYear":2002,"draftRound":2,"position":"Small Forward","active":false,"era":["2000s","2010s"]},
-  {"id":"toni_kukoc","name":"Toni Kukoc","nationality":"Croatian","league":"NBA","teams":["Chicago Bulls","Philadelphia 76ers","Atlanta Hawks","Milwaukee Bucks","Cleveland Cavaliers"],"awards":["NBA Champion","EuroLeague Champion","EuroLeague MVP"],"draftYear":1990,"draftRound":2,"position":"Small Forward","active":false,"era":["1990s","2000s"]},
-  {"id":"drazen_petrovic","name":"Drazen Petrovic","nationality":"Croatian","league":"NBA","teams":["Portland Trail Blazers","New Jersey Nets","Real Madrid Baloncesto"],"awards":["EuroLeague Champion","EuroLeague MVP","Olympic Gold"],"draftYear":1989,"draftRound":3,"position":"Shooting Guard","active":false,"era":["1980s","1990s"]},
-  {"id":"vlade_divac","name":"Vlade Divac","nationality":"Serbian","league":"NBA","teams":["Los Angeles Lakers","Sacramento Kings","Charlotte Hornets","Los Angeles Clippers"],"awards":["NBA All-Star","Olympic Gold"],"draftYear":1989,"draftRound":1,"draftPick":26,"position":"Center","active":false,"era":["1990s","2000s"],"nbaId":"248"},
-  {"id":"predrag_stojakovic","name":"Predrag Stojakovic","nationality":"Serbian","league":"NBA","teams":["Sacramento Kings","Indiana Pacers","New Orleans Pelicans","Toronto Raptors","Dallas Mavericks"],"awards":["NBA Champion","NBA All-Star","EuroLeague Champion","EuroLeague MVP"],"draftYear":1996,"draftRound":1,"draftPick":14,"position":"Small Forward","active":false,"era":["1990s","2000s","2010s"],"nbaId":"2018"},
-  {"id":"dejan_bodiroga","name":"Dejan Bodiroga","nationality":"Serbian","league":"EuroLeague","teams":["CSKA Moscow","FC Barcelona","Panathinaikos","Virtus Bologna"],"awards":["EuroLeague Champion","EuroLeague MVP","EuroBasket Champion"],"position":"Shooting Guard","active":false,"era":["1990s","2000s"]},
-  {"id":"milos_teodosic","name":"Milos Teodosic","nationality":"Serbian","league":"NBA","teams":["Los Angeles Clippers","Bologna","CSKA Moscow","Virtus Bologna"],"awards":["EuroLeague Champion","EuroLeague MVP","EuroBasket Champion","FIBA World Cup Champion","Olympic Gold"],"draftYear":2009,"draftRound":2,"position":"Point Guard","active":false,"era":["2000s","2010s","2020s"],"nbaId":"203511"},
-  {"id":"nikola_mirotic","name":"Nikola Mirotic","nationality":"Montenegrin","league":"NBA","teams":["Chicago Bulls","New Orleans Pelicans","Milwaukee Bucks","FC Barcelona","Real Madrid Baloncesto"],"awards":["EuroLeague Champion","Olympic Gold"],"draftYear":2011,"draftRound":1,"draftPick":23,"position":"Power Forward","active":true,"era":["2010s","2020s"],"nbaId":"1626260"},
-  {"id":"bogdan_bogdanovic","name":"Bogdan Bogdanovic","nationality":"Serbian","league":"NBA","teams":["Sacramento Kings","Atlanta Hawks","Anadolu Efes","Fenerbahce Beko"],"awards":["EuroLeague Champion","Olympic Gold","EuroBasket Champion"],"draftYear":2014,"draftRound":1,"draftPick":27,"position":"Shooting Guard","active":true,"era":["2010s","2020s"],"nbaId":"203992"},
-  {"id":"arvydas_sabonis","name":"Arvydas Sabonis","nationality":"Lithuanian","league":"NBA","teams":["Portland Trail Blazers","Real Madrid Baloncesto","Zalgiris Kaunas","Atlanta Hawks"],"awards":["EuroLeague Champion","EuroLeague MVP","Olympic Gold"],"draftYear":1986,"draftRound":1,"draftPick":24,"position":"Center","active":false,"era":["1980s","1990s","2000s"],"nbaId":"369"},
-  {"id":"sarunas_marciulionis","name":"Sarunas Marciulionis","nationality":"Lithuanian","league":"NBA","teams":["Golden State Warriors","Seattle SuperSonics","Denver Nuggets","Sacramento Kings"],"awards":["Olympic Gold"],"draftYear":1987,"draftRound":6,"position":"Shooting Guard","active":false,"era":["1990s"]},
-  {"id":"jonas_valanciunas","name":"Jonas Valanciunas","nationality":"Lithuanian","league":"NBA","teams":["Toronto Raptors","Memphis Grizzlies","New Orleans Pelicans","Washington Wizards"],"awards":["NBA All-Star","Olympic Gold"],"draftYear":2011,"draftRound":1,"draftPick":5,"position":"Center","active":true,"era":["2010s","2020s"],"nbaId":"203006"},
-  {"id":"vassilis_spanoulis","name":"Vassilis Spanoulis","nationality":"Greek","league":"EuroLeague","teams":["Olympiacos","Houston Rockets","Panathinaikos"],"awards":["EuroLeague Champion","EuroLeague MVP","EuroBasket Champion"],"draftYear":2006,"draftRound":2,"position":"Point Guard","active":false,"era":["2000s","2010s","2020s"]},
-  {"id":"dimitris_diamantidis","name":"Dimitris Diamantidis","nationality":"Greek","league":"EuroLeague","teams":["Panathinaikos"],"awards":["EuroLeague Champion","EuroLeague MVP"],"position":"Point Guard","active":false,"era":["2000s","2010s"]},
-  {"id":"nikos_galis","name":"Nikos Galis","nationality":"Greek","league":"EuroLeague","teams":["Panathinaikos","PAOK"],"awards":["EuroBasket Champion"],"position":"Shooting Guard","active":false,"era":["1980s","1990s"]},
-  {"id":"hidayet_turkoglu","name":"Hidayet Turkoglu","nationality":"Turkish","league":"NBA","teams":["Sacramento Kings","San Antonio Spurs","Orlando Magic","Toronto Raptors","Phoenix Suns","Orlando Magic","Los Angeles Clippers"],"awards":["NBA All-Star","EuroBasket Champion"],"draftYear":1998,"draftRound":1,"draftPick":16,"position":"Small Forward","active":false,"era":["2000s","2010s"],"nbaId":"2052"},
-  {"id":"enes_kanter","name":"Enes Kanter Freedom","nationality":"Turkish","league":"NBA","teams":["Utah Jazz","Oklahoma City Thunder","New York Knicks","Boston Celtics","Portland Trail Blazers","Cleveland Cavaliers","Houston Rockets"],"awards":["NBA All-Star"],"draftYear":2011,"draftRound":1,"draftPick":3,"position":"Center","active":false,"era":["2010s","2020s"],"nbaId":"202683"},
-  {"id":"cedi_osman","name":"Cedi Osman","nationality":"Turkish","league":"NBA","teams":["Cleveland Cavaliers","San Antonio Spurs","Anadolu Efes"],"awards":["EuroLeague Champion"],"draftYear":2015,"draftRound":2,"position":"Small Forward","active":true,"era":["2010s","2020s"],"nbaId":"1628440"},
-  {"id":"shane_larkin","name":"Shane Larkin","nationality":"American","league":"EuroLeague","teams":["Dallas Mavericks","Brooklyn Nets","Boston Celtics","Anadolu Efes","Fenerbahce Beko"],"awards":["EuroLeague Champion","EuroLeague MVP"],"draftYear":2013,"draftRound":1,"draftPick":18,"position":"Point Guard","active":true,"era":["2010s","2020s"],"nbaId":"203888"},
-  {"id":"ibrahim_kutluay","name":"Ibrahim Kutluay","nationality":"Turkish","league":"EuroLeague","teams":["Fenerbahce Beko","Panathinaikos","Real Madrid Baloncesto"],"awards":["EuroLeague Champion"],"position":"Shooting Guard","active":false,"era":["1990s","2000s"]},
-  {"id":"theodoros_papaloukas","name":"Theodoros Papaloukas","nationality":"Greek","league":"EuroLeague","teams":["CSKA Moscow","Panathinaikos","Olympiacos"],"awards":["EuroLeague Champion","EuroLeague MVP","EuroBasket Champion"],"position":"Point Guard","active":false,"era":["2000s","2010s"]},
-  {"id":"zydrunas_ilgauskas","name":"Zydrunas Ilgauskas","nationality":"Lithuanian","league":"NBA","teams":["Cleveland Cavaliers","Washington Wizards","Miami Heat"],"awards":["NBA All-Star","NBA Champion"],"draftYear":1996,"draftRound":1,"draftPick":20,"position":"Center","active":false,"era":["1990s","2000s","2010s"],"nbaId":"1714"},
-  {"id":"andrei_kirilenko","name":"Andrei Kirilenko","nationality":"American","league":"NBA","teams":["Utah Jazz","Minnesota Timberwolves","Brooklyn Nets","CSKA Moscow"],"awards":["NBA All-Star","EuroLeague Champion","Olympic Gold"],"draftYear":1999,"draftRound":1,"draftPick":24,"position":"Small Forward","active":false,"era":["2000s","2010s"],"nbaId":"2218"},
-  {"id":"dikembe_mutombo","name":"Dikembe Mutombo","nationality":"Congolese","league":"NBA","teams":["Denver Nuggets","Atlanta Hawks","Philadelphia 76ers","New Jersey Nets","New York Knicks","Houston Rockets"],"awards":["DPOY","NBA All-Star","All-NBA First Team"],"draftYear":1991,"draftRound":1,"draftPick":4,"position":"Center","active":false,"era":["1990s","2000s"],"nbaId":"398"},
-  {"id":"luol_deng","name":"Luol Deng","nationality":"South Sudanese","league":"NBA","teams":["Chicago Bulls","Cleveland Cavaliers","Miami Heat","Los Angeles Lakers","Minnesota Timberwolves"],"awards":["NBA All-Star","DPOY"],"draftYear":2004,"draftRound":1,"draftPick":7,"position":"Small Forward","active":false,"era":["2000s","2010s"],"nbaId":"2736"},
-  {"id":"serge_ibaka","name":"Serge Ibaka","nationality":"Congolese","league":"NBA","teams":["Oklahoma City Thunder","Orlando Magic","Toronto Raptors","Los Angeles Clippers","Milwaukee Bucks","Anadolu Efes"],"awards":["NBA Champion","DPOY"],"draftYear":2008,"draftRound":2,"draftPick":24,"position":"Power Forward","active":false,"era":["2000s","2010s","2020s"],"nbaId":"201586"},
-  {"id":"pascal_siakam","name":"Pascal Siakam","nationality":"Cameroonian","league":"NBA","teams":["Toronto Raptors","Indiana Pacers"],"awards":["NBA Champion","NBA All-Star","All-NBA First Team","Most Improved Player"],"draftYear":2016,"draftRound":1,"draftPick":27,"position":"Power Forward","active":true,"era":["2010s","2020s"],"nbaId":"1627783"},
-  {"id":"patty_mills","name":"Patty Mills","nationality":"Australian","league":"NBA","teams":["Portland Trail Blazers","San Antonio Spurs","Brooklyn Nets","Miami Heat"],"awards":["NBA Champion","Olympic Gold"],"draftYear":2009,"draftRound":2,"position":"Point Guard","active":true,"era":["2010s","2020s"],"nbaId":"201988"},
-  {"id":"andrew_bogut","name":"Andrew Bogut","nationality":"Australian","league":"NBA","teams":["Milwaukee Bucks","Golden State Warriors","Dallas Mavericks","Los Angeles Lakers","Cleveland Cavaliers","Sydney Kings"],"awards":["NBA Champion","Rookie of the Year"],"draftYear":2005,"draftRound":1,"draftPick":1,"position":"Center","active":false,"era":["2000s","2010s","2020s"],"nbaId":"101106"},
-  {"id":"joe_ingles","name":"Joe Ingles","nationality":"Australian","league":"NBA","teams":["Utah Jazz","Portland Trail Blazers","Milwaukee Bucks","Orlando Magic","FC Barcelona"],"awards":["Olympic Gold"],"draftYear":2014,"draftRound":2,"position":"Small Forward","active":true,"era":["2010s","2020s"],"nbaId":"204060"},
-  {"id":"ben_simmons","name":"Ben Simmons","nationality":"Australian","league":"NBA","teams":["Philadelphia 76ers","Brooklyn Nets"],"awards":["Rookie of the Year","NBA All-Star","DPOY","Olympic Gold"],"draftYear":2016,"draftRound":1,"draftPick":1,"position":"Point Guard","active":true,"era":["2010s","2020s"],"nbaId":"1627732"},
-  {"id":"dante_exum","name":"Dante Exum","nationality":"Australian","league":"NBA","teams":["Utah Jazz","Cleveland Cavaliers","Houston Rockets","Dallas Mavericks","Golden State Warriors"],"awards":["Olympic Gold"],"draftYear":2014,"draftRound":1,"draftPick":5,"position":"Point Guard","active":true,"era":["2010s","2020s"],"nbaId":"203957"},
-  {"id":"shai_gilgeous_alexander","name":"Shai Gilgeous-Alexander","nationality":"Canadian","league":"NBA","teams":["Los Angeles Clippers","Oklahoma City Thunder"],"awards":["NBA All-Star","All-NBA First Team","NBA Scoring Title","NBA MVP","Olympic Gold"],"draftYear":2018,"draftRound":1,"draftPick":11,"position":"Point Guard","active":true,"era":["2010s","2020s"],"nbaId":"1628983"},
-  {"id":"andrew_wiggins","name":"Andrew Wiggins","nationality":"Canadian","league":"NBA","teams":["Minnesota Timberwolves","Golden State Warriors"],"awards":["NBA Champion","NBA All-Star","Rookie of the Year","Olympic Gold"],"draftYear":2014,"draftRound":1,"draftPick":1,"position":"Small Forward","active":true,"era":["2010s","2020s"],"nbaId":"203952"},
-  {"id":"jamal_murray","name":"Jamal Murray","nationality":"Canadian","league":"NBA","teams":["Denver Nuggets"],"awards":["NBA Champion","Finals MVP","Olympic Gold"],"draftYear":2016,"draftRound":1,"draftPick":7,"position":"Point Guard","active":true,"era":["2010s","2020s"],"nbaId":"1627750"},
-  {"id":"rv_barrett","name":"RJ Barrett","nationality":"Canadian","league":"NBA","teams":["New York Knicks","Toronto Raptors"],"awards":["Olympic Gold","NBA All-Star"],"draftYear":2019,"draftRound":1,"draftPick":3,"position":"Small Forward","active":true,"era":["2020s"],"nbaId":"1629628"},
-  {"id":"kristaps_porzingis","name":"Kristaps Porzingis","nationality":"Latvian","league":"NBA","teams":["New York Knicks","Dallas Mavericks","Washington Wizards","Boston Celtics"],"awards":["NBA Champion","NBA All-Star"],"draftYear":2015,"draftRound":1,"draftPick":4,"position":"Power Forward","active":true,"era":["2010s","2020s"],"nbaId":"204001"},
-  {"id":"dario_saric","name":"Dario Saric","nationality":"Croatian","league":"NBA","teams":["Philadelphia 76ers","Minnesota Timberwolves","Phoenix Suns","Oklahoma City Thunder","Golden State Warriors","Anadolu Efes"],"awards":["NBA Champion","Rookie of the Year"],"draftYear":2014,"draftRound":1,"draftPick":12,"position":"Power Forward","active":true,"era":["2010s","2020s"],"nbaId":"203967"},
-  {"id":"dennis_schroder","name":"Dennis Schroder","nationality":"German","league":"NBA","teams":["Atlanta Hawks","Oklahoma City Thunder","Los Angeles Lakers","Boston Celtics","Houston Rockets","Toronto Raptors","Brooklyn Nets","Golden State Warriors","Los Angeles Lakers"],"awards":["NBA Champion","Olympic Gold"],"draftYear":2013,"draftRound":2,"draftPick":17,"position":"Point Guard","active":true,"era":["2010s","2020s"],"nbaId":"203471"},
-  {"id":"moritz_wagner","name":"Moritz Wagner","nationality":"German","league":"NBA","teams":["Los Angeles Lakers","Washington Wizards","Orlando Magic"],"awards":["Olympic Gold"],"draftYear":2018,"draftRound":1,"draftPick":25,"position":"Center","active":true,"era":["2010s","2020s"],"nbaId":"1628530"},
-  {"id":"alperen_sengun","name":"Alperen Sengun","nationality":"Turkish","league":"NBA","teams":["Houston Rockets"],"awards":["NBA All-Star"],"draftYear":2021,"draftRound":1,"draftPick":16,"position":"Center","active":true,"era":["2020s"],"nbaId":"1630578"},
-  {"id":"furkan_korkmaz","name":"Furkan Korkmaz","nationality":"Turkish","league":"NBA","teams":["Philadelphia 76ers","Anadolu Efes"],"awards":["EuroLeague Champion"],"draftYear":2016,"draftRound":2,"position":"Shooting Guard","active":true,"era":["2010s","2020s"],"nbaId":"1627814"},
-  {"id":"mehmet_okur","name":"Mehmet Okur","nationality":"Turkish","league":"NBA","teams":["Detroit Pistons","Utah Jazz"],"awards":["NBA Champion","NBA All-Star"],"draftYear":2001,"draftRound":2,"position":"Power Forward","active":false,"era":["2000s","2010s"],"nbaId":"2406"},
-  {"id":"ersan_ilyasova","name":"Ersan Ilyasova","nationality":"Turkish","league":"NBA","teams":["Milwaukee Bucks","Detroit Pistons","Philadelphia 76ers","Oklahoma City Thunder","Atlanta Hawks","Indiana Pacers","Golden State Warriors","Anadolu Efes","Fenerbahce Beko"],"awards":["NBA Champion"],"draftYear":2005,"draftRound":2,"position":"Power Forward","active":false,"era":["2000s","2010s","2020s"],"nbaId":"101133"},
-  {"id":"jan_vesely","name":"Jan Vesely","nationality":"Czech","league":"EuroLeague","teams":["Washington Wizards","Denver Nuggets","Fenerbahce Beko","Real Madrid Baloncesto"],"awards":["EuroLeague Champion","EuroLeague MVP"],"draftYear":2011,"draftRound":1,"draftPick":6,"position":"Power Forward","active":true,"era":["2010s","2020s"],"nbaId":"202740"},
-  {"id":"tomas_satoransky","name":"Tomas Satoransky","nationality":"Czech","league":"NBA","teams":["Washington Wizards","Chicago Bulls","New Orleans Pelicans","FC Barcelona"],"awards":["EuroLeague Champion"],"draftYear":2012,"draftRound":2,"position":"Point Guard","active":true,"era":["2010s","2020s"],"nbaId":"1627803"},
-  {"id":"nando_de_colo","name":"Nando De Colo","nationality":"French","league":"EuroLeague","teams":["San Antonio Spurs","Toronto Raptors","CSKA Moscow","Fenerbahce Beko","Anadolu Efes","Valencia Basket"],"awards":["NBA Champion","EuroLeague Champion","EuroLeague MVP","Olympic Gold"],"draftYear":2009,"draftRound":2,"position":"Shooting Guard","active":true,"era":["2010s","2020s"]},
-  {"id":"rodrigue_beaubois","name":"Rodrigue Beaubois","nationality":"French","league":"EuroLeague","teams":["Dallas Mavericks","Fenerbahce Beko","CSKA Moscow"],"awards":[],"draftYear":2009,"draftRound":1,"position":"Point Guard","active":true,"era":["2010s","2020s"]},
-  {"id":"lauri_markkanen","name":"Lauri Markkanen","nationality":"Finnish","league":"NBA","teams":["Chicago Bulls","Cleveland Cavaliers","Utah Jazz"],"awards":["NBA All-Star","Most Improved Player"],"draftYear":2017,"draftRound":1,"draftPick":7,"position":"Power Forward","active":true,"era":["2010s","2020s"],"nbaId":"1628374"},
-  {"id":"kyle_lowry","name":"Kyle Lowry","nationality":"American","league":"NBA","teams":["Memphis Grizzlies","Houston Rockets","Toronto Raptors","Miami Heat","Philadelphia 76ers"],"awards":["NBA Champion","NBA All-Star","Olympic Gold"],"draftYear":2006,"draftRound":1,"draftPick":24,"position":"Point Guard","active":true,"era":["2000s","2010s","2020s"],"nbaId":"200768"},
-  {"id":"pau_gasol_young","name":"Pau Gasol (Barcelona era)","nationality":"Spanish","league":"ACB","teams":["FC Barcelona"],"awards":["EuroLeague Champion"],"position":"Power Forward","active":false,"era":["2000s"]},
-  {"id":"wayne_ellington","name":"Wayne Ellington","nationality":"American","league":"NBA","teams":["Memphis Grizzlies","Cleveland Cavaliers","Minnesota Timberwolves","Miami Heat","Detroit Pistons","New York Knicks","Anadolu Efes"],"awards":[],"draftYear":2009,"draftRound":2,"position":"Shooting Guard","active":false,"era":["2010s","2020s"],"nbaId":"201961"},
-  {"id":"scottie_barnes","name":"Scottie Barnes","nationality":"American","league":"NBA","teams":["Toronto Raptors"],"awards":["Rookie of the Year","NBA All-Star"],"draftYear":2021,"draftRound":1,"draftPick":4,"position":"Power Forward","active":true,"era":["2020s"],"nbaId":"1630567"},
-  {"id":"nikola_vucevic","name":"Nikola Vucevic","nationality":"Montenegrin","league":"NBA","teams":["Philadelphia 76ers","Orlando Magic","Chicago Bulls","Los Angeles Clippers","Olimpia Milano"],"awards":["NBA All-Star"],"draftYear":2011,"draftRound":1,"draftPick":16,"position":"Center","active":true,"era":["2010s","2020s"],"nbaId":"202696"},
-  {"id":"marcus_smart","name":"Marcus Smart","nationality":"American","league":"NBA","teams":["Boston Celtics","Memphis Grizzlies","Oklahoma City Thunder","Portland Trail Blazers","Sacramento Kings"],"awards":["NBA Champion","DPOY"],"draftYear":2014,"draftRound":1,"draftPick":6,"position":"Point Guard","active":true,"era":["2010s","2020s"],"nbaId":"203935"},
-  {"id":"draymond_green","name":"Draymond Green","nationality":"American","league":"NBA","teams":["Golden State Warriors"],"awards":["NBA Champion","DPOY","NBA All-Star","Olympic Gold"],"draftYear":2012,"draftRound":2,"draftPick":35,"position":"Power Forward","active":true,"era":["2010s","2020s"],"nbaId":"203110"},
-  {"id":"klay_thompson","name":"Klay Thompson","nationality":"American","league":"NBA","teams":["Golden State Warriors","Dallas Mavericks"],"awards":["NBA Champion","NBA All-Star","Olympic Gold"],"draftYear":2011,"draftRound":1,"draftPick":11,"position":"Shooting Guard","active":true,"era":["2010s","2020s"],"nbaId":"202691"},
-  {"id":"paul_george","name":"Paul George","nationality":"American","league":"NBA","teams":["Indiana Pacers","Oklahoma City Thunder","Los Angeles Clippers","Philadelphia 76ers"],"awards":["NBA All-Star","All-NBA First Team","DPOY","Olympic Gold"],"draftYear":2010,"draftRound":1,"draftPick":10,"position":"Small Forward","active":true,"era":["2010s","2020s"],"nbaId":"202331"},
-  {"id":"blake_griffin","name":"Blake Griffin","nationality":"American","league":"NBA","teams":["Los Angeles Clippers","Detroit Pistons","Brooklyn Nets","Boston Celtics"],"awards":["NBA All-Star","Rookie of the Year","All-NBA First Team"],"draftYear":2009,"draftRound":1,"draftPick":1,"position":"Power Forward","active":false,"era":["2010s","2020s"],"nbaId":"201933"},
-  {"id":"dwight_howard","name":"Dwight Howard","nationality":"American","league":"NBA","teams":["Orlando Magic","Los Angeles Lakers","Houston Rockets","Atlanta Hawks","Charlotte Hornets","Washington Wizards","Philadelphia 76ers","Los Angeles Lakers","Philadelphia 76ers"],"awards":["DPOY","NBA All-Star","All-NBA First Team","Rookie of the Year","Olympic Gold"],"draftYear":2004,"draftRound":1,"draftPick":1,"position":"Center","active":false,"era":["2000s","2010s","2020s"],"nbaId":"2730"},
-  {"id":"derrick_rose","name":"Derrick Rose","nationality":"American","league":"NBA","teams":["Chicago Bulls","New York Knicks","Cleveland Cavaliers","Minnesota Timberwolves","Detroit Pistons","Memphis Grizzlies","Oklahoma City Thunder","New York Knicks"],"awards":["NBA MVP","NBA All-Star","Rookie of the Year"],"draftYear":2008,"draftRound":1,"draftPick":1,"position":"Point Guard","active":false,"era":["2000s","2010s","2020s"],"nbaId":"201565"},
-  {"id":"steve_nash","name":"Steve Nash","nationality":"Canadian","league":"NBA","teams":["Phoenix Suns","Dallas Mavericks","Los Angeles Lakers"],"awards":["NBA MVP","NBA All-Star","All-NBA First Team"],"draftYear":1996,"draftRound":1,"draftPick":15,"position":"Point Guard","active":false,"era":["1990s","2000s","2010s"],"nbaId":"959"},
-  {"id":"dennis_rodman","name":"Dennis Rodman","nationality":"American","league":"NBA","teams":["Detroit Pistons","San Antonio Spurs","Chicago Bulls","Los Angeles Lakers","Dallas Mavericks"],"awards":["NBA Champion","DPOY","All-NBA First Team"],"draftYear":1986,"draftRound":2,"position":"Power Forward","active":false,"era":["1980s","1990s"],"nbaId":"1880"},
-  {"id":"john_wall","name":"John Wall","nationality":"American","league":"NBA","teams":["Washington Wizards","Houston Rockets","Los Angeles Clippers"],"awards":["NBA All-Star","Rookie of the Year","Olympic Gold"],"draftYear":2010,"draftRound":1,"draftPick":1,"position":"Point Guard","active":true,"era":["2010s","2020s"],"nbaId":"202322"},
-  {"id":"bradley_beal","name":"Bradley Beal","nationality":"American","league":"NBA","teams":["Washington Wizards","Phoenix Suns"],"awards":["NBA All-Star","Olympic Gold"],"draftYear":2012,"draftRound":1,"draftPick":3,"position":"Shooting Guard","active":true,"era":["2010s","2020s"],"nbaId":"203078"},
-  {"id":"dominique_wilkins","name":"Dominique Wilkins","nationality":"American","league":"NBA","teams":["Atlanta Hawks","Los Angeles Clippers","Boston Celtics","San Antonio Spurs","Orlando Magic"],"awards":["NBA All-Star","All-NBA First Team","NBA Scoring Title"],"draftYear":1982,"draftRound":1,"draftPick":3,"position":"Small Forward","active":false,"era":["1980s","1990s"],"nbaId":"823"},
-  {"id":"leandro_barbosa","name":"Leandro Barbosa","nationality":"Brazilian","league":"NBA","teams":["Phoenix Suns","Toronto Raptors","Indiana Pacers","Golden State Warriors"],"awards":["NBA Champion"],"draftYear":2003,"draftRound":1,"draftPick":28,"position":"Point Guard","active":false,"era":["2000s","2010s"],"nbaId":"2571"},
-  {"id":"anderson_varejao","name":"Anderson Varejao","nationality":"Brazilian","league":"NBA","teams":["Cleveland Cavaliers","Golden State Warriors","Portland Trail Blazers"],"awards":["NBA All-Star"],"draftYear":2004,"draftRound":2,"position":"Center","active":false,"era":["2000s","2010s","2020s"],"nbaId":"101141"},
-  {"id":"nenê","name":"Nene","nationality":"Brazilian","league":"NBA","teams":["New York Knicks","Denver Nuggets","Washington Wizards","Houston Rockets","Atlanta Hawks"],"awards":["NBA All-Star"],"draftYear":2002,"draftRound":1,"draftPick":7,"position":"Power Forward","active":false,"era":["2000s","2010s","2020s"],"nbaId":"2748"},
-  {"id":"tiago_splitter","name":"Tiago Splitter","nationality":"Brazilian","league":"NBA","teams":["San Antonio Spurs","Atlanta Hawks","Sacramento Kings"],"awards":["NBA Champion"],"draftYear":2007,"draftRound":1,"draftPick":28,"position":"Center","active":false,"era":["2010s"],"nbaId":"201180"},
-  {"id":"igor_rakocevic","name":"Igor Rakocevic","nationality":"Serbian","league":"EuroLeague","teams":["CSKA Moscow","Maccabi Tel Aviv","Panathinaikos","Olympiacos"],"awards":["EuroLeague Champion"],"position":"Point Guard","active":false,"era":["2000s","2010s"]},
-  {"id":"chuck_hayes","name":"Chuck Hayes","nationality":"American","league":"EuroLeague","teams":["Houston Rockets","Sacramento Kings","Toronto Raptors","Oklahoma City Thunder","CSKA Moscow"],"awards":[],"position":"Center","active":false,"era":["2000s","2010s"]},
-  {"id":"mike_james","name":"Mike James","nationality":"American","league":"EuroLeague","teams":["Houston Rockets","Detroit Pistons","Toronto Raptors","New Jersey Nets","Minnesota Timberwolves","CSKA Moscow","AS Monaco Basketball","Brooklyn Nets"],"awards":["EuroLeague Champion"],"draftYear":2001,"draftRound":2,"position":"Point Guard","active":true,"era":["2000s","2010s","2020s"],"nbaId":"1629003"},
-  {"id":"will_clyburn","name":"Will Clyburn","nationality":"American","league":"EuroLeague","teams":["Houston Rockets","Utah Jazz","CSKA Moscow","Anadolu Efes"],"awards":["EuroLeague Champion"],"position":"Small Forward","active":true,"era":["2010s","2020s"]},
-  {"id":"alex_abrines","name":"Alex Abrines","nationality":"Spanish","league":"NBA","teams":["Oklahoma City Thunder","FC Barcelona"],"awards":["EuroBasket Champion","FIBA World Cup Champion","Olympic Gold"],"draftYear":2013,"draftRound":2,"position":"Shooting Guard","active":false,"era":["2010s","2020s"],"nbaId":"203518"},
-  {"id":"jorge_garbajosa","name":"Jorge Garbajosa","nationality":"Spanish","league":"NBA","teams":["Toronto Raptors","Baskonia","Real Madrid Baloncesto"],"awards":["EuroBasket Champion","FIBA World Cup Champion","EuroLeague Champion"],"draftYear":2001,"draftRound":2,"position":"Power Forward","active":false,"era":["2000s","2010s"],"nbaId":"101170"},
-  {"id":"james_nunnally","name":"James Nunnally","nationality":"American","league":"EuroLeague","teams":["Barcelona","Baskonia","Zalgiris Kaunas","FC Barcelona"],"awards":["EuroLeague Champion"],"position":"Shooting Guard","active":true,"era":["2010s","2020s"]},
-  {"id":"tornike_shengelia","name":"Tornike Shengelia","nationality":"Georgian","league":"EuroLeague","teams":["Brooklyn Nets","Sacramento Kings","Baskonia","CSKA Moscow","Virtus Bologna","Fenerbahce Beko"],"awards":["EuroLeague Champion"],"draftYear":2012,"draftRound":2,"position":"Small Forward","active":true,"era":["2010s","2020s"]},
-  {"id":"olympiacos_spanoulis","name":"Kostas Papanikolaou","nationality":"Greek","league":"EuroLeague","teams":["Olympiacos","Houston Rockets","Panathinaikos","Bayern Munich Basketball"],"awards":["EuroLeague Champion"],"draftYear":2012,"draftRound":2,"position":"Small Forward","active":true,"era":["2010s","2020s"]},
-  {"id":"kyle_hines","name":"Kyle Hines","nationality":"American","league":"EuroLeague","teams":["Houston Rockets","CSKA Moscow","Olimpia Milano","Barcelona"],"awards":["EuroLeague Champion"],"position":"Center","active":true,"era":["2000s","2010s","2020s"]},
-  {"id":"nate_james","name":"Mike Tobey","nationality":"American","league":"EuroLeague","teams":["Olympiacos","Valencia Basket","Zalgiris Kaunas","New Orleans Pelicans","Charlotte Hornets"],"awards":["EuroLeague Champion"],"position":"Center","active":true,"era":["2010s","2020s"]},
-  {"id":"tobias_harris","name":"Tobias Harris","nationality":"American","league":"NBA","teams":["Milwaukee Bucks","Cleveland Cavaliers","Orlando Magic","Detroit Pistons","Los Angeles Clippers","Philadelphia 76ers","Boston Celtics","Los Angeles Lakers"],"awards":["NBA All-Star"],"draftYear":2011,"draftRound":1,"draftPick":19,"position":"Power Forward","active":true,"era":["2010s","2020s"],"nbaId":"202699"},
-  {"id":"myles_turner","name":"Myles Turner","nationality":"American","league":"NBA","teams":["Indiana Pacers"],"awards":["DPOY","Olympic Gold"],"draftYear":2015,"draftRound":1,"draftPick":11,"position":"Center","active":true,"era":["2010s","2020s"],"nbaId":"1626167"},
-  {"id":"trae_young","name":"Trae Young","nationality":"American","league":"NBA","teams":["Atlanta Hawks"],"awards":["NBA All-Star","NBA Scoring Title"],"draftYear":2018,"draftRound":1,"draftPick":5,"position":"Point Guard","active":true,"era":["2020s"],"nbaId":"1629027"},
-  {"id":"zach_lavine","name":"Zach LaVine","nationality":"American","league":"NBA","teams":["Minnesota Timberwolves","Chicago Bulls","Sacramento Kings"],"awards":["NBA All-Star","Olympic Gold"],"draftYear":2014,"draftRound":1,"draftPick":13,"position":"Shooting Guard","active":true,"era":["2010s","2020s"],"nbaId":"203897"},
-  {"id":"donovan_mitchell","name":"Donovan Mitchell","nationality":"American","league":"NBA","teams":["Utah Jazz","Cleveland Cavaliers"],"awards":["NBA All-Star","Olympic Gold"],"draftYear":2017,"draftRound":1,"draftPick":13,"position":"Shooting Guard","active":true,"era":["2010s","2020s"],"nbaId":"1628378"},
-  {"id":"bam_adebayo","name":"Bam Adebayo","nationality":"American","league":"NBA","teams":["Miami Heat"],"awards":["NBA All-Star","DPOY","Olympic Gold"],"draftYear":2017,"draftRound":1,"draftPick":14,"position":"Center","active":true,"era":["2010s","2020s"],"nbaId":"1628389"},
-  {"id":"julius_randle","name":"Julius Randle","nationality":"American","league":"NBA","teams":["Los Angeles Lakers","New Orleans Pelicans","New York Knicks","Minnesota Timberwolves"],"awards":["NBA All-Star","Most Improved Player"],"draftYear":2014,"draftRound":1,"draftPick":7,"position":"Power Forward","active":true,"era":["2010s","2020s"],"nbaId":"203944"},
-  {"id":"jrue_holiday","name":"Jrue Holiday","nationality":"American","league":"NBA","teams":["Philadelphia 76ers","New Orleans Pelicans","Milwaukee Bucks","Portland Trail Blazers","Boston Celtics"],"awards":["NBA Champion","DPOY","Olympic Gold"],"draftYear":2009,"draftRound":1,"draftPick":17,"position":"Point Guard","active":true,"era":["2010s","2020s"],"nbaId":"201950"},
-  {"id":"khris_middleton","name":"Khris Middleton","nationality":"American","league":"NBA","teams":["Detroit Pistons","Milwaukee Bucks"],"awards":["NBA Champion","NBA All-Star","Olympic Gold"],"draftYear":2012,"draftRound":2,"position":"Small Forward","active":true,"era":["2010s","2020s"],"nbaId":"203114"},
-  {"id":"brook_lopez","name":"Brook Lopez","nationality":"American","league":"NBA","teams":["New Jersey Nets","Brooklyn Nets","Los Angeles Lakers","Milwaukee Bucks"],"awards":["NBA Champion","DPOY"],"draftYear":2008,"draftRound":1,"draftPick":10,"position":"Center","active":true,"era":["2000s","2010s","2020s"],"nbaId":"201572"},
-  {"id":"fred_vanvleet","name":"Fred VanVleet","nationality":"American","league":"NBA","teams":["Toronto Raptors","Houston Rockets"],"awards":["NBA Champion","NBA All-Star"],"position":"Point Guard","active":true,"era":["2010s","2020s"],"nbaId":"2555504"},
-  {"id":"og_anunoby","name":"OG Anunoby","nationality":"Nigerian","league":"NBA","teams":["Toronto Raptors","New York Knicks"],"awards":["NBA Champion","DPOY"],"draftYear":2017,"draftRound":1,"draftPick":23,"position":"Small Forward","active":true,"era":["2010s","2020s"],"nbaId":"1628384"},
-  {"id":"naz_reid","name":"Naz Reid","nationality":"American","league":"NBA","teams":["Minnesota Timberwolves"],"awards":["NBA All-Star"],"position":"Center","active":true,"era":["2020s"],"nbaId":"1629675"},
-  {"id":"tyrese_haliburton","name":"Tyrese Haliburton","nationality":"American","league":"NBA","teams":["Sacramento Kings","Indiana Pacers"],"awards":["NBA All-Star","Olympic Gold"],"draftYear":2020,"draftRound":1,"draftPick":12,"position":"Point Guard","active":true,"era":["2020s"],"nbaId":"1630169"},
-  {"id":"cade_cunningham","name":"Cade Cunningham","nationality":"American","league":"NBA","teams":["Detroit Pistons"],"awards":["NBA All-Star"],"draftYear":2021,"draftRound":1,"draftPick":1,"position":"Point Guard","active":true,"era":["2020s"],"nbaId":"1630595"},
-  {"id":"evan_mobley","name":"Evan Mobley","nationality":"American","league":"NBA","teams":["Cleveland Cavaliers"],"awards":["NBA All-Star","DPOY"],"draftYear":2021,"draftRound":1,"draftPick":3,"position":"Center","active":true,"era":["2020s"],"nbaId":"1630596"},
-  {"id":"josh_giddey","name":"Josh Giddey","nationality":"Australian","league":"NBA","teams":["Oklahoma City Thunder","Chicago Bulls"],"awards":["Olympic Gold"],"draftYear":2021,"draftRound":1,"draftPick":6,"position":"Point Guard","active":true,"era":["2020s"],"nbaId":"1630628"},
-  {"id":"jalen_brunson","name":"Jalen Brunson","nationality":"American","league":"NBA","teams":["Dallas Mavericks","New York Knicks"],"awards":["NBA All-Star","Olympic Gold"],"draftYear":2018,"draftRound":2,"position":"Point Guard","active":true,"era":["2020s"],"nbaId":"1628973"},
-  {"id":"anthony_edwards","name":"Anthony Edwards","nationality":"American","league":"NBA","teams":["Minnesota Timberwolves"],"awards":["NBA All-Star","Olympic Gold","Rookie of the Year"],"draftYear":2020,"draftRound":1,"draftPick":1,"position":"Shooting Guard","active":true,"era":["2020s"],"nbaId":"1630162"},
-  {"id":"chauncey_billups","name":"Chauncey Billups","nationality":"American","league":"NBA","teams":["Boston Celtics","Toronto Raptors","Denver Nuggets","Detroit Pistons","New York Knicks","Los Angeles Clippers","Minnesota Timberwolves"],"awards":["NBA Champion","Finals MVP","NBA All-Star"],"draftYear":1997,"draftRound":1,"draftPick":3,"position":"Point Guard","active":false,"era":["1990s","2000s","2010s"],"nbaId":"1714"},
-  {"id":"yao_ming","name":"Yao Ming","nationality":"Chinese","league":"NBA","teams":["Houston Rockets"],"awards":["NBA All-Star"],"draftYear":2002,"draftRound":1,"draftPick":1,"position":"Center","active":false,"era":["2000s"],"nbaId":"2397"},
-  {"id":"marcus_camby","name":"Marcus Camby","nationality":"American","league":"NBA","teams":["Toronto Raptors","New York Knicks","Denver Nuggets","Los Angeles Clippers","Portland Trail Blazers","Houston Rockets","Oklahoma City Thunder"],"awards":["DPOY","NBA All-Star"],"draftYear":1996,"draftRound":1,"draftPick":2,"position":"Center","active":false,"era":["1990s","2000s","2010s"],"nbaId":"1080"}
+  {
+    "id": "lebron_james",
+    "name": "LeBron James",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Cleveland Cavaliers",
+      "Miami Heat",
+      "Los Angeles Lakers"
+    ],
+    "awards": [
+      "NBA MVP",
+      "NBA Champion",
+      "Finals MVP",
+      "NBA All-Star",
+      "Olympic Gold",
+      "All-NBA First Team"
+    ],
+    "draftYear": 2003,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Small Forward",
+    "active": true,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "2544"
+  },
+  {
+    "id": "michael_jordan",
+    "name": "Michael Jordan",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Chicago Bulls",
+      "Washington Wizards"
+    ],
+    "awards": [
+      "NBA MVP",
+      "NBA Champion",
+      "Finals MVP",
+      "NBA All-Star",
+      "Olympic Gold",
+      "All-NBA First Team",
+      "DPOY",
+      "Rookie of the Year"
+    ],
+    "draftYear": 1984,
+    "draftRound": 1,
+    "draftPick": 3,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "1980s",
+      "1990s"
+    ],
+    "nbaId": "893"
+  },
+  {
+    "id": "kobe_bryant",
+    "name": "Kobe Bryant",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Los Angeles Lakers"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Finals MVP",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "NBA MVP",
+      "DPOY"
+    ],
+    "draftYear": 1996,
+    "draftRound": 1,
+    "draftPick": 13,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "977"
+  },
+  {
+    "id": "magic_johnson",
+    "name": "Magic Johnson",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Los Angeles Lakers"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Finals MVP",
+      "NBA MVP",
+      "NBA All-Star",
+      "Olympic Gold",
+      "All-NBA First Team"
+    ],
+    "draftYear": 1979,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "1980s",
+      "1990s"
+    ],
+    "nbaId": "1"
+  },
+  {
+    "id": "larry_bird",
+    "name": "Larry Bird",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Boston Celtics"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Finals MVP",
+      "NBA MVP",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Rookie of the Year"
+    ],
+    "draftYear": 1978,
+    "draftRound": 1,
+    "draftPick": 6,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "1980s",
+      "1990s"
+    ],
+    "nbaId": "1449"
+  },
+  {
+    "id": "shaquille_oneal",
+    "name": "Shaquille O'Neal",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Orlando Magic",
+      "Los Angeles Lakers",
+      "Miami Heat",
+      "Phoenix Suns",
+      "Cleveland Cavaliers",
+      "Boston Celtics"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Finals MVP",
+      "NBA MVP",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Rookie of the Year"
+    ],
+    "draftYear": 1992,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ],
+    "nbaId": "406"
+  },
+  {
+    "id": "tim_duncan",
+    "name": "Tim Duncan",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "San Antonio Spurs"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Finals MVP",
+      "NBA MVP",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Rookie of the Year",
+      "DPOY"
+    ],
+    "draftYear": 1997,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "1495"
+  },
+  {
+    "id": "kevin_durant",
+    "name": "Kevin Durant",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Oklahoma City Thunder",
+      "Golden State Warriors",
+      "Brooklyn Nets",
+      "Phoenix Suns",
+      "Houston Rockets"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Finals MVP",
+      "NBA MVP",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Rookie of the Year",
+      "Olympic Gold",
+      "NBA Scoring Title"
+    ],
+    "draftYear": 2007,
+    "draftRound": 1,
+    "draftPick": 2,
+    "position": "Small Forward",
+    "active": true,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "201142"
+  },
+  {
+    "id": "stephen_curry",
+    "name": "Stephen Curry",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Golden State Warriors"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Finals MVP",
+      "NBA MVP",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Olympic Gold",
+      "NBA Scoring Title"
+    ],
+    "draftYear": 2009,
+    "draftRound": 1,
+    "draftPick": 7,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "201939"
+  },
+  {
+    "id": "giannis_antetokounmpo",
+    "name": "Giannis Antetokounmpo",
+    "nationality": "Greek",
+    "league": "NBA",
+    "teams": [
+      "Milwaukee Bucks"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Finals MVP",
+      "NBA MVP",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "DPOY",
+      "Rookie of the Year"
+    ],
+    "draftYear": 2013,
+    "draftRound": 1,
+    "draftPick": 15,
+    "position": "Power Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203507"
+  },
+  {
+    "id": "dirk_nowitzki",
+    "name": "Dirk Nowitzki",
+    "nationality": "German",
+    "league": "NBA",
+    "teams": [
+      "Dallas Mavericks"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Finals MVP",
+      "NBA MVP",
+      "NBA All-Star",
+      "All-NBA First Team"
+    ],
+    "draftYear": 1998,
+    "draftRound": 1,
+    "draftPick": 9,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "1717"
+  },
+  {
+    "id": "dwyane_wade",
+    "name": "Dwyane Wade",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Miami Heat",
+      "Chicago Bulls",
+      "Cleveland Cavaliers"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Finals MVP",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Olympic Gold",
+      "Rookie of the Year"
+    ],
+    "draftYear": 2003,
+    "draftRound": 1,
+    "draftPick": 5,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "2548"
+  },
+  {
+    "id": "carmelo_anthony",
+    "name": "Carmelo Anthony",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Denver Nuggets",
+      "New York Knicks",
+      "Oklahoma City Thunder",
+      "Houston Rockets",
+      "Portland Trail Blazers",
+      "Los Angeles Lakers"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Olympic Gold",
+      "NBA Scoring Title"
+    ],
+    "draftYear": 2003,
+    "draftRound": 1,
+    "draftPick": 3,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "2546"
+  },
+  {
+    "id": "chris_paul",
+    "name": "Chris Paul",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "New Orleans Pelicans",
+      "Los Angeles Clippers",
+      "Houston Rockets",
+      "Oklahoma City Thunder",
+      "Phoenix Suns",
+      "San Antonio Spurs",
+      "Golden State Warriors"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Olympic Gold",
+      "DPOY",
+      "Rookie of the Year"
+    ],
+    "draftYear": 2005,
+    "draftRound": 1,
+    "draftPick": 4,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "101108"
+  },
+  {
+    "id": "russell_westbrook",
+    "name": "Russell Westbrook",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Oklahoma City Thunder",
+      "Houston Rockets",
+      "Washington Wizards",
+      "Los Angeles Lakers",
+      "Los Angeles Clippers",
+      "Utah Jazz",
+      "Denver Nuggets"
+    ],
+    "awards": [
+      "NBA MVP",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Olympic Gold",
+      "NBA Scoring Title",
+      "Rookie of the Year"
+    ],
+    "draftYear": 2008,
+    "draftRound": 1,
+    "draftPick": 4,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "201566"
+  },
+  {
+    "id": "james_harden",
+    "name": "James Harden",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Oklahoma City Thunder",
+      "Houston Rockets",
+      "Brooklyn Nets",
+      "Philadelphia 76ers",
+      "Los Angeles Clippers"
+    ],
+    "awards": [
+      "NBA MVP",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Olympic Gold",
+      "NBA Scoring Title",
+      "DPOY"
+    ],
+    "draftYear": 2009,
+    "draftRound": 1,
+    "draftPick": 3,
+    "position": "Shooting Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "201935"
+  },
+  {
+    "id": "kawhi_leonard",
+    "name": "Kawhi Leonard",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "San Antonio Spurs",
+      "Toronto Raptors",
+      "Los Angeles Clippers"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Finals MVP",
+      "DPOY",
+      "NBA All-Star",
+      "All-NBA First Team"
+    ],
+    "draftYear": 2011,
+    "draftRound": 1,
+    "draftPick": 15,
+    "position": "Small Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "202695"
+  },
+  {
+    "id": "kevin_garnett",
+    "name": "Kevin Garnett",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Minnesota Timberwolves",
+      "Boston Celtics",
+      "Brooklyn Nets"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA MVP",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "DPOY"
+    ],
+    "draftYear": 1995,
+    "draftRound": 1,
+    "draftPick": 5,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "708"
+  },
+  {
+    "id": "paul_pierce",
+    "name": "Paul Pierce",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Boston Celtics",
+      "Brooklyn Nets",
+      "Washington Wizards",
+      "Los Angeles Clippers"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Finals MVP",
+      "NBA All-Star",
+      "All-NBA First Team"
+    ],
+    "draftYear": 1998,
+    "draftRound": 1,
+    "draftPick": 10,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "1718"
+  },
+  {
+    "id": "ray_allen",
+    "name": "Ray Allen",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Milwaukee Bucks",
+      "Seattle SuperSonics",
+      "Boston Celtics",
+      "Miami Heat"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Olympic Gold"
+    ],
+    "draftYear": 1996,
+    "draftRound": 1,
+    "draftPick": 5,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "951"
+  },
+  {
+    "id": "allen_iverson",
+    "name": "Allen Iverson",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Philadelphia 76ers",
+      "Denver Nuggets",
+      "Detroit Pistons",
+      "Memphis Grizzlies"
+    ],
+    "awards": [
+      "NBA MVP",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Rookie of the Year",
+      "NBA Scoring Title"
+    ],
+    "draftYear": 1996,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "947"
+  },
+  {
+    "id": "charles_barkley",
+    "name": "Charles Barkley",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Philadelphia 76ers",
+      "Phoenix Suns",
+      "Houston Rockets"
+    ],
+    "awards": [
+      "NBA MVP",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Olympic Gold"
+    ],
+    "draftYear": 1984,
+    "draftRound": 1,
+    "draftPick": 5,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "1980s",
+      "1990s"
+    ],
+    "nbaId": "787"
+  },
+  {
+    "id": "hakeem_olajuwon",
+    "name": "Hakeem Olajuwon",
+    "nationality": "Nigerian",
+    "league": "NBA",
+    "teams": [
+      "Houston Rockets",
+      "Toronto Raptors"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Finals MVP",
+      "NBA MVP",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "DPOY",
+      "Rookie of the Year"
+    ],
+    "draftYear": 1984,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "nbaId": "165"
+  },
+  {
+    "id": "david_robinson",
+    "name": "David Robinson",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "San Antonio Spurs"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA MVP",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "DPOY",
+      "Rookie of the Year",
+      "Olympic Gold"
+    ],
+    "draftYear": 1987,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "nbaId": "7"
+  },
+  {
+    "id": "scottie_pippen",
+    "name": "Scottie Pippen",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Chicago Bulls",
+      "Houston Rockets",
+      "Portland Trail Blazers"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Olympic Gold"
+    ],
+    "draftYear": 1987,
+    "draftRound": 1,
+    "draftPick": 5,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "1980s",
+      "1990s"
+    ],
+    "nbaId": "979"
+  },
+  {
+    "id": "gary_payton",
+    "name": "Gary Payton",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Seattle SuperSonics",
+      "Milwaukee Bucks",
+      "Los Angeles Lakers",
+      "Boston Celtics",
+      "Miami Heat"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star",
+      "DPOY",
+      "Olympic Gold",
+      "All-NBA First Team"
+    ],
+    "draftYear": 1990,
+    "draftRound": 1,
+    "draftPick": 2,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ],
+    "nbaId": "940"
+  },
+  {
+    "id": "tracy_mcgrady",
+    "name": "Tracy McGrady",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Toronto Raptors",
+      "Orlando Magic",
+      "Houston Rockets",
+      "New York Knicks",
+      "Detroit Pistons"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "All-NBA First Team",
+      "NBA Scoring Title"
+    ],
+    "draftYear": 1997,
+    "draftRound": 1,
+    "draftPick": 9,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "1488245"
+  },
+  {
+    "id": "vince_carter",
+    "name": "Vince Carter",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Toronto Raptors",
+      "New Jersey Nets",
+      "Orlando Magic",
+      "Phoenix Suns",
+      "Dallas Mavericks",
+      "Memphis Grizzlies",
+      "Sacramento Kings",
+      "Atlanta Hawks"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Rookie of the Year",
+      "Olympic Gold"
+    ],
+    "draftYear": 1998,
+    "draftRound": 1,
+    "draftPick": 5,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s",
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "1713"
+  },
+  {
+    "id": "jason_kidd",
+    "name": "Jason Kidd",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Dallas Mavericks",
+      "Phoenix Suns",
+      "New Jersey Nets",
+      "New York Knicks"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Olympic Gold",
+      "Rookie of the Year",
+      "DPOY"
+    ],
+    "draftYear": 1994,
+    "draftRound": 1,
+    "draftPick": 2,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "703"
+  },
+  {
+    "id": "patrick_ewing",
+    "name": "Patrick Ewing",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "New York Knicks",
+      "Seattle SuperSonics",
+      "Orlando Magic"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Olympic Gold",
+      "Rookie of the Year"
+    ],
+    "draftYear": 1985,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "1980s",
+      "1990s"
+    ],
+    "nbaId": "181"
+  },
+  {
+    "id": "reggie_miller",
+    "name": "Reggie Miller",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Indiana Pacers"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Olympic Gold"
+    ],
+    "draftYear": 1987,
+    "draftRound": 1,
+    "draftPick": 11,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "nbaId": "948"
+  },
+  {
+    "id": "clyde_drexler",
+    "name": "Clyde Drexler",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Portland Trail Blazers",
+      "Houston Rockets"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Olympic Gold"
+    ],
+    "draftYear": 1983,
+    "draftRound": 1,
+    "draftPick": 14,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "1980s",
+      "1990s"
+    ],
+    "nbaId": "143"
+  },
+  {
+    "id": "isiah_thomas",
+    "name": "Isiah Thomas",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Detroit Pistons"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Finals MVP",
+      "NBA All-Star",
+      "All-NBA First Team"
+    ],
+    "draftYear": 1981,
+    "draftRound": 1,
+    "draftPick": 2,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "1980s",
+      "1990s"
+    ],
+    "nbaId": "252"
+  },
+  {
+    "id": "karl_malone",
+    "name": "Karl Malone",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Utah Jazz",
+      "Los Angeles Lakers"
+    ],
+    "awards": [
+      "NBA MVP",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Olympic Gold"
+    ],
+    "draftYear": 1985,
+    "draftRound": 1,
+    "draftPick": 13,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "nbaId": "244"
+  },
+  {
+    "id": "john_stockton",
+    "name": "John Stockton",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Utah Jazz"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Olympic Gold",
+      "All-NBA First Team"
+    ],
+    "draftYear": 1984,
+    "draftRound": 1,
+    "draftPick": 16,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "nbaId": "304"
+  },
+  {
+    "id": "nikola_jokic",
+    "name": "Nikola Jokic",
+    "nationality": "Serbian",
+    "league": "NBA",
+    "teams": [
+      "Denver Nuggets"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Finals MVP",
+      "NBA MVP",
+      "NBA All-Star",
+      "All-NBA First Team"
+    ],
+    "draftYear": 2014,
+    "draftRound": 2,
+    "draftPick": 41,
+    "position": "Center",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203999"
+  },
+  {
+    "id": "luka_doncic",
+    "name": "Luka Doncic",
+    "nationality": "Slovenian",
+    "league": "NBA",
+    "teams": [
+      "Dallas Mavericks"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Rookie of the Year",
+      "NBA MVP",
+      "Finals MVP",
+      "NBA Champion",
+      "EuroLeague Champion",
+      "EuroLeague MVP",
+      "Olympic Gold"
+    ],
+    "draftYear": 2018,
+    "draftRound": 1,
+    "draftPick": 3,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "1629029"
+  },
+  {
+    "id": "joel_embiid",
+    "name": "Joel Embiid",
+    "nationality": "Cameroonian",
+    "league": "NBA",
+    "teams": [
+      "Philadelphia 76ers"
+    ],
+    "awards": [
+      "NBA MVP",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "NBA Scoring Title",
+      "DPOY"
+    ],
+    "draftYear": 2014,
+    "draftRound": 1,
+    "draftPick": 3,
+    "position": "Center",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203954"
+  },
+  {
+    "id": "jayson_tatum",
+    "name": "Jayson Tatum",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Boston Celtics"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Finals MVP",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Olympic Gold"
+    ],
+    "draftYear": 2017,
+    "draftRound": 1,
+    "draftPick": 3,
+    "position": "Small Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "1628369"
+  },
+  {
+    "id": "devin_booker",
+    "name": "Devin Booker",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Phoenix Suns",
+      "Los Angeles Lakers"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Olympic Gold",
+      "All-NBA First Team"
+    ],
+    "draftYear": 2015,
+    "draftRound": 1,
+    "draftPick": 13,
+    "position": "Shooting Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "1626164"
+  },
+  {
+    "id": "damian_lillard",
+    "name": "Damian Lillard",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Portland Trail Blazers",
+      "Milwaukee Bucks"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Rookie of the Year",
+      "NBA Scoring Title",
+      "Olympic Gold"
+    ],
+    "draftYear": 2012,
+    "draftRound": 1,
+    "draftPick": 6,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203081"
+  },
+  {
+    "id": "jimmy_butler",
+    "name": "Jimmy Butler",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Chicago Bulls",
+      "Minnesota Timberwolves",
+      "Philadelphia 76ers",
+      "Miami Heat",
+      "Golden State Warriors"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Olympic Gold"
+    ],
+    "draftYear": 2011,
+    "draftRound": 1,
+    "draftPick": 30,
+    "position": "Small Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "202710"
+  },
+  {
+    "id": "kyrie_irving",
+    "name": "Kyrie Irving",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Cleveland Cavaliers",
+      "Boston Celtics",
+      "Brooklyn Nets",
+      "Dallas Mavericks"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Rookie of the Year",
+      "Olympic Gold"
+    ],
+    "draftYear": 2011,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "202681"
+  },
+  {
+    "id": "anthony_davis",
+    "name": "Anthony Davis",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "New Orleans Pelicans",
+      "Los Angeles Lakers"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Olympic Gold",
+      "DPOY"
+    ],
+    "draftYear": 2012,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Power Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203076"
+  },
+  {
+    "id": "rudy_gobert",
+    "name": "Rudy Gobert",
+    "nationality": "French",
+    "league": "NBA",
+    "teams": [
+      "Utah Jazz",
+      "Minnesota Timberwolves"
+    ],
+    "awards": [
+      "DPOY",
+      "NBA All-Star",
+      "Olympic Gold"
+    ],
+    "draftYear": 2013,
+    "draftRound": 1,
+    "draftPick": 27,
+    "position": "Center",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203497"
+  },
+  {
+    "id": "victor_wembanyama",
+    "name": "Victor Wembanyama",
+    "nationality": "French",
+    "league": "NBA",
+    "teams": [
+      "San Antonio Spurs"
+    ],
+    "awards": [
+      "Rookie of the Year",
+      "NBA All-Star"
+    ],
+    "draftYear": 2023,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Center",
+    "active": true,
+    "era": [
+      "2020s"
+    ],
+    "nbaId": "1641705"
+  },
+  {
+    "id": "evan_fournier",
+    "name": "Evan Fournier",
+    "nationality": "French",
+    "league": "NBA",
+    "teams": [
+      "Denver Nuggets",
+      "Orlando Magic",
+      "Boston Celtics",
+      "New York Knicks",
+      "Detroit Pistons"
+    ],
+    "awards": [
+      "Olympic Gold"
+    ],
+    "draftYear": 2012,
+    "draftRound": 2,
+    "draftPick": 20,
+    "position": "Shooting Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203095"
+  },
+  {
+    "id": "nicolas_batum",
+    "name": "Nicolas Batum",
+    "nationality": "French",
+    "league": "NBA",
+    "teams": [
+      "Portland Trail Blazers",
+      "Houston Rockets",
+      "Charlotte Hornets",
+      "Los Angeles Clippers",
+      "Philadelphia 76ers"
+    ],
+    "awards": [
+      "Olympic Gold"
+    ],
+    "draftYear": 2008,
+    "draftRound": 1,
+    "draftPick": 25,
+    "position": "Small Forward",
+    "active": true,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "201587"
+  },
+  {
+    "id": "frank_ntilikina",
+    "name": "Frank Ntilikina",
+    "nationality": "French",
+    "league": "NBA",
+    "teams": [
+      "New York Knicks",
+      "Dallas Mavericks"
+    ],
+    "awards": [
+      "Olympic Gold"
+    ],
+    "draftYear": 2017,
+    "draftRound": 1,
+    "draftPick": 8,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "1628972"
+  },
+  {
+    "id": "tony_parker",
+    "name": "Tony Parker",
+    "nationality": "French",
+    "league": "NBA",
+    "teams": [
+      "San Antonio Spurs",
+      "Charlotte Hornets"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Finals MVP",
+      "NBA All-Star",
+      "All-NBA First Team"
+    ],
+    "draftYear": 2001,
+    "draftRound": 1,
+    "draftPick": 28,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "2225"
+  },
+  {
+    "id": "boris_diaw",
+    "name": "Boris Diaw",
+    "nationality": "French",
+    "league": "NBA",
+    "teams": [
+      "Atlanta Hawks",
+      "Phoenix Suns",
+      "Charlotte Hornets",
+      "San Antonio Spurs",
+      "Utah Jazz"
+    ],
+    "awards": [
+      "NBA Champion"
+    ],
+    "draftYear": 2003,
+    "draftRound": 2,
+    "draftPick": 21,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "101122"
+  },
+  {
+    "id": "pau_gasol",
+    "name": "Pau Gasol",
+    "nationality": "Spanish",
+    "league": "NBA",
+    "teams": [
+      "Memphis Grizzlies",
+      "Los Angeles Lakers",
+      "Chicago Bulls",
+      "San Antonio Spurs",
+      "Milwaukee Bucks",
+      "Portland Trail Blazers"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Olympic Gold",
+      "EuroBasket Champion",
+      "EuroLeague Champion",
+      "FIBA World Cup Champion"
+    ],
+    "draftYear": 2001,
+    "draftRound": 1,
+    "draftPick": 3,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "2200"
+  },
+  {
+    "id": "marc_gasol",
+    "name": "Marc Gasol",
+    "nationality": "Spanish",
+    "league": "NBA",
+    "teams": [
+      "Memphis Grizzlies",
+      "Toronto Raptors",
+      "Los Angeles Lakers",
+      "Portland Trail Blazers"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star",
+      "DPOY",
+      "Olympic Gold",
+      "EuroBasket Champion",
+      "FIBA World Cup Champion"
+    ],
+    "draftYear": 2007,
+    "draftRound": 2,
+    "draftPick": 48,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "201188"
+  },
+  {
+    "id": "ricky_rubio",
+    "name": "Ricky Rubio",
+    "nationality": "Spanish",
+    "league": "NBA",
+    "teams": [
+      "Minnesota Timberwolves",
+      "Utah Jazz",
+      "Phoenix Suns",
+      "Cleveland Cavaliers",
+      "Brooklyn Nets"
+    ],
+    "awards": [
+      "Olympic Gold",
+      "EuroBasket Champion",
+      "FIBA World Cup Champion"
+    ],
+    "draftYear": 2009,
+    "draftRound": 1,
+    "draftPick": 5,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "201937"
+  },
+  {
+    "id": "juan_carlos_navarro",
+    "name": "Juan Carlos Navarro",
+    "nationality": "Spanish",
+    "league": "ACB",
+    "teams": [
+      "FC Barcelona",
+      "Memphis Grizzlies"
+    ],
+    "awards": [
+      "EuroLeague Champion",
+      "EuroLeague MVP",
+      "EuroBasket Champion",
+      "FIBA World Cup Champion",
+      "Olympic Gold"
+    ],
+    "draftYear": 2002,
+    "draftRound": 2,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "sergio_rodriguez",
+    "name": "Sergio Rodriguez",
+    "nationality": "Spanish",
+    "league": "ACB",
+    "teams": [
+      "FC Barcelona",
+      "Portland Trail Blazers",
+      "Sacramento Kings",
+      "New York Knicks",
+      "Philadelphia 76ers",
+      "Real Madrid Baloncesto",
+      "CSKA Moscow",
+      "Olimpia Milano",
+      "Anadolu Efes"
+    ],
+    "awards": [
+      "EuroLeague Champion",
+      "EuroLeague MVP",
+      "EuroBasket Champion",
+      "FIBA World Cup Champion"
+    ],
+    "draftYear": 2006,
+    "draftRound": 2,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "manu_ginobili",
+    "name": "Manu Ginobili",
+    "nationality": "Argentine",
+    "league": "NBA",
+    "teams": [
+      "San Antonio Spurs"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star",
+      "EuroLeague Champion",
+      "Olympic Gold",
+      "FIBA World Cup Champion"
+    ],
+    "draftYear": 1999,
+    "draftRound": 2,
+    "draftPick": 57,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "1938"
+  },
+  {
+    "id": "luis_scola",
+    "name": "Luis Scola",
+    "nationality": "Argentine",
+    "league": "NBA",
+    "teams": [
+      "Houston Rockets",
+      "Phoenix Suns",
+      "Toronto Raptors",
+      "Indiana Pacers",
+      "Brooklyn Nets",
+      "Fenerbahce Beko"
+    ],
+    "awards": [
+      "Olympic Gold"
+    ],
+    "draftYear": 2002,
+    "draftRound": 2,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "andres_nocioni",
+    "name": "Andres Nocioni",
+    "nationality": "Argentine",
+    "league": "NBA",
+    "teams": [
+      "Chicago Bulls",
+      "Sacramento Kings",
+      "Philadelphia 76ers",
+      "Real Madrid Baloncesto"
+    ],
+    "awards": [
+      "Olympic Gold",
+      "EuroLeague Champion"
+    ],
+    "draftYear": 2002,
+    "draftRound": 2,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "toni_kukoc",
+    "name": "Toni Kukoc",
+    "nationality": "Croatian",
+    "league": "NBA",
+    "teams": [
+      "Chicago Bulls",
+      "Philadelphia 76ers",
+      "Atlanta Hawks",
+      "Milwaukee Bucks",
+      "Cleveland Cavaliers"
+    ],
+    "awards": [
+      "NBA Champion",
+      "EuroLeague Champion",
+      "EuroLeague MVP"
+    ],
+    "draftYear": 1990,
+    "draftRound": 2,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ]
+  },
+  {
+    "id": "drazen_petrovic",
+    "name": "Drazen Petrovic",
+    "nationality": "Croatian",
+    "league": "NBA",
+    "teams": [
+      "Portland Trail Blazers",
+      "New Jersey Nets",
+      "Real Madrid Baloncesto"
+    ],
+    "awards": [
+      "EuroLeague Champion",
+      "EuroLeague MVP",
+      "Olympic Gold"
+    ],
+    "draftYear": 1989,
+    "draftRound": 3,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "1980s",
+      "1990s"
+    ]
+  },
+  {
+    "id": "vlade_divac",
+    "name": "Vlade Divac",
+    "nationality": "Serbian",
+    "league": "NBA",
+    "teams": [
+      "Los Angeles Lakers",
+      "Sacramento Kings",
+      "Charlotte Hornets",
+      "Los Angeles Clippers"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Olympic Gold"
+    ],
+    "draftYear": 1989,
+    "draftRound": 1,
+    "draftPick": 26,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ],
+    "nbaId": "248"
+  },
+  {
+    "id": "predrag_stojakovic",
+    "name": "Predrag Stojakovic",
+    "nationality": "Serbian",
+    "league": "NBA",
+    "teams": [
+      "Sacramento Kings",
+      "Indiana Pacers",
+      "New Orleans Pelicans",
+      "Toronto Raptors",
+      "Dallas Mavericks"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star",
+      "EuroLeague Champion",
+      "EuroLeague MVP"
+    ],
+    "draftYear": 1996,
+    "draftRound": 1,
+    "draftPick": 14,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "2018"
+  },
+  {
+    "id": "dejan_bodiroga",
+    "name": "Dejan Bodiroga",
+    "nationality": "Serbian",
+    "league": "EuroLeague",
+    "teams": [
+      "CSKA Moscow",
+      "FC Barcelona",
+      "Panathinaikos",
+      "Virtus Bologna"
+    ],
+    "awards": [
+      "EuroLeague Champion",
+      "EuroLeague MVP",
+      "EuroBasket Champion"
+    ],
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ]
+  },
+  {
+    "id": "milos_teodosic",
+    "name": "Milos Teodosic",
+    "nationality": "Serbian",
+    "league": "NBA",
+    "teams": [
+      "Los Angeles Clippers",
+      "Bologna",
+      "CSKA Moscow",
+      "Virtus Bologna"
+    ],
+    "awards": [
+      "EuroLeague Champion",
+      "EuroLeague MVP",
+      "EuroBasket Champion",
+      "FIBA World Cup Champion",
+      "Olympic Gold"
+    ],
+    "draftYear": 2009,
+    "draftRound": 2,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203511"
+  },
+  {
+    "id": "nikola_mirotic",
+    "name": "Nikola Mirotic",
+    "nationality": "Montenegrin",
+    "league": "NBA",
+    "teams": [
+      "Chicago Bulls",
+      "New Orleans Pelicans",
+      "Milwaukee Bucks",
+      "FC Barcelona",
+      "Real Madrid Baloncesto"
+    ],
+    "awards": [
+      "EuroLeague Champion",
+      "Olympic Gold"
+    ],
+    "draftYear": 2011,
+    "draftRound": 1,
+    "draftPick": 23,
+    "position": "Power Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "1626260"
+  },
+  {
+    "id": "bogdan_bogdanovic",
+    "name": "Bogdan Bogdanovic",
+    "nationality": "Serbian",
+    "league": "NBA",
+    "teams": [
+      "Sacramento Kings",
+      "Atlanta Hawks",
+      "Anadolu Efes",
+      "Fenerbahce Beko"
+    ],
+    "awards": [
+      "EuroLeague Champion",
+      "Olympic Gold",
+      "EuroBasket Champion"
+    ],
+    "draftYear": 2014,
+    "draftRound": 1,
+    "draftPick": 27,
+    "position": "Shooting Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203992"
+  },
+  {
+    "id": "arvydas_sabonis",
+    "name": "Arvydas Sabonis",
+    "nationality": "Lithuanian",
+    "league": "NBA",
+    "teams": [
+      "Portland Trail Blazers",
+      "Real Madrid Baloncesto",
+      "Zalgiris Kaunas",
+      "Atlanta Hawks"
+    ],
+    "awards": [
+      "EuroLeague Champion",
+      "EuroLeague MVP",
+      "Olympic Gold"
+    ],
+    "draftYear": 1986,
+    "draftRound": 1,
+    "draftPick": 24,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "1980s",
+      "1990s",
+      "2000s"
+    ],
+    "nbaId": "369"
+  },
+  {
+    "id": "sarunas_marciulionis",
+    "name": "Sarunas Marciulionis",
+    "nationality": "Lithuanian",
+    "league": "NBA",
+    "teams": [
+      "Golden State Warriors",
+      "Seattle SuperSonics",
+      "Denver Nuggets",
+      "Sacramento Kings"
+    ],
+    "awards": [
+      "Olympic Gold"
+    ],
+    "draftYear": 1987,
+    "draftRound": 6,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "1990s"
+    ]
+  },
+  {
+    "id": "jonas_valanciunas",
+    "name": "Jonas Valanciunas",
+    "nationality": "Lithuanian",
+    "league": "NBA",
+    "teams": [
+      "Toronto Raptors",
+      "Memphis Grizzlies",
+      "New Orleans Pelicans",
+      "Washington Wizards"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Olympic Gold"
+    ],
+    "draftYear": 2011,
+    "draftRound": 1,
+    "draftPick": 5,
+    "position": "Center",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203006"
+  },
+  {
+    "id": "vassilis_spanoulis",
+    "name": "Vassilis Spanoulis",
+    "nationality": "Greek",
+    "league": "EuroLeague",
+    "teams": [
+      "Olympiacos",
+      "Houston Rockets",
+      "Panathinaikos"
+    ],
+    "awards": [
+      "EuroLeague Champion",
+      "EuroLeague MVP",
+      "EuroBasket Champion"
+    ],
+    "draftYear": 2006,
+    "draftRound": 2,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "dimitris_diamantidis",
+    "name": "Dimitris Diamantidis",
+    "nationality": "Greek",
+    "league": "EuroLeague",
+    "teams": [
+      "Panathinaikos"
+    ],
+    "awards": [
+      "EuroLeague Champion",
+      "EuroLeague MVP"
+    ],
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "nikos_galis",
+    "name": "Nikos Galis",
+    "nationality": "Greek",
+    "league": "EuroLeague",
+    "teams": [
+      "Panathinaikos",
+      "PAOK"
+    ],
+    "awards": [
+      "EuroBasket Champion"
+    ],
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "1980s",
+      "1990s"
+    ]
+  },
+  {
+    "id": "hidayet_turkoglu",
+    "name": "Hidayet Turkoglu",
+    "nationality": "Turkish",
+    "league": "NBA",
+    "teams": [
+      "Sacramento Kings",
+      "San Antonio Spurs",
+      "Orlando Magic",
+      "Toronto Raptors",
+      "Phoenix Suns",
+      "Orlando Magic",
+      "Los Angeles Clippers"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "EuroBasket Champion"
+    ],
+    "draftYear": 1998,
+    "draftRound": 1,
+    "draftPick": 16,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "2052"
+  },
+  {
+    "id": "enes_kanter",
+    "name": "Enes Kanter Freedom",
+    "nationality": "Turkish",
+    "league": "NBA",
+    "teams": [
+      "Utah Jazz",
+      "Oklahoma City Thunder",
+      "New York Knicks",
+      "Boston Celtics",
+      "Portland Trail Blazers",
+      "Cleveland Cavaliers",
+      "Houston Rockets"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 2011,
+    "draftRound": 1,
+    "draftPick": 3,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "202683"
+  },
+  {
+    "id": "cedi_osman",
+    "name": "Cedi Osman",
+    "nationality": "Turkish",
+    "league": "NBA",
+    "teams": [
+      "Cleveland Cavaliers",
+      "San Antonio Spurs",
+      "Anadolu Efes"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "draftYear": 2015,
+    "draftRound": 2,
+    "position": "Small Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "1628440"
+  },
+  {
+    "id": "shane_larkin",
+    "name": "Shane Larkin",
+    "nationality": "American",
+    "league": "EuroLeague",
+    "teams": [
+      "Dallas Mavericks",
+      "Brooklyn Nets",
+      "Boston Celtics",
+      "Anadolu Efes",
+      "Fenerbahce Beko"
+    ],
+    "awards": [
+      "EuroLeague Champion",
+      "EuroLeague MVP"
+    ],
+    "draftYear": 2013,
+    "draftRound": 1,
+    "draftPick": 18,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203888"
+  },
+  {
+    "id": "ibrahim_kutluay",
+    "name": "Ibrahim Kutluay",
+    "nationality": "Turkish",
+    "league": "EuroLeague",
+    "teams": [
+      "Fenerbahce Beko",
+      "Panathinaikos",
+      "Real Madrid Baloncesto"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ]
+  },
+  {
+    "id": "theodoros_papaloukas",
+    "name": "Theodoros Papaloukas",
+    "nationality": "Greek",
+    "league": "EuroLeague",
+    "teams": [
+      "CSKA Moscow",
+      "Panathinaikos",
+      "Olympiacos"
+    ],
+    "awards": [
+      "EuroLeague Champion",
+      "EuroLeague MVP",
+      "EuroBasket Champion"
+    ],
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "zydrunas_ilgauskas",
+    "name": "Zydrunas Ilgauskas",
+    "nationality": "Lithuanian",
+    "league": "NBA",
+    "teams": [
+      "Cleveland Cavaliers",
+      "Washington Wizards",
+      "Miami Heat"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "NBA Champion"
+    ],
+    "draftYear": 1996,
+    "draftRound": 1,
+    "draftPick": 20,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "1714"
+  },
+  {
+    "id": "andrei_kirilenko",
+    "name": "Andrei Kirilenko",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Utah Jazz",
+      "Minnesota Timberwolves",
+      "Brooklyn Nets",
+      "CSKA Moscow"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "EuroLeague Champion",
+      "Olympic Gold"
+    ],
+    "draftYear": 1999,
+    "draftRound": 1,
+    "draftPick": 24,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "2218"
+  },
+  {
+    "id": "dikembe_mutombo",
+    "name": "Dikembe Mutombo",
+    "nationality": "Congolese",
+    "league": "NBA",
+    "teams": [
+      "Denver Nuggets",
+      "Atlanta Hawks",
+      "Philadelphia 76ers",
+      "New Jersey Nets",
+      "New York Knicks",
+      "Houston Rockets"
+    ],
+    "awards": [
+      "DPOY",
+      "NBA All-Star",
+      "All-NBA First Team"
+    ],
+    "draftYear": 1991,
+    "draftRound": 1,
+    "draftPick": 4,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ],
+    "nbaId": "398"
+  },
+  {
+    "id": "luol_deng",
+    "name": "Luol Deng",
+    "nationality": "South Sudanese",
+    "league": "NBA",
+    "teams": [
+      "Chicago Bulls",
+      "Cleveland Cavaliers",
+      "Miami Heat",
+      "Los Angeles Lakers",
+      "Minnesota Timberwolves"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "DPOY"
+    ],
+    "draftYear": 2004,
+    "draftRound": 1,
+    "draftPick": 7,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "2736"
+  },
+  {
+    "id": "serge_ibaka",
+    "name": "Serge Ibaka",
+    "nationality": "Congolese",
+    "league": "NBA",
+    "teams": [
+      "Oklahoma City Thunder",
+      "Orlando Magic",
+      "Toronto Raptors",
+      "Los Angeles Clippers",
+      "Milwaukee Bucks",
+      "Anadolu Efes"
+    ],
+    "awards": [
+      "NBA Champion",
+      "DPOY"
+    ],
+    "draftYear": 2008,
+    "draftRound": 2,
+    "draftPick": 24,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "201586"
+  },
+  {
+    "id": "pascal_siakam",
+    "name": "Pascal Siakam",
+    "nationality": "Cameroonian",
+    "league": "NBA",
+    "teams": [
+      "Toronto Raptors",
+      "Indiana Pacers"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Most Improved Player"
+    ],
+    "draftYear": 2016,
+    "draftRound": 1,
+    "draftPick": 27,
+    "position": "Power Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "1627783"
+  },
+  {
+    "id": "patty_mills",
+    "name": "Patty Mills",
+    "nationality": "Australian",
+    "league": "NBA",
+    "teams": [
+      "Portland Trail Blazers",
+      "San Antonio Spurs",
+      "Brooklyn Nets",
+      "Miami Heat"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Olympic Gold"
+    ],
+    "draftYear": 2009,
+    "draftRound": 2,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "201988"
+  },
+  {
+    "id": "andrew_bogut",
+    "name": "Andrew Bogut",
+    "nationality": "Australian",
+    "league": "NBA",
+    "teams": [
+      "Milwaukee Bucks",
+      "Golden State Warriors",
+      "Dallas Mavericks",
+      "Los Angeles Lakers",
+      "Cleveland Cavaliers",
+      "Sydney Kings"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Rookie of the Year"
+    ],
+    "draftYear": 2005,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "101106"
+  },
+  {
+    "id": "joe_ingles",
+    "name": "Joe Ingles",
+    "nationality": "Australian",
+    "league": "NBA",
+    "teams": [
+      "Utah Jazz",
+      "Portland Trail Blazers",
+      "Milwaukee Bucks",
+      "Orlando Magic",
+      "FC Barcelona"
+    ],
+    "awards": [
+      "Olympic Gold"
+    ],
+    "draftYear": 2014,
+    "draftRound": 2,
+    "position": "Small Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "204060"
+  },
+  {
+    "id": "ben_simmons",
+    "name": "Ben Simmons",
+    "nationality": "Australian",
+    "league": "NBA",
+    "teams": [
+      "Philadelphia 76ers",
+      "Brooklyn Nets"
+    ],
+    "awards": [
+      "Rookie of the Year",
+      "NBA All-Star",
+      "DPOY",
+      "Olympic Gold"
+    ],
+    "draftYear": 2016,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "1627732"
+  },
+  {
+    "id": "dante_exum",
+    "name": "Dante Exum",
+    "nationality": "Australian",
+    "league": "NBA",
+    "teams": [
+      "Utah Jazz",
+      "Cleveland Cavaliers",
+      "Houston Rockets",
+      "Dallas Mavericks",
+      "Golden State Warriors"
+    ],
+    "awards": [
+      "Olympic Gold"
+    ],
+    "draftYear": 2014,
+    "draftRound": 1,
+    "draftPick": 5,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203957"
+  },
+  {
+    "id": "shai_gilgeous_alexander",
+    "name": "Shai Gilgeous-Alexander",
+    "nationality": "Canadian",
+    "league": "NBA",
+    "teams": [
+      "Los Angeles Clippers",
+      "Oklahoma City Thunder"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "All-NBA First Team",
+      "NBA Scoring Title",
+      "NBA MVP",
+      "Olympic Gold"
+    ],
+    "draftYear": 2018,
+    "draftRound": 1,
+    "draftPick": 11,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "1628983"
+  },
+  {
+    "id": "andrew_wiggins",
+    "name": "Andrew Wiggins",
+    "nationality": "Canadian",
+    "league": "NBA",
+    "teams": [
+      "Minnesota Timberwolves",
+      "Golden State Warriors"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star",
+      "Rookie of the Year",
+      "Olympic Gold"
+    ],
+    "draftYear": 2014,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Small Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203952"
+  },
+  {
+    "id": "jamal_murray",
+    "name": "Jamal Murray",
+    "nationality": "Canadian",
+    "league": "NBA",
+    "teams": [
+      "Denver Nuggets"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Finals MVP",
+      "Olympic Gold"
+    ],
+    "draftYear": 2016,
+    "draftRound": 1,
+    "draftPick": 7,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "1627750"
+  },
+  {
+    "id": "rv_barrett",
+    "name": "RJ Barrett",
+    "nationality": "Canadian",
+    "league": "NBA",
+    "teams": [
+      "New York Knicks",
+      "Toronto Raptors"
+    ],
+    "awards": [
+      "Olympic Gold",
+      "NBA All-Star"
+    ],
+    "draftYear": 2019,
+    "draftRound": 1,
+    "draftPick": 3,
+    "position": "Small Forward",
+    "active": true,
+    "era": [
+      "2020s"
+    ],
+    "nbaId": "1629628"
+  },
+  {
+    "id": "kristaps_porzingis",
+    "name": "Kristaps Porzingis",
+    "nationality": "Latvian",
+    "league": "NBA",
+    "teams": [
+      "New York Knicks",
+      "Dallas Mavericks",
+      "Washington Wizards",
+      "Boston Celtics"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star"
+    ],
+    "draftYear": 2015,
+    "draftRound": 1,
+    "draftPick": 4,
+    "position": "Power Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "204001"
+  },
+  {
+    "id": "dario_saric",
+    "name": "Dario Saric",
+    "nationality": "Croatian",
+    "league": "NBA",
+    "teams": [
+      "Philadelphia 76ers",
+      "Minnesota Timberwolves",
+      "Phoenix Suns",
+      "Oklahoma City Thunder",
+      "Golden State Warriors",
+      "Anadolu Efes"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Rookie of the Year"
+    ],
+    "draftYear": 2014,
+    "draftRound": 1,
+    "draftPick": 12,
+    "position": "Power Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203967"
+  },
+  {
+    "id": "dennis_schroder",
+    "name": "Dennis Schroder",
+    "nationality": "German",
+    "league": "NBA",
+    "teams": [
+      "Atlanta Hawks",
+      "Oklahoma City Thunder",
+      "Los Angeles Lakers",
+      "Boston Celtics",
+      "Houston Rockets",
+      "Toronto Raptors",
+      "Brooklyn Nets",
+      "Golden State Warriors",
+      "Los Angeles Lakers"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Olympic Gold"
+    ],
+    "draftYear": 2013,
+    "draftRound": 2,
+    "draftPick": 17,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203471"
+  },
+  {
+    "id": "moritz_wagner",
+    "name": "Moritz Wagner",
+    "nationality": "German",
+    "league": "NBA",
+    "teams": [
+      "Los Angeles Lakers",
+      "Washington Wizards",
+      "Orlando Magic"
+    ],
+    "awards": [
+      "Olympic Gold"
+    ],
+    "draftYear": 2018,
+    "draftRound": 1,
+    "draftPick": 25,
+    "position": "Center",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "1628530"
+  },
+  {
+    "id": "alperen_sengun",
+    "name": "Alperen Sengun",
+    "nationality": "Turkish",
+    "league": "NBA",
+    "teams": [
+      "Houston Rockets"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 2021,
+    "draftRound": 1,
+    "draftPick": 16,
+    "position": "Center",
+    "active": true,
+    "era": [
+      "2020s"
+    ],
+    "nbaId": "1630578"
+  },
+  {
+    "id": "furkan_korkmaz",
+    "name": "Furkan Korkmaz",
+    "nationality": "Turkish",
+    "league": "NBA",
+    "teams": [
+      "Philadelphia 76ers",
+      "Anadolu Efes"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "draftYear": 2016,
+    "draftRound": 2,
+    "position": "Shooting Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "1627814"
+  },
+  {
+    "id": "mehmet_okur",
+    "name": "Mehmet Okur",
+    "nationality": "Turkish",
+    "league": "NBA",
+    "teams": [
+      "Detroit Pistons",
+      "Utah Jazz"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star"
+    ],
+    "draftYear": 2001,
+    "draftRound": 2,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "2406"
+  },
+  {
+    "id": "ersan_ilyasova",
+    "name": "Ersan Ilyasova",
+    "nationality": "Turkish",
+    "league": "NBA",
+    "teams": [
+      "Milwaukee Bucks",
+      "Detroit Pistons",
+      "Philadelphia 76ers",
+      "Oklahoma City Thunder",
+      "Atlanta Hawks",
+      "Indiana Pacers",
+      "Golden State Warriors",
+      "Anadolu Efes",
+      "Fenerbahce Beko"
+    ],
+    "awards": [
+      "NBA Champion"
+    ],
+    "draftYear": 2005,
+    "draftRound": 2,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "101133"
+  },
+  {
+    "id": "jan_vesely",
+    "name": "Jan Vesely",
+    "nationality": "Czech",
+    "league": "EuroLeague",
+    "teams": [
+      "Washington Wizards",
+      "Denver Nuggets",
+      "Fenerbahce Beko",
+      "Real Madrid Baloncesto"
+    ],
+    "awards": [
+      "EuroLeague Champion",
+      "EuroLeague MVP"
+    ],
+    "draftYear": 2011,
+    "draftRound": 1,
+    "draftPick": 6,
+    "position": "Power Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "202740"
+  },
+  {
+    "id": "tomas_satoransky",
+    "name": "Tomas Satoransky",
+    "nationality": "Czech",
+    "league": "NBA",
+    "teams": [
+      "Washington Wizards",
+      "Chicago Bulls",
+      "New Orleans Pelicans",
+      "FC Barcelona"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "draftYear": 2012,
+    "draftRound": 2,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "1627803"
+  },
+  {
+    "id": "nando_de_colo",
+    "name": "Nando De Colo",
+    "nationality": "French",
+    "league": "EuroLeague",
+    "teams": [
+      "San Antonio Spurs",
+      "Toronto Raptors",
+      "CSKA Moscow",
+      "Fenerbahce Beko",
+      "Anadolu Efes",
+      "Valencia Basket"
+    ],
+    "awards": [
+      "NBA Champion",
+      "EuroLeague Champion",
+      "EuroLeague MVP",
+      "Olympic Gold"
+    ],
+    "draftYear": 2009,
+    "draftRound": 2,
+    "position": "Shooting Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "rodrigue_beaubois",
+    "name": "Rodrigue Beaubois",
+    "nationality": "French",
+    "league": "EuroLeague",
+    "teams": [
+      "Dallas Mavericks",
+      "Fenerbahce Beko",
+      "CSKA Moscow"
+    ],
+    "awards": [],
+    "draftYear": 2009,
+    "draftRound": 1,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "lauri_markkanen",
+    "name": "Lauri Markkanen",
+    "nationality": "Finnish",
+    "league": "NBA",
+    "teams": [
+      "Chicago Bulls",
+      "Cleveland Cavaliers",
+      "Utah Jazz"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Most Improved Player"
+    ],
+    "draftYear": 2017,
+    "draftRound": 1,
+    "draftPick": 7,
+    "position": "Power Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "1628374"
+  },
+  {
+    "id": "kyle_lowry",
+    "name": "Kyle Lowry",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Memphis Grizzlies",
+      "Houston Rockets",
+      "Toronto Raptors",
+      "Miami Heat",
+      "Philadelphia 76ers"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star",
+      "Olympic Gold"
+    ],
+    "draftYear": 2006,
+    "draftRound": 1,
+    "draftPick": 24,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "200768"
+  },
+  {
+    "id": "pau_gasol_young",
+    "name": "Pau Gasol (Barcelona era)",
+    "nationality": "Spanish",
+    "league": "ACB",
+    "teams": [
+      "FC Barcelona"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "2000s"
+    ]
+  },
+  {
+    "id": "wayne_ellington",
+    "name": "Wayne Ellington",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Memphis Grizzlies",
+      "Cleveland Cavaliers",
+      "Minnesota Timberwolves",
+      "Miami Heat",
+      "Detroit Pistons",
+      "New York Knicks",
+      "Anadolu Efes"
+    ],
+    "awards": [],
+    "draftYear": 2009,
+    "draftRound": 2,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "201961"
+  },
+  {
+    "id": "scottie_barnes",
+    "name": "Scottie Barnes",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Toronto Raptors"
+    ],
+    "awards": [
+      "Rookie of the Year",
+      "NBA All-Star"
+    ],
+    "draftYear": 2021,
+    "draftRound": 1,
+    "draftPick": 4,
+    "position": "Power Forward",
+    "active": true,
+    "era": [
+      "2020s"
+    ],
+    "nbaId": "1630567"
+  },
+  {
+    "id": "nikola_vucevic",
+    "name": "Nikola Vucevic",
+    "nationality": "Montenegrin",
+    "league": "NBA",
+    "teams": [
+      "Philadelphia 76ers",
+      "Orlando Magic",
+      "Chicago Bulls",
+      "Los Angeles Clippers",
+      "Olimpia Milano"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 2011,
+    "draftRound": 1,
+    "draftPick": 16,
+    "position": "Center",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "202696"
+  },
+  {
+    "id": "marcus_smart",
+    "name": "Marcus Smart",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Boston Celtics",
+      "Memphis Grizzlies",
+      "Oklahoma City Thunder",
+      "Portland Trail Blazers",
+      "Sacramento Kings"
+    ],
+    "awards": [
+      "NBA Champion",
+      "DPOY"
+    ],
+    "draftYear": 2014,
+    "draftRound": 1,
+    "draftPick": 6,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203935"
+  },
+  {
+    "id": "draymond_green",
+    "name": "Draymond Green",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Golden State Warriors"
+    ],
+    "awards": [
+      "NBA Champion",
+      "DPOY",
+      "NBA All-Star",
+      "Olympic Gold"
+    ],
+    "draftYear": 2012,
+    "draftRound": 2,
+    "draftPick": 35,
+    "position": "Power Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203110"
+  },
+  {
+    "id": "klay_thompson",
+    "name": "Klay Thompson",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Golden State Warriors",
+      "Dallas Mavericks"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star",
+      "Olympic Gold"
+    ],
+    "draftYear": 2011,
+    "draftRound": 1,
+    "draftPick": 11,
+    "position": "Shooting Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "202691"
+  },
+  {
+    "id": "paul_george",
+    "name": "Paul George",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Indiana Pacers",
+      "Oklahoma City Thunder",
+      "Los Angeles Clippers",
+      "Philadelphia 76ers"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "All-NBA First Team",
+      "DPOY",
+      "Olympic Gold"
+    ],
+    "draftYear": 2010,
+    "draftRound": 1,
+    "draftPick": 10,
+    "position": "Small Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "202331"
+  },
+  {
+    "id": "blake_griffin",
+    "name": "Blake Griffin",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Los Angeles Clippers",
+      "Detroit Pistons",
+      "Brooklyn Nets",
+      "Boston Celtics"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Rookie of the Year",
+      "All-NBA First Team"
+    ],
+    "draftYear": 2009,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "201933"
+  },
+  {
+    "id": "dwight_howard",
+    "name": "Dwight Howard",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Orlando Magic",
+      "Los Angeles Lakers",
+      "Houston Rockets",
+      "Atlanta Hawks",
+      "Charlotte Hornets",
+      "Washington Wizards",
+      "Philadelphia 76ers",
+      "Los Angeles Lakers",
+      "Philadelphia 76ers"
+    ],
+    "awards": [
+      "DPOY",
+      "NBA All-Star",
+      "All-NBA First Team",
+      "Rookie of the Year",
+      "Olympic Gold"
+    ],
+    "draftYear": 2004,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "2730"
+  },
+  {
+    "id": "derrick_rose",
+    "name": "Derrick Rose",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Chicago Bulls",
+      "New York Knicks",
+      "Cleveland Cavaliers",
+      "Minnesota Timberwolves",
+      "Detroit Pistons",
+      "Memphis Grizzlies",
+      "Oklahoma City Thunder",
+      "New York Knicks"
+    ],
+    "awards": [
+      "NBA MVP",
+      "NBA All-Star",
+      "Rookie of the Year"
+    ],
+    "draftYear": 2008,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "201565"
+  },
+  {
+    "id": "steve_nash",
+    "name": "Steve Nash",
+    "nationality": "Canadian",
+    "league": "NBA",
+    "teams": [
+      "Phoenix Suns",
+      "Dallas Mavericks",
+      "Los Angeles Lakers"
+    ],
+    "awards": [
+      "NBA MVP",
+      "NBA All-Star",
+      "All-NBA First Team"
+    ],
+    "draftYear": 1996,
+    "draftRound": 1,
+    "draftPick": 15,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "959"
+  },
+  {
+    "id": "dennis_rodman",
+    "name": "Dennis Rodman",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Detroit Pistons",
+      "San Antonio Spurs",
+      "Chicago Bulls",
+      "Los Angeles Lakers",
+      "Dallas Mavericks"
+    ],
+    "awards": [
+      "NBA Champion",
+      "DPOY",
+      "All-NBA First Team"
+    ],
+    "draftYear": 1986,
+    "draftRound": 2,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "1980s",
+      "1990s"
+    ],
+    "nbaId": "1880"
+  },
+  {
+    "id": "john_wall",
+    "name": "John Wall",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Washington Wizards",
+      "Houston Rockets",
+      "Los Angeles Clippers"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Rookie of the Year",
+      "Olympic Gold"
+    ],
+    "draftYear": 2010,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "202322"
+  },
+  {
+    "id": "bradley_beal",
+    "name": "Bradley Beal",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Washington Wizards",
+      "Phoenix Suns"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Olympic Gold"
+    ],
+    "draftYear": 2012,
+    "draftRound": 1,
+    "draftPick": 3,
+    "position": "Shooting Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203078"
+  },
+  {
+    "id": "dominique_wilkins",
+    "name": "Dominique Wilkins",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Atlanta Hawks",
+      "Los Angeles Clippers",
+      "Boston Celtics",
+      "San Antonio Spurs",
+      "Orlando Magic"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "All-NBA First Team",
+      "NBA Scoring Title"
+    ],
+    "draftYear": 1982,
+    "draftRound": 1,
+    "draftPick": 3,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "1980s",
+      "1990s"
+    ],
+    "nbaId": "823"
+  },
+  {
+    "id": "leandro_barbosa",
+    "name": "Leandro Barbosa",
+    "nationality": "Brazilian",
+    "league": "NBA",
+    "teams": [
+      "Phoenix Suns",
+      "Toronto Raptors",
+      "Indiana Pacers",
+      "Golden State Warriors"
+    ],
+    "awards": [
+      "NBA Champion"
+    ],
+    "draftYear": 2003,
+    "draftRound": 1,
+    "draftPick": 28,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "2571"
+  },
+  {
+    "id": "anderson_varejao",
+    "name": "Anderson Varejao",
+    "nationality": "Brazilian",
+    "league": "NBA",
+    "teams": [
+      "Cleveland Cavaliers",
+      "Golden State Warriors",
+      "Portland Trail Blazers"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 2004,
+    "draftRound": 2,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "101141"
+  },
+  {
+    "id": "nenê",
+    "name": "Nene",
+    "nationality": "Brazilian",
+    "league": "NBA",
+    "teams": [
+      "New York Knicks",
+      "Denver Nuggets",
+      "Washington Wizards",
+      "Houston Rockets",
+      "Atlanta Hawks"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 2002,
+    "draftRound": 1,
+    "draftPick": 7,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "2748"
+  },
+  {
+    "id": "tiago_splitter",
+    "name": "Tiago Splitter",
+    "nationality": "Brazilian",
+    "league": "NBA",
+    "teams": [
+      "San Antonio Spurs",
+      "Atlanta Hawks",
+      "Sacramento Kings"
+    ],
+    "awards": [
+      "NBA Champion"
+    ],
+    "draftYear": 2007,
+    "draftRound": 1,
+    "draftPick": 28,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2010s"
+    ],
+    "nbaId": "201180"
+  },
+  {
+    "id": "igor_rakocevic",
+    "name": "Igor Rakocevic",
+    "nationality": "Serbian",
+    "league": "EuroLeague",
+    "teams": [
+      "CSKA Moscow",
+      "Maccabi Tel Aviv",
+      "Panathinaikos",
+      "Olympiacos"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "chuck_hayes",
+    "name": "Chuck Hayes",
+    "nationality": "American",
+    "league": "EuroLeague",
+    "teams": [
+      "Houston Rockets",
+      "Sacramento Kings",
+      "Toronto Raptors",
+      "Oklahoma City Thunder",
+      "CSKA Moscow"
+    ],
+    "awards": [],
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "mike_james",
+    "name": "Mike James",
+    "nationality": "American",
+    "league": "EuroLeague",
+    "teams": [
+      "Houston Rockets",
+      "Detroit Pistons",
+      "Toronto Raptors",
+      "New Jersey Nets",
+      "Minnesota Timberwolves",
+      "CSKA Moscow",
+      "AS Monaco Basketball",
+      "Brooklyn Nets"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "draftYear": 2001,
+    "draftRound": 2,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "1629003"
+  },
+  {
+    "id": "will_clyburn",
+    "name": "Will Clyburn",
+    "nationality": "American",
+    "league": "EuroLeague",
+    "teams": [
+      "Houston Rockets",
+      "Utah Jazz",
+      "CSKA Moscow",
+      "Anadolu Efes"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "position": "Small Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "alex_abrines",
+    "name": "Alex Abrines",
+    "nationality": "Spanish",
+    "league": "NBA",
+    "teams": [
+      "Oklahoma City Thunder",
+      "FC Barcelona"
+    ],
+    "awards": [
+      "EuroBasket Champion",
+      "FIBA World Cup Champion",
+      "Olympic Gold"
+    ],
+    "draftYear": 2013,
+    "draftRound": 2,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203518"
+  },
+  {
+    "id": "jorge_garbajosa",
+    "name": "Jorge Garbajosa",
+    "nationality": "Spanish",
+    "league": "NBA",
+    "teams": [
+      "Toronto Raptors",
+      "Baskonia",
+      "Real Madrid Baloncesto"
+    ],
+    "awards": [
+      "EuroBasket Champion",
+      "FIBA World Cup Champion",
+      "EuroLeague Champion"
+    ],
+    "draftYear": 2001,
+    "draftRound": 2,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "101170"
+  },
+  {
+    "id": "james_nunnally",
+    "name": "James Nunnally",
+    "nationality": "American",
+    "league": "EuroLeague",
+    "teams": [
+      "Barcelona",
+      "Baskonia",
+      "Zalgiris Kaunas",
+      "FC Barcelona"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "position": "Shooting Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "tornike_shengelia",
+    "name": "Tornike Shengelia",
+    "nationality": "Georgian",
+    "league": "EuroLeague",
+    "teams": [
+      "Brooklyn Nets",
+      "Sacramento Kings",
+      "Baskonia",
+      "CSKA Moscow",
+      "Virtus Bologna",
+      "Fenerbahce Beko"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "draftYear": 2012,
+    "draftRound": 2,
+    "position": "Small Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "olympiacos_spanoulis",
+    "name": "Kostas Papanikolaou",
+    "nationality": "Greek",
+    "league": "EuroLeague",
+    "teams": [
+      "Olympiacos",
+      "Houston Rockets",
+      "Panathinaikos",
+      "Bayern Munich Basketball"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "draftYear": 2012,
+    "draftRound": 2,
+    "position": "Small Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "kyle_hines",
+    "name": "Kyle Hines",
+    "nationality": "American",
+    "league": "EuroLeague",
+    "teams": [
+      "Houston Rockets",
+      "CSKA Moscow",
+      "Olimpia Milano",
+      "Barcelona"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "position": "Center",
+    "active": true,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "nate_james",
+    "name": "Mike Tobey",
+    "nationality": "American",
+    "league": "EuroLeague",
+    "teams": [
+      "Olympiacos",
+      "Valencia Basket",
+      "Zalgiris Kaunas",
+      "New Orleans Pelicans",
+      "Charlotte Hornets"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "position": "Center",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "tobias_harris",
+    "name": "Tobias Harris",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Milwaukee Bucks",
+      "Cleveland Cavaliers",
+      "Orlando Magic",
+      "Detroit Pistons",
+      "Los Angeles Clippers",
+      "Philadelphia 76ers",
+      "Boston Celtics",
+      "Los Angeles Lakers"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 2011,
+    "draftRound": 1,
+    "draftPick": 19,
+    "position": "Power Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "202699"
+  },
+  {
+    "id": "myles_turner",
+    "name": "Myles Turner",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Indiana Pacers"
+    ],
+    "awards": [
+      "DPOY",
+      "Olympic Gold"
+    ],
+    "draftYear": 2015,
+    "draftRound": 1,
+    "draftPick": 11,
+    "position": "Center",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "1626167"
+  },
+  {
+    "id": "trae_young",
+    "name": "Trae Young",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Atlanta Hawks"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "NBA Scoring Title"
+    ],
+    "draftYear": 2018,
+    "draftRound": 1,
+    "draftPick": 5,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2020s"
+    ],
+    "nbaId": "1629027"
+  },
+  {
+    "id": "zach_lavine",
+    "name": "Zach LaVine",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Minnesota Timberwolves",
+      "Chicago Bulls",
+      "Sacramento Kings"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Olympic Gold"
+    ],
+    "draftYear": 2014,
+    "draftRound": 1,
+    "draftPick": 13,
+    "position": "Shooting Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203897"
+  },
+  {
+    "id": "donovan_mitchell",
+    "name": "Donovan Mitchell",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Utah Jazz",
+      "Cleveland Cavaliers"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Olympic Gold"
+    ],
+    "draftYear": 2017,
+    "draftRound": 1,
+    "draftPick": 13,
+    "position": "Shooting Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "1628378"
+  },
+  {
+    "id": "bam_adebayo",
+    "name": "Bam Adebayo",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Miami Heat"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "DPOY",
+      "Olympic Gold"
+    ],
+    "draftYear": 2017,
+    "draftRound": 1,
+    "draftPick": 14,
+    "position": "Center",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "1628389"
+  },
+  {
+    "id": "julius_randle",
+    "name": "Julius Randle",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Los Angeles Lakers",
+      "New Orleans Pelicans",
+      "New York Knicks",
+      "Minnesota Timberwolves"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Most Improved Player"
+    ],
+    "draftYear": 2014,
+    "draftRound": 1,
+    "draftPick": 7,
+    "position": "Power Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203944"
+  },
+  {
+    "id": "jrue_holiday",
+    "name": "Jrue Holiday",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Philadelphia 76ers",
+      "New Orleans Pelicans",
+      "Milwaukee Bucks",
+      "Portland Trail Blazers",
+      "Boston Celtics"
+    ],
+    "awards": [
+      "NBA Champion",
+      "DPOY",
+      "Olympic Gold"
+    ],
+    "draftYear": 2009,
+    "draftRound": 1,
+    "draftPick": 17,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "201950"
+  },
+  {
+    "id": "khris_middleton",
+    "name": "Khris Middleton",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Detroit Pistons",
+      "Milwaukee Bucks"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star",
+      "Olympic Gold"
+    ],
+    "draftYear": 2012,
+    "draftRound": 2,
+    "position": "Small Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "203114"
+  },
+  {
+    "id": "brook_lopez",
+    "name": "Brook Lopez",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "New Jersey Nets",
+      "Brooklyn Nets",
+      "Los Angeles Lakers",
+      "Milwaukee Bucks"
+    ],
+    "awards": [
+      "NBA Champion",
+      "DPOY"
+    ],
+    "draftYear": 2008,
+    "draftRound": 1,
+    "draftPick": 10,
+    "position": "Center",
+    "active": true,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "201572"
+  },
+  {
+    "id": "fred_vanvleet",
+    "name": "Fred VanVleet",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Toronto Raptors",
+      "Houston Rockets"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star"
+    ],
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "2555504"
+  },
+  {
+    "id": "og_anunoby",
+    "name": "OG Anunoby",
+    "nationality": "Nigerian",
+    "league": "NBA",
+    "teams": [
+      "Toronto Raptors",
+      "New York Knicks"
+    ],
+    "awards": [
+      "NBA Champion",
+      "DPOY"
+    ],
+    "draftYear": 2017,
+    "draftRound": 1,
+    "draftPick": 23,
+    "position": "Small Forward",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ],
+    "nbaId": "1628384"
+  },
+  {
+    "id": "naz_reid",
+    "name": "Naz Reid",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Minnesota Timberwolves"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "position": "Center",
+    "active": true,
+    "era": [
+      "2020s"
+    ],
+    "nbaId": "1629675"
+  },
+  {
+    "id": "tyrese_haliburton",
+    "name": "Tyrese Haliburton",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Sacramento Kings",
+      "Indiana Pacers"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Olympic Gold"
+    ],
+    "draftYear": 2020,
+    "draftRound": 1,
+    "draftPick": 12,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2020s"
+    ],
+    "nbaId": "1630169"
+  },
+  {
+    "id": "cade_cunningham",
+    "name": "Cade Cunningham",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Detroit Pistons"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 2021,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2020s"
+    ],
+    "nbaId": "1630595"
+  },
+  {
+    "id": "evan_mobley",
+    "name": "Evan Mobley",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Cleveland Cavaliers"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "DPOY"
+    ],
+    "draftYear": 2021,
+    "draftRound": 1,
+    "draftPick": 3,
+    "position": "Center",
+    "active": true,
+    "era": [
+      "2020s"
+    ],
+    "nbaId": "1630596"
+  },
+  {
+    "id": "josh_giddey",
+    "name": "Josh Giddey",
+    "nationality": "Australian",
+    "league": "NBA",
+    "teams": [
+      "Oklahoma City Thunder",
+      "Chicago Bulls"
+    ],
+    "awards": [
+      "Olympic Gold"
+    ],
+    "draftYear": 2021,
+    "draftRound": 1,
+    "draftPick": 6,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2020s"
+    ],
+    "nbaId": "1630628"
+  },
+  {
+    "id": "jalen_brunson",
+    "name": "Jalen Brunson",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Dallas Mavericks",
+      "New York Knicks"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Olympic Gold"
+    ],
+    "draftYear": 2018,
+    "draftRound": 2,
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2020s"
+    ],
+    "nbaId": "1628973"
+  },
+  {
+    "id": "anthony_edwards",
+    "name": "Anthony Edwards",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Minnesota Timberwolves"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Olympic Gold",
+      "Rookie of the Year"
+    ],
+    "draftYear": 2020,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Shooting Guard",
+    "active": true,
+    "era": [
+      "2020s"
+    ],
+    "nbaId": "1630162"
+  },
+  {
+    "id": "chauncey_billups",
+    "name": "Chauncey Billups",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Boston Celtics",
+      "Toronto Raptors",
+      "Denver Nuggets",
+      "Detroit Pistons",
+      "New York Knicks",
+      "Los Angeles Clippers",
+      "Minnesota Timberwolves"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Finals MVP",
+      "NBA All-Star"
+    ],
+    "draftYear": 1997,
+    "draftRound": 1,
+    "draftPick": 3,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "1714"
+  },
+  {
+    "id": "yao_ming",
+    "name": "Yao Ming",
+    "nationality": "Chinese",
+    "league": "NBA",
+    "teams": [
+      "Houston Rockets"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 2002,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2000s"
+    ],
+    "nbaId": "2397"
+  },
+  {
+    "id": "marcus_camby",
+    "name": "Marcus Camby",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Toronto Raptors",
+      "New York Knicks",
+      "Denver Nuggets",
+      "Los Angeles Clippers",
+      "Portland Trail Blazers",
+      "Houston Rockets",
+      "Oklahoma City Thunder"
+    ],
+    "awards": [
+      "DPOY",
+      "NBA All-Star"
+    ],
+    "draftYear": 1996,
+    "draftRound": 1,
+    "draftPick": 2,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "1080"
+  },
+  {
+    "id": "anfernee_hardaway",
+    "name": "Anfernee Hardaway",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Orlando Magic",
+      "Phoenix Suns",
+      "New York Knicks"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1993,
+    "draftRound": 1,
+    "draftPick": 3,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ],
+    "nbaId": "875"
+  },
+  {
+    "id": "alonzo_mourning",
+    "name": "Alonzo Mourning",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Charlotte Hornets",
+      "Miami Heat",
+      "New Jersey Nets",
+      "Toronto Raptors"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "DPOY",
+      "NBA Champion"
+    ],
+    "draftYear": 1992,
+    "draftRound": 1,
+    "draftPick": 2,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ],
+    "nbaId": "749"
+  },
+  {
+    "id": "shawn_kemp",
+    "name": "Shawn Kemp",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Seattle SuperSonics",
+      "Cleveland Cavaliers",
+      "Portland Trail Blazers",
+      "Orlando Magic"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1989,
+    "draftRound": 1,
+    "draftPick": 17,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ],
+    "nbaId": "431"
+  },
+  {
+    "id": "glen_rice",
+    "name": "Glen Rice",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Miami Heat",
+      "Charlotte Hornets",
+      "Los Angeles Lakers",
+      "Houston Rockets",
+      "New York Knicks"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "NBA Champion"
+    ],
+    "draftYear": 1989,
+    "draftRound": 1,
+    "draftPick": 4,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ],
+    "nbaId": "351"
+  },
+  {
+    "id": "latrell_sprewell",
+    "name": "Latrell Sprewell",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Golden State Warriors",
+      "New York Knicks",
+      "Minnesota Timberwolves"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1992,
+    "draftRound": 1,
+    "draftPick": 24,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ],
+    "nbaId": "814"
+  },
+  {
+    "id": "mitch_richmond",
+    "name": "Mitch Richmond",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Golden State Warriors",
+      "Sacramento Kings",
+      "Washington Wizards",
+      "Los Angeles Lakers"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Rookie of the Year",
+      "NBA Champion"
+    ],
+    "draftYear": 1988,
+    "draftRound": 1,
+    "draftPick": 5,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ],
+    "nbaId": "306"
+  },
+  {
+    "id": "joe_dumars",
+    "name": "Joe Dumars",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Detroit Pistons"
+    ],
+    "awards": [
+      "NBA Champion",
+      "Finals MVP",
+      "NBA All-Star"
+    ],
+    "draftYear": 1985,
+    "draftRound": 1,
+    "draftPick": 18,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "1990s"
+    ],
+    "nbaId": "225"
+  },
+  {
+    "id": "horace_grant",
+    "name": "Horace Grant",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Chicago Bulls",
+      "Orlando Magic",
+      "Los Angeles Lakers",
+      "Seattle SuperSonics"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star"
+    ],
+    "draftYear": 1987,
+    "draftRound": 1,
+    "draftPick": 10,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ],
+    "nbaId": "269"
+  },
+  {
+    "id": "grant_hill",
+    "name": "Grant Hill",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Detroit Pistons",
+      "Orlando Magic",
+      "Phoenix Suns",
+      "Los Angeles Clippers"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Rookie of the Year"
+    ],
+    "draftYear": 1994,
+    "draftRound": 1,
+    "draftPick": 3,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "1742"
+  },
+  {
+    "id": "jerry_stackhouse",
+    "name": "Jerry Stackhouse",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Philadelphia 76ers",
+      "Detroit Pistons",
+      "Washington Wizards",
+      "Dallas Mavericks",
+      "Milwaukee Bucks",
+      "Miami Heat"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1995,
+    "draftRound": 1,
+    "draftPick": 3,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ],
+    "nbaId": "1889"
+  },
+  {
+    "id": "glen_robinson",
+    "name": "Glen Robinson",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Milwaukee Bucks",
+      "Atlanta Hawks",
+      "Philadelphia 76ers",
+      "San Antonio Spurs"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1994,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ],
+    "nbaId": "1929"
+  },
+  {
+    "id": "dan_majerle",
+    "name": "Dan Majerle",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Phoenix Suns",
+      "Cleveland Cavaliers",
+      "Miami Heat"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1988,
+    "draftRound": 1,
+    "draftPick": 14,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "1990s"
+    ],
+    "nbaId": "282"
+  },
+  {
+    "id": "sean_elliott",
+    "name": "Sean Elliott",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "San Antonio Spurs",
+      "Detroit Pistons"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star"
+    ],
+    "draftYear": 1989,
+    "draftRound": 1,
+    "draftPick": 3,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "1990s"
+    ],
+    "nbaId": "193"
+  },
+  {
+    "id": "detlef_schrempf",
+    "name": "Detlef Schrempf",
+    "nationality": "German",
+    "league": "NBA",
+    "teams": [
+      "Dallas Mavericks",
+      "Indiana Pacers",
+      "Seattle SuperSonics",
+      "Portland Trail Blazers"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Most Improved Player"
+    ],
+    "draftYear": 1985,
+    "draftRound": 1,
+    "draftPick": 8,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "1990s"
+    ],
+    "nbaId": "555"
+  },
+  {
+    "id": "dino_radja",
+    "name": "Dino Radja",
+    "nationality": "Croatian",
+    "league": "NBA",
+    "teams": [
+      "Boston Celtics"
+    ],
+    "awards": [],
+    "draftYear": 1989,
+    "draftRound": 2,
+    "draftPick": 40,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "1990s"
+    ]
+  },
+  {
+    "id": "ben_wallace",
+    "name": "Ben Wallace",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Orlando Magic",
+      "Washington Wizards",
+      "Detroit Pistons",
+      "Chicago Bulls",
+      "Cleveland Cavaliers",
+      "Phoenix Suns"
+    ],
+    "awards": [
+      "DPOY",
+      "NBA Champion",
+      "NBA All-Star"
+    ],
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2000s"
+    ],
+    "nbaId": "2216"
+  },
+  {
+    "id": "rasheed_wallace",
+    "name": "Rasheed Wallace",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Washington Wizards",
+      "Portland Trail Blazers",
+      "Atlanta Hawks",
+      "Detroit Pistons",
+      "Boston Celtics",
+      "New York Knicks"
+    ],
+    "awards": [
+      "NBA Champion",
+      "NBA All-Star"
+    ],
+    "draftYear": 1995,
+    "draftRound": 1,
+    "draftPick": 4,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "1890"
+  },
+  {
+    "id": "antawn_jamison",
+    "name": "Antawn Jamison",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Golden State Warriors",
+      "Dallas Mavericks",
+      "Washington Wizards",
+      "Cleveland Cavaliers",
+      "Los Angeles Lakers",
+      "Los Angeles Clippers"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1998,
+    "draftRound": 1,
+    "draftPick": 4,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "elton_brand",
+    "name": "Elton Brand",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Chicago Bulls",
+      "Los Angeles Clippers",
+      "Philadelphia 76ers",
+      "Dallas Mavericks",
+      "Atlanta Hawks"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1999,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "2000s"
+    ],
+    "nbaId": "1717"
+  },
+  {
+    "id": "mike_bibby",
+    "name": "Mike Bibby",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Sacramento Kings",
+      "Atlanta Hawks",
+      "Miami Heat",
+      "New York Knicks",
+      "Washington Wizards"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1998,
+    "draftRound": 1,
+    "draftPick": 2,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "2000s"
+    ],
+    "nbaId": "2406"
+  },
+  {
+    "id": "baron_davis",
+    "name": "Baron Davis",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Charlotte Hornets",
+      "Golden State Warriors",
+      "New Orleans Pelicans",
+      "Los Angeles Clippers",
+      "Cleveland Cavaliers",
+      "New York Knicks"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1999,
+    "draftRound": 1,
+    "draftPick": 3,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "2000s"
+    ],
+    "nbaId": "1718"
+  },
+  {
+    "id": "caron_butler",
+    "name": "Caron Butler",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Miami Heat",
+      "Los Angeles Lakers",
+      "Washington Wizards",
+      "Dallas Mavericks",
+      "Los Angeles Clippers",
+      "Memphis Grizzlies",
+      "Oklahoma City Thunder",
+      "Milwaukee Bucks"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 2002,
+    "draftRound": 1,
+    "draftPick": 10,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "2561"
+  },
+  {
+    "id": "emeka_okafor",
+    "name": "Emeka Okafor",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Charlotte Hornets",
+      "New Orleans Pelicans",
+      "Washington Wizards"
+    ],
+    "awards": [
+      "Rookie of the Year"
+    ],
+    "draftYear": 2004,
+    "draftRound": 1,
+    "draftPick": 2,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "2871"
+  },
+  {
+    "id": "amare_stoudemire",
+    "name": "Amar'e Stoudemire",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Phoenix Suns",
+      "New York Knicks",
+      "Dallas Mavericks",
+      "Miami Heat"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Rookie of the Year"
+    ],
+    "draftYear": 2002,
+    "draftRound": 1,
+    "draftPick": 9,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "andre_miller",
+    "name": "Andre Miller",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Cleveland Cavaliers",
+      "Los Angeles Clippers",
+      "Philadelphia 76ers",
+      "Denver Nuggets",
+      "Portland Trail Blazers",
+      "Sacramento Kings",
+      "Washington Wizards",
+      "Dallas Mavericks",
+      "San Antonio Spurs"
+    ],
+    "awards": [],
+    "draftYear": 1999,
+    "draftRound": 1,
+    "draftPick": 8,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "jason_terry",
+    "name": "Jason Terry",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Atlanta Hawks",
+      "Dallas Mavericks",
+      "Boston Celtics",
+      "Brooklyn Nets",
+      "Milwaukee Bucks",
+      "Houston Rockets",
+      "Sacramento Kings"
+    ],
+    "awards": [
+      "NBA Champion"
+    ],
+    "draftYear": 1999,
+    "draftRound": 1,
+    "draftPick": 10,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "joakim_noah",
+    "name": "Joakim Noah",
+    "nationality": "French",
+    "league": "NBA",
+    "teams": [
+      "Chicago Bulls",
+      "New York Knicks",
+      "Los Angeles Clippers",
+      "Memphis Grizzlies"
+    ],
+    "awards": [
+      "DPOY",
+      "NBA All-Star"
+    ],
+    "draftYear": 2007,
+    "draftRound": 1,
+    "draftPick": 9,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ],
+    "nbaId": "201149"
+  },
+  {
+    "id": "ian_mahinmi",
+    "name": "Ian Mahinmi",
+    "nationality": "French",
+    "league": "NBA",
+    "teams": [
+      "San Antonio Spurs",
+      "Dallas Mavericks",
+      "Indiana Pacers",
+      "Washington Wizards"
+    ],
+    "awards": [
+      "NBA Champion"
+    ],
+    "draftYear": 2005,
+    "draftRound": 2,
+    "draftPick": 28,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "jose_calderon",
+    "name": "Jose Calderon",
+    "nationality": "Spanish",
+    "league": "NBA",
+    "teams": [
+      "Toronto Raptors",
+      "Detroit Pistons",
+      "Dallas Mavericks",
+      "New York Knicks",
+      "Los Angeles Lakers",
+      "Cleveland Cavaliers",
+      "Atlanta Hawks"
+    ],
+    "awards": [],
+    "draftYear": 2003,
+    "draftRound": 2,
+    "draftPick": 37,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "nemanja_bjelica",
+    "name": "Nemanja Bjelica",
+    "nationality": "Serbian",
+    "league": "NBA",
+    "teams": [
+      "Minnesota Timberwolves",
+      "Sacramento Kings",
+      "Golden State Warriors",
+      "Miami Heat"
+    ],
+    "awards": [],
+    "draftYear": 2010,
+    "draftRound": 2,
+    "draftPick": 35,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "matthew_dellavedova",
+    "name": "Matthew Dellavedova",
+    "nationality": "Australian",
+    "league": "NBA",
+    "teams": [
+      "Cleveland Cavaliers",
+      "Milwaukee Bucks",
+      "Sacramento Kings"
+    ],
+    "awards": [
+      "NBA Champion"
+    ],
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "thon_maker",
+    "name": "Thon Maker",
+    "nationality": "Australian",
+    "league": "NBA",
+    "teams": [
+      "Milwaukee Bucks",
+      "Detroit Pistons",
+      "Cleveland Cavaliers",
+      "Portland Trail Blazers"
+    ],
+    "awards": [],
+    "draftYear": 2016,
+    "draftRound": 1,
+    "draftPick": 10,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "al_farouq_aminu",
+    "name": "Al-Farouq Aminu",
+    "nationality": "Nigerian",
+    "league": "NBA",
+    "teams": [
+      "Los Angeles Clippers",
+      "New Orleans Pelicans",
+      "Dallas Mavericks",
+      "Portland Trail Blazers",
+      "Orlando Magic"
+    ],
+    "awards": [],
+    "draftYear": 2010,
+    "draftRound": 1,
+    "draftPick": 8,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "goran_dragic",
+    "name": "Goran Dragic",
+    "nationality": "Slovenian",
+    "league": "NBA",
+    "teams": [
+      "San Antonio Spurs",
+      "Houston Rockets",
+      "Phoenix Suns",
+      "Miami Heat",
+      "Toronto Raptors",
+      "Brooklyn Nets",
+      "Chicago Bulls"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Most Improved Player"
+    ],
+    "draftYear": 2008,
+    "draftRound": 2,
+    "draftPick": 45,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "domantas_sabonis",
+    "name": "Domantas Sabonis",
+    "nationality": "Lithuanian",
+    "league": "NBA",
+    "teams": [
+      "Oklahoma City Thunder",
+      "Indiana Pacers",
+      "Sacramento Kings"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 2016,
+    "draftRound": 1,
+    "draftPick": 11,
+    "position": "Center",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "mario_hezonja",
+    "name": "Mario Hezonja",
+    "nationality": "Croatian",
+    "league": "NBA",
+    "teams": [
+      "Orlando Magic",
+      "New York Knicks",
+      "Portland Trail Blazers"
+    ],
+    "awards": [],
+    "draftYear": 2015,
+    "draftRound": 1,
+    "draftPick": 5,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "sergio_llull",
+    "name": "Sergio Llull",
+    "nationality": "Spanish",
+    "league": "EuroLeague",
+    "teams": [
+      "Real Madrid Baloncesto"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "position": "Point Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "rudy_fernandez",
+    "name": "Rudy Fernandez",
+    "nationality": "Spanish",
+    "league": "NBA",
+    "teams": [
+      "Portland Trail Blazers",
+      "Denver Nuggets",
+      "Dallas Mavericks"
+    ],
+    "awards": [],
+    "draftYear": 2007,
+    "draftRound": 2,
+    "draftPick": 24,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "kevin_punter",
+    "name": "Kevin Punter",
+    "nationality": "American",
+    "league": "EuroLeague",
+    "teams": [
+      "Partizan Belgrade"
+    ],
+    "awards": [],
+    "position": "Shooting Guard",
+    "active": true,
+    "era": [
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "andrei_vorontsevich",
+    "name": "Andrei Vorontsevich",
+    "nationality": "Russian",
+    "league": "EuroLeague",
+    "teams": [
+      "CSKA Moscow"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "2010s"
+    ]
+  },
+  {
+    "id": "de_andre_jordan",
+    "name": "DeAndre Jordan",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Los Angeles Clippers",
+      "Dallas Mavericks",
+      "New York Knicks",
+      "Brooklyn Nets",
+      "Philadelphia 76ers",
+      "Los Angeles Lakers"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 2008,
+    "draftRound": 2,
+    "draftPick": 35,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "tyson_chandler",
+    "name": "Tyson Chandler",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Chicago Bulls",
+      "New Orleans Pelicans",
+      "Oklahoma City Thunder",
+      "Dallas Mavericks",
+      "New York Knicks",
+      "Phoenix Suns",
+      "Los Angeles Lakers"
+    ],
+    "awards": [
+      "NBA Champion",
+      "DPOY"
+    ],
+    "draftYear": 2001,
+    "draftRound": 1,
+    "draftPick": 2,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "channing_frye",
+    "name": "Channing Frye",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "New York Knicks",
+      "Phoenix Suns",
+      "Portland Trail Blazers",
+      "Orlando Magic",
+      "Cleveland Cavaliers",
+      "Los Angeles Lakers"
+    ],
+    "awards": [
+      "NBA Champion"
+    ],
+    "draftYear": 2005,
+    "draftRound": 1,
+    "draftPick": 8,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "alex_mumbru",
+    "name": "Alex Mumbru",
+    "nationality": "Spanish",
+    "league": "EuroLeague",
+    "teams": [
+      "FC Barcelona"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "2000s"
+    ]
+  },
+  {
+    "id": "nikita_kurbanov",
+    "name": "Nikita Kurbanov",
+    "nationality": "Russian",
+    "league": "EuroLeague",
+    "teams": [
+      "CSKA Moscow"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "kostas_papanikolaou",
+    "name": "Kostas Papanikolaou",
+    "nationality": "Greek",
+    "league": "EuroLeague",
+    "teams": [
+      "Olympiacos",
+      "Panathinaikos"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "ioannis_bourousis",
+    "name": "Ioannis Bourousis",
+    "nationality": "Greek",
+    "league": "EuroLeague",
+    "teams": [
+      "Olympiacos",
+      "Real Madrid Baloncesto",
+      "Zalgiris Kaunas"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "felipe_reyes",
+    "name": "Felipe Reyes",
+    "nationality": "Spanish",
+    "league": "EuroLeague",
+    "teams": [
+      "Real Madrid Baloncesto"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "fragiskos_alvertis",
+    "name": "Fragiskos Alvertis",
+    "nationality": "Greek",
+    "league": "EuroLeague",
+    "teams": [
+      "Panathinaikos"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ]
+  },
+  {
+    "id": "dejan_tomasevic",
+    "name": "Dejan Tomasevic",
+    "nationality": "Serbian",
+    "league": "EuroLeague",
+    "teams": [
+      "Partizan Belgrade",
+      "Crvena Zvezda Belgrade"
+    ],
+    "awards": [],
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2000s"
+    ]
+  },
+  {
+    "id": "miroslav_raduljica",
+    "name": "Miroslav Raduljica",
+    "nationality": "Serbian",
+    "league": "EuroLeague",
+    "teams": [
+      "Crvena Zvezda Belgrade"
+    ],
+    "awards": [],
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2010s"
+    ]
+  },
+  {
+    "id": "david_blatt",
+    "name": "David Blatt",
+    "nationality": "Israeli",
+    "league": "EuroLeague",
+    "teams": [
+      "Maccabi Tel Aviv"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "1990s"
+    ]
+  },
+  {
+    "id": "anthony_parker",
+    "name": "Anthony Parker",
+    "nationality": "American",
+    "league": "EuroLeague",
+    "teams": [
+      "Maccabi Tel Aviv"
+    ],
+    "awards": [
+      "EuroLeague Champion",
+      "EuroLeague MVP"
+    ],
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "2000s"
+    ]
+  },
+  {
+    "id": "trajan_langdon",
+    "name": "Trajan Langdon",
+    "nationality": "American",
+    "league": "EuroLeague",
+    "teams": [
+      "CSKA Moscow"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "zaza_pachulia",
+    "name": "Zaza Pachulia",
+    "nationality": "Georgian",
+    "league": "NBA",
+    "teams": [
+      "Milwaukee Bucks",
+      "Atlanta Hawks",
+      "Dallas Mavericks",
+      "Golden State Warriors",
+      "Detroit Pistons"
+    ],
+    "awards": [
+      "NBA Champion"
+    ],
+    "draftYear": 2003,
+    "draftRound": 2,
+    "draftPick": 42,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "vin_baker",
+    "name": "Vin Baker",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Milwaukee Bucks",
+      "Seattle SuperSonics",
+      "Boston Celtics",
+      "New York Knicks",
+      "Houston Rockets"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1993,
+    "draftRound": 1,
+    "draftPick": 8,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ]
+  },
+  {
+    "id": "antonio_mcdyess",
+    "name": "Antonio McDyess",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Denver Nuggets",
+      "Phoenix Suns",
+      "New York Knicks",
+      "Detroit Pistons",
+      "San Antonio Spurs"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1995,
+    "draftRound": 1,
+    "draftPick": 2,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ]
+  },
+  {
+    "id": "larry_johnson",
+    "name": "Larry Johnson",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Charlotte Hornets",
+      "New York Knicks"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1991,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "1990s"
+    ],
+    "nbaId": "607"
+  },
+  {
+    "id": "muggsy_bogues",
+    "name": "Muggsy Bogues",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Washington Wizards",
+      "Charlotte Hornets",
+      "Golden State Warriors",
+      "Toronto Raptors"
+    ],
+    "awards": [],
+    "draftYear": 1987,
+    "draftRound": 1,
+    "draftPick": 12,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "1990s"
+    ]
+  },
+  {
+    "id": "rod_strickland",
+    "name": "Rod Strickland",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "New York Knicks",
+      "San Antonio Spurs",
+      "Portland Trail Blazers",
+      "Washington Wizards",
+      "Miami Heat"
+    ],
+    "awards": [],
+    "draftYear": 1988,
+    "draftRound": 1,
+    "draftPick": 19,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ]
+  },
+  {
+    "id": "derrick_coleman",
+    "name": "Derrick Coleman",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "New Jersey Nets",
+      "Philadelphia 76ers",
+      "Charlotte Hornets",
+      "Detroit Pistons"
+    ],
+    "awards": [
+      "Rookie of the Year"
+    ],
+    "draftYear": 1990,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "1990s"
+    ],
+    "nbaId": "524"
+  },
+  {
+    "id": "chris_webber",
+    "name": "Chris Webber",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Golden State Warriors",
+      "Washington Wizards",
+      "Sacramento Kings",
+      "Philadelphia 76ers",
+      "Detroit Pistons"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Rookie of the Year"
+    ],
+    "draftYear": 1993,
+    "draftRound": 1,
+    "draftPick": 1,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ],
+    "nbaId": "1080"
+  },
+  {
+    "id": "rik_smits",
+    "name": "Rik Smits",
+    "nationality": "Dutch",
+    "league": "NBA",
+    "teams": [
+      "Indiana Pacers"
+    ],
+    "awards": [],
+    "draftYear": 1988,
+    "draftRound": 1,
+    "draftPick": 2,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "1990s"
+    ]
+  },
+  {
+    "id": "mark_price",
+    "name": "Mark Price",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Cleveland Cavaliers",
+      "Washington Wizards",
+      "Golden State Warriors",
+      "Orlando Magic"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1986,
+    "draftRound": 2,
+    "draftPick": 25,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "1990s"
+    ]
+  },
+  {
+    "id": "terry_porter",
+    "name": "Terry Porter",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Portland Trail Blazers",
+      "Minnesota Timberwolves",
+      "Miami Heat",
+      "San Antonio Spurs"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1985,
+    "draftRound": 1,
+    "draftPick": 24,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "1990s"
+    ]
+  },
+  {
+    "id": "stacey_augmon",
+    "name": "Stacey Augmon",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Atlanta Hawks",
+      "Detroit Pistons",
+      "Portland Trail Blazers",
+      "New Orleans Pelicans"
+    ],
+    "awards": [],
+    "draftYear": 1991,
+    "draftRound": 1,
+    "draftPick": 9,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "1990s"
+    ]
+  },
+  {
+    "id": "hersey_hawkins",
+    "name": "Hersey Hawkins",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Philadelphia 76ers",
+      "Charlotte Hornets",
+      "Seattle SuperSonics",
+      "Chicago Bulls"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1988,
+    "draftRound": 1,
+    "draftPick": 6,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "1990s"
+    ]
+  },
+  {
+    "id": "nick_van_exel",
+    "name": "Nick Van Exel",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Los Angeles Lakers",
+      "Denver Nuggets",
+      "Dallas Mavericks",
+      "Portland Trail Blazers",
+      "Golden State Warriors",
+      "San Antonio Spurs"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1993,
+    "draftRound": 2,
+    "draftPick": 37,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ]
+  },
+  {
+    "id": "cedric_ceballos",
+    "name": "Cedric Ceballos",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Phoenix Suns",
+      "Los Angeles Lakers",
+      "Dallas Mavericks",
+      "Miami Heat"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1990,
+    "draftRound": 2,
+    "draftPick": 48,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "1990s"
+    ]
+  },
+  {
+    "id": "tom_gugliotta",
+    "name": "Tom Gugliotta",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Washington Wizards",
+      "Minnesota Timberwolves",
+      "Phoenix Suns",
+      "Utah Jazz"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1992,
+    "draftRound": 1,
+    "draftPick": 6,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "1990s"
+    ]
+  },
+  {
+    "id": "donyell_marshall",
+    "name": "Donyell Marshall",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Minnesota Timberwolves",
+      "Golden State Warriors",
+      "Utah Jazz",
+      "Chicago Bulls",
+      "Toronto Raptors",
+      "Cleveland Cavaliers",
+      "Seattle SuperSonics"
+    ],
+    "awards": [],
+    "draftYear": 1994,
+    "draftRound": 1,
+    "draftPick": 4,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ]
+  },
+  {
+    "id": "kendall_gill",
+    "name": "Kendall Gill",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Charlotte Hornets",
+      "Seattle SuperSonics",
+      "New Jersey Nets",
+      "Chicago Bulls",
+      "Miami Heat"
+    ],
+    "awards": [],
+    "draftYear": 1990,
+    "draftRound": 1,
+    "draftPick": 5,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "1990s"
+    ]
+  },
+  {
+    "id": "christian_laettner",
+    "name": "Christian Laettner",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Minnesota Timberwolves",
+      "Atlanta Hawks",
+      "Detroit Pistons",
+      "Dallas Mavericks",
+      "Washington Wizards",
+      "Miami Heat"
+    ],
+    "awards": [
+      "Olympic Gold"
+    ],
+    "draftYear": 1992,
+    "draftRound": 1,
+    "draftPick": 3,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ]
+  },
+  {
+    "id": "damon_stoudamire",
+    "name": "Damon Stoudamire",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Toronto Raptors",
+      "Portland Trail Blazers",
+      "Memphis Grizzlies",
+      "San Antonio Spurs",
+      "Phoenix Suns"
+    ],
+    "awards": [
+      "Rookie of the Year"
+    ],
+    "draftYear": 1995,
+    "draftRound": 1,
+    "draftPick": 7,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ]
+  },
+  {
+    "id": "brent_barry",
+    "name": "Brent Barry",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Los Angeles Clippers",
+      "Miami Heat",
+      "Chicago Bulls",
+      "Seattle SuperSonics",
+      "San Antonio Spurs",
+      "Houston Rockets"
+    ],
+    "awards": [
+      "NBA Champion"
+    ],
+    "draftYear": 1995,
+    "draftRound": 1,
+    "draftPick": 15,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ]
+  },
+  {
+    "id": "michael_finley",
+    "name": "Michael Finley",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Phoenix Suns",
+      "Dallas Mavericks",
+      "San Antonio Spurs"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "NBA Champion"
+    ],
+    "draftYear": 1995,
+    "draftRound": 1,
+    "draftPick": 21,
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ]
+  },
+  {
+    "id": "chris_mullin",
+    "name": "Chris Mullin",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Golden State Warriors",
+      "Indiana Pacers"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "Olympic Gold"
+    ],
+    "draftYear": 1985,
+    "draftRound": 1,
+    "draftPick": 7,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "1990s"
+    ]
+  },
+  {
+    "id": "avery_johnson",
+    "name": "Avery Johnson",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "San Antonio Spurs",
+      "Golden State Warriors",
+      "Houston Rockets",
+      "Seattle SuperSonics",
+      "Dallas Mavericks",
+      "Minnesota Timberwolves",
+      "Denver Nuggets"
+    ],
+    "awards": [
+      "NBA Champion"
+    ],
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ]
+  },
+  {
+    "id": "robert_horry",
+    "name": "Robert Horry",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Houston Rockets",
+      "Phoenix Suns",
+      "Los Angeles Lakers",
+      "San Antonio Spurs"
+    ],
+    "awards": [
+      "NBA Champion"
+    ],
+    "draftYear": 1992,
+    "draftRound": 1,
+    "draftPick": 11,
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ]
+  },
+  {
+    "id": "mario_chalmers",
+    "name": "Mario Chalmers",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Miami Heat",
+      "Memphis Grizzlies"
+    ],
+    "awards": [
+      "NBA Champion"
+    ],
+    "draftYear": 2008,
+    "draftRound": 2,
+    "draftPick": 34,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "udonis_haslem",
+    "name": "Udonis Haslem",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Miami Heat"
+    ],
+    "awards": [
+      "NBA Champion"
+    ],
+    "position": "Power Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "mike_miller",
+    "name": "Mike Miller",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Orlando Magic",
+      "Memphis Grizzlies",
+      "Washington Wizards",
+      "Miami Heat",
+      "Minnesota Timberwolves",
+      "Denver Nuggets",
+      "Cleveland Cavaliers"
+    ],
+    "awards": [
+      "NBA Champion"
+    ],
+    "draftYear": 2000,
+    "draftRound": 1,
+    "draftPick": 5,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "norris_cole",
+    "name": "Norris Cole",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Miami Heat",
+      "Oklahoma City Thunder",
+      "New Orleans Pelicans",
+      "Charlotte Hornets"
+    ],
+    "awards": [
+      "NBA Champion"
+    ],
+    "draftYear": 2011,
+    "draftRound": 1,
+    "draftPick": 28,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "2010s"
+    ]
+  },
+  {
+    "id": "kyle_korver",
+    "name": "Kyle Korver",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Philadelphia 76ers",
+      "Utah Jazz",
+      "Chicago Bulls",
+      "Atlanta Hawks",
+      "Cleveland Cavaliers",
+      "Minnesota Timberwolves",
+      "Milwaukee Bucks"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 2003,
+    "draftRound": 2,
+    "draftPick": 51,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "james_posey",
+    "name": "James Posey",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Denver Nuggets",
+      "Houston Rockets",
+      "Memphis Grizzlies",
+      "Miami Heat",
+      "New Orleans Pelicans",
+      "Boston Celtics",
+      "Charlotte Hornets"
+    ],
+    "awards": [
+      "NBA Champion"
+    ],
+    "draftYear": 1999,
+    "draftRound": 1,
+    "draftPick": 18,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "2000s"
+    ]
+  },
+  {
+    "id": "jalen_rose",
+    "name": "Jalen Rose",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Denver Nuggets",
+      "Indiana Pacers",
+      "Chicago Bulls",
+      "Toronto Raptors",
+      "New York Knicks",
+      "Phoenix Suns"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1994,
+    "draftRound": 2,
+    "draftPick": 13,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ]
+  },
+  {
+    "id": "corliss_williamson",
+    "name": "Corliss Williamson",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Sacramento Kings",
+      "Detroit Pistons",
+      "Toronto Raptors"
+    ],
+    "awards": [],
+    "draftYear": 1995,
+    "draftRound": 1,
+    "draftPick": 13,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ]
+  },
+  {
+    "id": "predrag_danilovic",
+    "name": "Predrag Danilovic",
+    "nationality": "Serbian",
+    "league": "EuroLeague",
+    "teams": [
+      "Partizan Belgrade"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "position": "Shooting Guard",
+    "active": false,
+    "era": [
+      "1990s"
+    ]
+  },
+  {
+    "id": "sasa_djordjevic",
+    "name": "Saša Đorđević",
+    "nationality": "Serbian",
+    "league": "EuroLeague",
+    "teams": [
+      "Partizan Belgrade",
+      "CSKA Moscow"
+    ],
+    "awards": [
+      "EuroLeague Champion"
+    ],
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "1990s",
+      "2000s"
+    ]
+  },
+  {
+    "id": "bojan_bogdanovic",
+    "name": "Bojan Bogdanovic",
+    "nationality": "Croatian",
+    "league": "NBA",
+    "teams": [
+      "Brooklyn Nets",
+      "Indiana Pacers",
+      "Utah Jazz",
+      "Detroit Pistons"
+    ],
+    "awards": [],
+    "draftYear": 2011,
+    "draftRound": 2,
+    "draftPick": 31,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "2010s",
+      "2020s"
+    ]
+  },
+  {
+    "id": "rashard_lewis",
+    "name": "Rashard Lewis",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Seattle SuperSonics",
+      "Orlando Magic",
+      "Washington Wizards",
+      "Miami Heat"
+    ],
+    "awards": [
+      "NBA All-Star",
+      "NBA Champion"
+    ],
+    "draftYear": 1998,
+    "draftRound": 2,
+    "draftPick": 32,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  },
+  {
+    "id": "carlos_arroyo",
+    "name": "Carlos Arroyo",
+    "nationality": "Puerto Rican",
+    "league": "NBA",
+    "teams": [
+      "Utah Jazz",
+      "Detroit Pistons",
+      "Orlando Magic",
+      "Miami Heat"
+    ],
+    "awards": [
+      "NBA Champion"
+    ],
+    "draftYear": 2001,
+    "draftRound": 2,
+    "draftPick": 41,
+    "position": "Point Guard",
+    "active": false,
+    "era": [
+      "2000s"
+    ]
+  },
+  {
+    "id": "wally_szczerbiak",
+    "name": "Wally Szczerbiak",
+    "nationality": "American",
+    "league": "NBA",
+    "teams": [
+      "Minnesota Timberwolves",
+      "Boston Celtics",
+      "Cleveland Cavaliers",
+      "Seattle SuperSonics"
+    ],
+    "awards": [
+      "NBA All-Star"
+    ],
+    "draftYear": 1999,
+    "draftRound": 1,
+    "draftPick": 6,
+    "position": "Small Forward",
+    "active": false,
+    "era": [
+      "2000s"
+    ]
+  },
+  {
+    "id": "marcin_gortat",
+    "name": "Marcin Gortat",
+    "nationality": "Polish",
+    "league": "NBA",
+    "teams": [
+      "Orlando Magic",
+      "Phoenix Suns",
+      "Washington Wizards",
+      "Los Angeles Clippers"
+    ],
+    "awards": [],
+    "draftYear": 2005,
+    "draftRound": 2,
+    "draftPick": 57,
+    "position": "Center",
+    "active": false,
+    "era": [
+      "2000s",
+      "2010s"
+    ]
+  }
 ]

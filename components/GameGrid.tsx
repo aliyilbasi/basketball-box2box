@@ -49,7 +49,7 @@ const CRITERION_LOGOS: Record<string, string> = {
   team_barcelona:    'https://a.espncdn.com/i/teamlogos/soccer/500/83.png',
   team_panathinaikos: 'https://a.espncdn.com/i/teamlogos/soccer/500/188.png',
   team_olympiacos:   'https://a.espncdn.com/i/teamlogos/soccer/500/194.png',
-  team_fenerbahce:   'https://a.espncdn.com/i/teamlogos/soccer/500/474.png',
+  team_fenerbahce:   'https://a.espncdn.com/i/teamlogos/evl/500/fenerbahce-beko-istanbul.png',
   team_anadolu_efes: 'https://a.espncdn.com/i/teamlogos/evl/500/anadolu-efes-istanbul.png',
   team_efes:         'https://a.espncdn.com/i/teamlogos/evl/500/anadolu-efes-istanbul.png',
   team_cska:         'https://a.espncdn.com/i/teamlogos/evl/500/cska-moscow.png',

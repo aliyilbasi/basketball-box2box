@@ -36,5 +36,6 @@
   "lineComplete": "¡Línea completada!",
   "lineCompleteMsg": "Completaste una fila, columna o diagonal. ¿Terminar aquí o seguir llenando toda la cuadrícula?",
   "finishGame": "Terminar",
-  "keepPlaying": "Seguir jugando"
+  "keepPlaying": "Seguir jugando",
+  "playAgain": "Jugar de nuevo"
 }

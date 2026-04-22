@@ -10,6 +10,7 @@ interface ResultsScreenProps {
   cells: GridCell[][];
   puzzle: DailyPuzzle;
   onClose: () => void;
+  onNewGame: () => void;
 }
 
 function buildEmojiGrid(cells: GridCell[][]): string {
@@ -22,7 +23,7 @@ function countCorrect(cells: GridCell[][]): number {
   return cells.flat().filter(c => c.correct).length;
 }
 
-export default function ResultsScreen({ score, cells, puzzle, onClose }: ResultsScreenProps) {
+export default function ResultsScreen({ score, cells, puzzle, onClose, onNewGame }: ResultsScreenProps) {
   const { t } = useI18n();
   const correctCount = countCorrect(cells);
   const isImmaculate = correctCount === 9;
@@ -124,13 +125,14 @@ export default function ResultsScreen({ score, cells, puzzle, onClose }: Results
           ))}
         </div>
 
-        {/* Come back tomorrow */}
-        <p className="text-gray-400 text-sm">
-          {t('comeBack')}
-        </p>
-
         {/* Actions */}
         <div className="flex flex-col gap-3 w-full">
+          <button
+            onClick={onNewGame}
+            className="w-full bg-orange-500 hover:bg-orange-400 active:scale-95 text-white font-bold py-3 rounded-xl transition-all shadow-lg shadow-orange-500/20"
+          >
+            {t('playAgain')}
+          </button>
           <ShareButton text={shareText} />
           <button
             onClick={onClose}

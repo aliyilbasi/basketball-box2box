@@ -91,6 +91,27 @@ function shuffle<T>(arr: T[], rng: () => number): T[] {
   return a;
 }
 
+export function getRandomPuzzle(): DailyPuzzle {
+  const players = playersData as Player[];
+  const baseSeed = Math.floor(Math.random() * 2147483647);
+
+  let offset = 0;
+  while (offset < 200) {
+    const rng = mulberry32(baseSeed + offset);
+    const shuffled = shuffle(CRITERIA_POOL, rng);
+    const rowCriteria = shuffled.slice(0, 3);
+    const colCriteria = shuffled.slice(3, 6);
+    const rowIds = new Set(rowCriteria.map(c => c.id));
+    const colIds = new Set(colCriteria.map(c => c.id));
+    const overlap = [...rowIds].some(id => colIds.has(id));
+    if (!overlap && validateGrid(players, rowCriteria, colCriteria)) {
+      return { date: new Date().toISOString().slice(0, 10).replace(/-/g, ''), rowCriteria, colCriteria };
+    }
+    offset++;
+  }
+  return getDailyPuzzle();
+}
+
 export function getDailyPuzzle(dateStr?: string): DailyPuzzle {
   const today = dateStr || new Date().toISOString().slice(0, 10).replace(/-/g, '');
   const players = playersData as Player[];

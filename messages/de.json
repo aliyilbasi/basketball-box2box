@@ -36,5 +36,6 @@
   "lineComplete": "Reihe abgeschlossen!",
   "lineCompleteMsg": "Du hast eine Zeile, Spalte oder Diagonale vervollständigt. Hier beenden oder das gesamte Raster ausfüllen?",
   "finishGame": "Spiel beenden",
-  "keepPlaying": "Weiterspielen"
+  "keepPlaying": "Weiterspielen",
+  "playAgain": "Nochmal spielen"
 }

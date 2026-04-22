@@ -36,5 +36,6 @@
   "lineComplete": "Line Complete!",
   "lineCompleteMsg": "You completed a row, column, or diagonal. Finish here or keep going for the full grid?",
   "finishGame": "Finish Game",
-  "keepPlaying": "Keep Playing"
+  "keepPlaying": "Keep Playing",
+  "playAgain": "Play Again"
 }

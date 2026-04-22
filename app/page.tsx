@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useEffect, useMemo, useRef } from 'react';
 import { GridCell, DailyPuzzle, Player } from '@/types/game';
-import { getDailyPuzzle } from '@/lib/dailyPuzzle';
+import { getRandomPuzzle } from '@/lib/dailyPuzzle';
 import { satisfiesCriterion, getValidPlayers, getRarityScore } from '@/lib/gameLogic';
 import { getAllPlayers, getPlayerImageUrl } from '@/lib/playerUtils';
 import { useI18n } from '@/lib/i18n';
@@ -50,8 +50,21 @@ export default function Home() {
     setLineCompletePrompt(false);
   }, []);
 
+  const handleNewGame = useCallback(() => {
+    setPuzzle(getRandomPuzzle());
+    setCells(makeEmptyCells());
+    setScore(0);
+    setGameOver(false);
+    setStarted(false);
+    setSelectedCell(null);
+    setCellFeedback(undefined);
+    setHintRevealedCells(new Set());
+    setLineCompletePrompt(false);
+    announcedLinesRef.current = new Set();
+  }, []);
+
   useEffect(() => {
-    setPuzzle(getDailyPuzzle());
+    setPuzzle(getRandomPuzzle());
   }, []);
 
   useEffect(() => {
@@ -293,6 +306,7 @@ export default function Home() {
           cells={cells}
           puzzle={puzzle}
           onClose={() => setGameOver(false)}
+        onNewGame={handleNewGame}
         />
       )}
     </div>

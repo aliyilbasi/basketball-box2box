@@ -128,6 +128,7 @@ const CRITERION_LOGOS: Record<string, string> = {
 
   // Awards
   award_allstar:     'https://a.espncdn.com/i/teamlogos/nba/500/allstar.png',
+  award_olympic:     'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Olympic_rings_without_rims.svg/480px-Olympic_rings_without_rims.svg.png',
   // Eras
   era_2000s:         'https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Nba_logo.svg/240px-Nba_logo.svg.png',
 };

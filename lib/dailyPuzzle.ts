@@ -79,7 +79,6 @@ const CRITERIA_POOL: Criterion[] = [
   { id: 'era_90s', type: 'era', label: '1990s Player', value: '1990s' },
   { id: 'era_2000s', type: 'era', label: '2000s Player', value: '2000s' },
   { id: 'era_2010s', type: 'era', label: '2010s Player', value: '2010s' },
-  { id: 'era_active', type: 'era', label: 'Active Player', value: '2020s' },
 ];
 
 function shuffle<T>(arr: T[], rng: () => number): T[] {

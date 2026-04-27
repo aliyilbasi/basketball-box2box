@@ -1,7 +1,7 @@
 import { Player } from '@/types/game';
 import playersData from '@/data/players.json';
 
-const players = playersData as Player[];
+const players = Object.values(playersData) as Player[];
 
 export function getAllPlayers(): Player[] {
   return players;

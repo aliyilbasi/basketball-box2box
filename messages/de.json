@@ -37,5 +37,10 @@
   "lineCompleteMsg": "Du hast eine Zeile, Spalte oder Diagonale vervollständigt. Hier beenden oder das gesamte Raster ausfüllen?",
   "finishGame": "Spiel beenden",
   "keepPlaying": "Weiterspielen",
-  "playAgain": "Nochmal spielen"
+  "playAgain": "Nochmal spielen",
+  "pauseTimer": "Timer pausieren",
+  "resumeTimer": "Timer fortsetzen",
+  "hideTimer": "Timer verbergen",
+  "showTimer": "Timer anzeigen",
+  "timerPaused": "Pausiert"
 }

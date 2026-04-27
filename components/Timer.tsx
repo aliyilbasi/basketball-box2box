@@ -6,68 +6,52 @@ import { useI18n } from '@/lib/i18n';
 interface TimerProps {
   timeLeft: number;
   onExpire: () => void;
+  paused?: boolean;
 }
 
-export default function Timer({ timeLeft: initialTimeLeft, onExpire }: TimerProps) {
+export default function Timer({ timeLeft: initialTimeLeft, onExpire, paused = false }: TimerProps) {
   const { t } = useI18n();
   const [timeLeft, setTimeLeft] = useState(initialTimeLeft);
   const onExpireRef = useRef(onExpire);
   const expiredRef = useRef(false);
 
-  // Keep ref current so the interval closure always calls the latest onExpire
-  useEffect(() => {
-    onExpireRef.current = onExpire;
-  }, [onExpire]);
+  useEffect(() => { onExpireRef.current = onExpire; }, [onExpire]);
 
-  // Reset internal timer when the prop changes (e.g. new game starts)
   useEffect(() => {
     expiredRef.current = false;
-    setTimeLeft(initialTimeLeft);
+    const id = window.setTimeout(() => setTimeLeft(initialTimeLeft), 0);
+    return () => window.clearTimeout(id);
   }, [initialTimeLeft]);
 
   useEffect(() => {
+    if (paused) return;
     if (timeLeft <= 0) {
-      if (!expiredRef.current) {
-        expiredRef.current = true;
-        onExpireRef.current();
-      }
+      if (!expiredRef.current) { expiredRef.current = true; onExpireRef.current(); }
       return;
     }
-
     const id = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev <= 1) {
-          clearInterval(id);
-          return 0;
-        }
-        return prev - 1;
-      });
+      setTimeLeft(prev => { if (prev <= 1) { clearInterval(id); return 0; } return prev - 1; });
     }, 1000);
-
     return () => clearInterval(id);
-  }, [timeLeft]);
+  }, [timeLeft, paused]);
 
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;
   const display = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-  const isUrgent = timeLeft < 60;
+  const isUrgent = timeLeft < 60 && !paused;
 
   return (
-    <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 border border-gray-700">
-      <span className="text-lg" role="img" aria-label="basketball">
-        🏀
-      </span>
-      <div className="flex flex-col items-center">
-        <span className="text-xs text-gray-400 uppercase tracking-wider leading-none mb-0.5">
-          {t('timeLeft')}
+    <div
+      className={`timer-wrap ${paused ? 'timer-wrap--paused' : ''} ${isUrgent ? 'timer-wrap--urgent' : ''}`}
+      role="timer"
+      aria-live="polite"
+      aria-atomic="true"
+    >
+      <div className="flex flex-col items-center" style={{ minWidth: '52px' }}>
+        <span className="timer-label">
+          {paused ? t('timerPaused') : t('timeLeft')}
         </span>
-        <span
-          className={`text-xl font-mono font-bold tabular-nums transition-colors duration-300 ${
-            isUrgent ? 'text-red-500' : 'text-white'
-          }`}
-          aria-live="polite"
-          aria-atomic="true"
-        >
+        <span className={`timer-digits ${isUrgent ? 'timer-digits--urgent' : ''} ${paused ? 'timer-digits--paused' : ''}`}>
           {display}
         </span>
       </div>

@@ -14,9 +14,7 @@ interface ResultsScreenProps {
 }
 
 function buildEmojiGrid(cells: GridCell[][]): string {
-  return cells
-    .map(row => row.map(cell => (cell.correct ? '✅' : '❌')).join(''))
-    .join('\n');
+  return cells.map(row => row.map(c => c.correct ? '✅' : '❌').join('')).join('\n');
 }
 
 function countCorrect(cells: GridCell[][]): number {
@@ -30,7 +28,7 @@ export default function ResultsScreen({ score, cells, puzzle, onClose, onNewGame
   const emojiGrid = buildEmojiGrid(cells);
 
   const shareText = [
-    `🏀 Basketball Box2Box — ${puzzle.date}`,
+    `🏀 HoopsBox — ${puzzle.date}`,
     '',
     emojiGrid,
     '',
@@ -38,86 +36,66 @@ export default function ResultsScreen({ score, cells, puzzle, onClose, onNewGame
     isImmaculate ? '🎉 Immaculate Grid!' : '',
     '',
     'Play at: basketball-box2box.vercel.app',
-  ]
-    .filter(line => line !== undefined)
-    .join('\n')
-    .trim();
+  ].filter(l => l !== undefined).join('\n').trim();
 
-  // Close on Escape
   useEffect(() => {
-    function handleKeyDown(e: KeyboardEvent) {
-      if (e.key === 'Escape') onClose();
-    }
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', handler);
+    return () => document.removeEventListener('keydown', handler);
   }, [onClose]);
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="results-title"
-    >
-      <div className="relative w-full max-w-sm rounded-2xl bg-gray-800 border border-gray-700 shadow-2xl p-7 flex flex-col items-center gap-6 text-center">
-        {/* Close button */}
+    <div className="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="results-title">
+      <div className="modal-panel" style={{ maxWidth: 400, alignItems: 'center', textAlign: 'center' }}>
+
+        {/* Close */}
         <button
           onClick={onClose}
           aria-label={t('closeResults')}
-          className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors text-xl leading-none"
-        >
-          ✕
-        </button>
+          style={{ position: 'absolute', top: 16, right: 16, background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-lo)', fontSize: '1.1rem', padding: 4 }}
+          onMouseEnter={e => (e.currentTarget.style.color = 'var(--text-hi)')}
+          onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-lo)')}
+        >✕</button>
 
         {/* Heading */}
-        <div className="flex flex-col items-center gap-1">
-          {isImmaculate ? (
-            <>
-              <span className="text-4xl">🎉</span>
-              <h2 id="results-title" className="text-2xl font-extrabold text-white">
-                {t('immaculateGrid')}
-              </h2>
-              <p className="text-orange-400 text-sm font-medium">{t('immaculateSubtitle')}</p>
-            </>
-          ) : (
-            <h2 id="results-title" className="text-2xl font-extrabold text-white">
-              {t('gameOver')}
+        {isImmaculate ? (
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
+            <span style={{ fontSize: '2.5rem' }}>🎉</span>
+            <h2 id="results-title" className="font-display" style={{ fontSize: '2rem', color: 'var(--text-hi)' }}>
+              {t('immaculateGrid')}
             </h2>
-          )}
-        </div>
+            <p style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--accent)' }}>{t('immaculateSubtitle')}</p>
+          </div>
+        ) : (
+          <h2 id="results-title" className="font-display" style={{ fontSize: '2rem', color: 'var(--text-hi)' }}>
+            {t('gameOver')}
+          </h2>
+        )}
 
         {/* Score */}
-        <div className="flex flex-col items-center gap-0.5">
-          <span className="text-5xl font-black text-orange-500 tabular-nums">{score}</span>
-          <span className="text-gray-400 text-sm">{t('points')}</span>
-          <span className="text-gray-300 text-sm mt-1">
-            {correctCount} / 9 correct
-          </span>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
+          <span className="score-big">{score}</span>
+          <span style={{ fontSize: '0.8rem', color: 'var(--text-lo)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700 }}>{t('points')}</span>
+          <span style={{ fontSize: '0.875rem', color: 'var(--text-mid)', marginTop: 4 }}>{correctCount} / 9 correct</span>
         </div>
 
-        {/* Emoji grid */}
-        <div
-          className="rounded-xl bg-gray-900 border border-gray-700 px-6 py-4"
-          aria-label="Results grid"
-        >
+        {/* Result grid */}
+        <div style={{ background: 'var(--bg-raised)', border: '1px solid var(--border-dim)', borderRadius: 12, padding: '16px 20px', width: '100%' }}>
           {cells.map((row, rIdx) => (
-            <div key={rIdx} className="flex gap-2 justify-center">
+            <div key={rIdx} style={{ display: 'flex', gap: 10, justifyContent: 'center', marginBottom: rIdx < 2 ? 10 : 0 }}>
               {row.map((cell, cIdx) => (
-                <div key={cIdx} className="flex flex-col items-center gap-1 w-16">
-                  {cell.correct && cell.playerImageUrl ? (
-                    <img
-                      src={cell.playerImageUrl}
-                      alt={cell.playerName ?? ''}
-                      className="w-12 h-12 rounded-lg object-cover border-2 border-green-500"
-                      onError={(e) => { (e.target as HTMLImageElement).style.display='none'; }}
-                    />
-                  ) : (
-                    <div className="w-12 h-12 rounded-lg bg-gray-700 flex items-center justify-center">
-                      <span className="text-xl">{cell.correct ? '✅' : '❌'}</span>
-                    </div>
-                  )}
+                <div key={cIdx} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 5, width: 56 }}>
+                  <div style={{ width: 52, height: 52, borderRadius: 8, overflow: 'hidden', border: `2px solid ${cell.correct ? 'var(--correct-bdr)' : 'var(--border-dim)'}`, background: cell.correct ? 'var(--correct-bg)' : 'var(--bg-surface)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                    {cell.correct && cell.playerImageUrl ? (
+                      <img src={cell.playerImageUrl} alt={cell.playerName ?? ''} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                    ) : (
+                      <span style={{ fontSize: '1.2rem' }}>{cell.correct ? '✅' : '❌'}</span>
+                    )}
+                  </div>
                   {cell.correct && (
-                    <span className="text-xs text-gray-400 text-center leading-tight line-clamp-2">{cell.playerName}</span>
+                    <span style={{ fontSize: '0.6rem', color: 'var(--text-mid)', lineHeight: 1.2, textAlign: 'center', overflow: 'hidden', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', width: '100%' }}>
+                      {cell.playerName}
+                    </span>
                   )}
                 </div>
               ))}
@@ -126,20 +104,10 @@ export default function ResultsScreen({ score, cells, puzzle, onClose, onNewGame
         </div>
 
         {/* Actions */}
-        <div className="flex flex-col gap-3 w-full">
-          <button
-            onClick={onNewGame}
-            className="w-full bg-orange-500 hover:bg-orange-400 active:scale-95 text-white font-bold py-3 rounded-xl transition-all shadow-lg shadow-orange-500/20"
-          >
-            {t('playAgain')}
-          </button>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10, width: '100%' }}>
+          <button onClick={onNewGame} className="btn-accent">{t('playAgain')}</button>
           <ShareButton text={shareText} />
-          <button
-            onClick={onClose}
-            className="px-5 py-2.5 rounded-lg text-sm font-semibold text-gray-300 border border-gray-600 hover:border-gray-400 hover:text-white transition-colors"
-          >
-            {t('viewGrid')}
-          </button>
+          <button onClick={onClose} className="btn-ghost">{t('viewGrid')}</button>
         </div>
       </div>
     </div>

@@ -40,7 +40,9 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const saved = localStorage.getItem('hoopsbox-locale') as Locale | null;
-    if (saved && ALL_MESSAGES[saved]) setLocaleState(saved);
+    if (!saved || !ALL_MESSAGES[saved]) return;
+    const id = window.setTimeout(() => setLocaleState(saved), 0);
+    return () => window.clearTimeout(id);
   }, []);
 
   const setLocale = useCallback((l: Locale) => {

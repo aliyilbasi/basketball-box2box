@@ -11,14 +11,15 @@ import CellModal from '@/components/CellModal';
 import Timer from '@/components/Timer';
 import ResultsScreen from '@/components/ResultsScreen';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import ThemeToggle from '@/components/ThemeToggle';
 
-const GAME_DURATION = 180; // 3 minutes
+const GAME_DURATION = 180;
 const HINT_COST = 50;
 
 const LINES: [number, number][][] = [
-  [[0,0],[0,1],[0,2]], [[1,0],[1,1],[1,2]], [[2,0],[2,1],[2,2]], // rows
-  [[0,0],[1,0],[2,0]], [[0,1],[1,1],[2,1]], [[0,2],[1,2],[2,2]], // columns
-  [[0,0],[1,1],[2,2]], [[0,2],[1,1],[2,0]],                      // diagonals
+  [[0,0],[0,1],[0,2]], [[1,0],[1,1],[1,2]], [[2,0],[2,1],[2,2]],
+  [[0,0],[1,0],[2,0]], [[0,1],[1,1],[2,1]], [[0,2],[1,2],[2,2]],
+  [[0,0],[1,1],[2,2]], [[0,2],[1,1],[2,0]],
 ];
 
 function makeEmptyCells(): GridCell[][] {
@@ -39,6 +40,7 @@ export default function Home() {
   const [cellFeedback, setCellFeedback] = useState<boolean | undefined>(undefined);
   const [hintRevealedCells, setHintRevealedCells] = useState<Set<string>>(new Set());
   const [timerEnabled, setTimerEnabled] = useState(true);
+  const [timerPaused, setTimerPaused] = useState(false);
   const [lineCompletePrompt, setLineCompletePrompt] = useState(false);
   const announcedLinesRef = useRef<Set<number>>(new Set());
 
@@ -59,25 +61,22 @@ export default function Home() {
     setSelectedCell(null);
     setCellFeedback(undefined);
     setHintRevealedCells(new Set());
+    setTimerPaused(false);
     setLineCompletePrompt(false);
     announcedLinesRef.current = new Set();
   }, []);
 
   useEffect(() => {
-    setPuzzle(getRandomPuzzle());
+    const id = window.setTimeout(() => setPuzzle(getRandomPuzzle()), 0);
+    return () => window.clearTimeout(id);
   }, []);
 
   useEffect(() => {
     if (!started || gameOver) return;
     const correctCount = cells.flat().filter(c => c.correct).length;
-    if (correctCount === 9) {
-      setTimeout(handleGameOver, 800);
-      return;
-    }
+    if (correctCount === 9) { setTimeout(handleGameOver, 800); return; }
     const newLine = LINES.findIndex(
-      (line, idx) =>
-        !announcedLinesRef.current.has(idx) &&
-        line.every(([r, c]) => cells[r][c]?.correct)
+      (line, idx) => !announcedLinesRef.current.has(idx) && line.every(([r, c]) => cells[r][c]?.correct)
     );
     if (newLine !== -1) {
       announcedLinesRef.current.add(newLine);
@@ -93,55 +92,32 @@ export default function Home() {
     setCellFeedback(undefined);
   };
 
-  const handleAnswer = useCallback(
-    (player: Player) => {
-      if (!puzzle || !selectedCell) return;
-      const { row, col } = selectedCell;
-      const rowCriterion = puzzle.rowCriteria[row];
-      const colCriterion = puzzle.colCriteria[col];
-
-      const correct =
-        satisfiesCriterion(player, rowCriterion) &&
-        satisfiesCriterion(player, colCriterion);
-
-      setCellFeedback(correct);
-
-      if (correct) {
-        const validCount = getValidPlayers(allPlayers, rowCriterion, colCriterion).length;
-        const points = getRarityScore(validCount);
-        const imageUrl = getPlayerImageUrl(player);
-
-        setCells(prev => {
-          const next = prev.map(r => r.map(c => ({ ...c })));
-          next[row][col] = {
-            ...next[row][col],
-            playerId: player.id,
-            playerName: player.name,
-            playerImageUrl: imageUrl,
-            correct: true,
-            locked: true,
-          };
-          return next;
-        });
-        setScore(prev => prev + points);
-
-        setTimeout(() => {
-          setSelectedCell(null);
-          setCellFeedback(undefined);
-        }, 800);
-      } else {
-        setTimeout(() => {
-          setCellFeedback(undefined);
-        }, 1200);
-      }
-    },
-    [puzzle, selectedCell, allPlayers]
-  );
+  const handleAnswer = useCallback((player: Player) => {
+    if (!puzzle || !selectedCell) return;
+    const { row, col } = selectedCell;
+    const rowCriterion = puzzle.rowCriteria[row];
+    const colCriterion = puzzle.colCriteria[col];
+    const correct = satisfiesCriterion(player, rowCriterion) && satisfiesCriterion(player, colCriterion);
+    setCellFeedback(correct);
+    if (correct) {
+      const validCount = getValidPlayers(allPlayers, rowCriterion, colCriterion).length;
+      const points = getRarityScore(validCount);
+      const imageUrl = getPlayerImageUrl(player);
+      setCells(prev => {
+        const next = prev.map(r => r.map(c => ({ ...c })));
+        next[row][col] = { ...next[row][col], playerId: player.id, playerName: player.name, playerImageUrl: imageUrl, correct: true, locked: true };
+        return next;
+      });
+      setScore(prev => prev + points);
+      setTimeout(() => { setSelectedCell(null); setCellFeedback(undefined); }, 800);
+    } else {
+      setTimeout(() => { setCellFeedback(undefined); }, 1200);
+    }
+  }, [puzzle, selectedCell, allPlayers]);
 
   const handleRevealHint = useCallback(() => {
     if (!selectedCell) return;
-    const key = `${selectedCell.row}-${selectedCell.col}`;
-    setHintRevealedCells(prev => new Set(prev).add(key));
+    setHintRevealedCells(prev => new Set(prev).add(`${selectedCell.row}-${selectedCell.col}`));
     setScore(prev => Math.max(0, prev - HINT_COST));
   }, [selectedCell]);
 
@@ -152,8 +128,10 @@ export default function Home() {
 
   if (!puzzle) {
     return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <div className="text-orange-400 text-xl animate-pulse">{t('loading')}</div>
+      <div className="min-h-screen flex items-center justify-center" style={{ background: 'var(--bg-base)' }}>
+        <span style={{ color: 'var(--accent)', fontFamily: 'var(--font-barlow-condensed)', fontSize: '1.5rem', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+          Loading…
+        </span>
       </div>
     );
   }
@@ -162,93 +140,138 @@ export default function Home() {
   const modalRow = selectedCell?.row ?? 0;
   const modalCol = selectedCell?.col ?? 0;
   const modalCellKey = `${modalRow}-${modalCol}`;
-
-  const modalValidPlayers = isModalOpen
-    ? getValidPlayers(allPlayers, puzzle.rowCriteria[modalRow], puzzle.colCriteria[modalCol])
-    : [];
+  const modalValidPlayers = isModalOpen ? getValidPlayers(allPlayers, puzzle.rowCriteria[modalRow], puzzle.colCriteria[modalCol]) : [];
   const modalValidCount = modalValidPlayers.length;
   const modalFirstLetter = modalValidPlayers[0]?.name[0] ?? '?';
   const modalHintRevealed = hintRevealedCells.has(modalCellKey);
-
   const correctCount = cells.flat().filter(c => c.correct).length;
   const finalScore = correctCount === 9 ? score + 200 : score;
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex flex-col">
-      {/* Header */}
-      <header className="border-b border-gray-800 px-4 py-3 max-w-2xl mx-auto w-full">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="text-2xl">🏀</span>
-            <h1 className="text-xl font-bold text-white tracking-tight">
-              Hoops<span className="text-orange-500">Box</span>
+    <div className="court-bg min-h-screen flex flex-col" style={{ background: 'var(--bg-base)', color: 'var(--text-hi)' }}>
+
+      {/* ── Header ── */}
+      <header style={{ borderBottom: '1px solid var(--border-dim)', background: 'var(--bg-surface)' }} className="px-4 py-3 relative z-10">
+        <div className="max-w-2xl mx-auto w-full flex items-center justify-between gap-3">
+
+          {/* Logo */}
+          <div className="flex items-center gap-2 flex-shrink-0">
+            <span className="text-xl">🏀</span>
+            <h1 className="font-display" style={{ fontSize: '1.35rem', color: 'var(--text-hi)', letterSpacing: '0.05em' }}>
+              HOOPS<span style={{ color: 'var(--accent)' }}>BOX</span>
             </h1>
           </div>
-          <div className="flex items-center gap-3">
+
+          {/* Right controls */}
+          <div className="flex items-center gap-2 flex-wrap justify-end">
+            {/* Timer */}
             {started && !gameOver && timerEnabled && (
-              <Timer timeLeft={GAME_DURATION} onExpire={handleGameOver} />
+              <div className="flex items-center gap-1">
+                <Timer timeLeft={GAME_DURATION} onExpire={handleGameOver} paused={timerPaused} />
+                <button
+                  onClick={() => setTimerPaused(p => !p)}
+                  className="btn-icon"
+                  aria-label={timerPaused ? t('resumeTimer') : t('pauseTimer')}
+                  title={timerPaused ? t('resumeTimer') : t('pauseTimer')}
+                >
+                  {timerPaused ? '▶' : '⏸'}
+                </button>
+              </div>
             )}
-            <div className="text-sm text-gray-400">
-              {t('score')}: <span className="text-orange-400 font-bold">{score}</span>
-            </div>
+            {started && !gameOver && (
+              <button
+                onClick={() => { setTimerEnabled(e => !e); setTimerPaused(false); }}
+                className="btn-icon"
+                aria-label={timerEnabled ? t('hideTimer') : t('showTimer')}
+                title={timerEnabled ? t('hideTimer') : t('showTimer')}
+              >
+                {timerEnabled ? '🙈' : '⏱️'}
+              </button>
+            )}
+
+            {/* Score */}
+            {started && (
+              <div className="score-badge flex items-center gap-1.5">
+                <span>{t('score')}</span>
+                <span className="score-badge-value">{score}</span>
+              </div>
+            )}
+
+            <LanguageSwitcher />
+            <ThemeToggle />
           </div>
-        </div>
-        <div className="mt-2 flex justify-end">
-          <LanguageSwitcher />
         </div>
       </header>
 
-      <main className="flex-1 flex flex-col items-center justify-center px-4 py-8 gap-6 max-w-2xl mx-auto w-full">
+      {/* ── Main ── */}
+      <main className="flex-1 flex flex-col items-center justify-center px-4 py-8 gap-6 max-w-2xl mx-auto w-full relative z-10">
+
+        {/* ── Start screen ── */}
         {!started ? (
-          <div className="flex flex-col items-center gap-6 text-center">
-            <div className="text-6xl">🏀</div>
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-2">{t('appName')}</h2>
-              <p className="text-gray-400 text-lg">{t('subtitle')}</p>
+          <div className="flex flex-col items-center gap-6 text-center w-full max-w-md">
+            {/* Title */}
+            <div className="flex flex-col items-center gap-1">
+              <div className="font-display" style={{ fontSize: '3.5rem', lineHeight: 0.95, color: 'var(--text-hi)' }}>
+                HOOPS<span style={{ color: 'var(--accent)' }}>BOX</span>
+              </div>
+              <div style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-lo)', letterSpacing: '0.18em', textTransform: 'uppercase', marginTop: '4px' }}>
+                {t('subtitle')}
+              </div>
             </div>
-            <div className="bg-gray-800 rounded-2xl p-6 text-left max-w-sm w-full border border-gray-700">
-              <h3 className="text-white font-semibold mb-3">{t('howToPlay')}</h3>
-              <ul className="text-gray-300 text-sm space-y-2">
-                <li>🏀 {t('rule1')}</li>
-                <li>✅ {t('rule2')}</li>
-                <li>⏱️ {t('rule3')}</li>
-                <li>⭐ {t('rule4')}</li>
-                <li>🎯 {t('rule5')}</li>
-              </ul>
+
+            {/* Rules card */}
+            <div className="card w-full" style={{ padding: '20px 22px' }}>
+              <div className="font-display" style={{ fontSize: '0.85rem', color: 'var(--text-lo)', marginBottom: '14px', letterSpacing: '0.1em' }}>
+                {t('howToPlay')}
+              </div>
+              <div className="flex flex-col gap-3">
+                {[
+                  { icon: '🏀', text: t('rule1') },
+                  { icon: '✅', text: t('rule2') },
+                  { icon: '⏱️', text: t('rule3') },
+                  { icon: '⭐', text: t('rule4') },
+                  { icon: '🎯', text: t('rule5') },
+                ].map((r, i) => (
+                  <div key={i} className="rule-item">
+                    <span style={{ fontSize: '1rem', flexShrink: 0 }}>{r.icon}</span>
+                    <span>{r.text}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-            <label className="flex items-center gap-2 cursor-pointer select-none text-sm text-gray-400 hover:text-gray-300 transition-colors">
+
+            {/* Timer toggle */}
+            <label className="flex items-center gap-2.5 cursor-pointer select-none" style={{ fontSize: '0.875rem', color: 'var(--text-mid)' }}>
               <input
                 type="checkbox"
                 checked={timerEnabled}
-                onChange={(e) => setTimerEnabled(e.target.checked)}
-                className="w-4 h-4 rounded accent-orange-500"
+                onChange={e => setTimerEnabled(e.target.checked)}
+                className="w-4 h-4 rounded"
               />
               {t('timerEnabled')}
             </label>
-            <button
-              onClick={() => setStarted(true)}
-              className="bg-orange-500 hover:bg-orange-400 active:scale-95 text-white font-bold text-lg px-10 py-4 rounded-2xl transition-all shadow-lg shadow-orange-500/20"
-            >
+
+            {/* Start button */}
+            <button onClick={() => setStarted(true)} className="btn-accent">
               {t('startButton')}
             </button>
-            <p className="text-gray-600 text-xs">
+
+            <p style={{ fontSize: '0.75rem', color: 'var(--text-lo)' }}>
               {new Date().toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
             </p>
           </div>
+
         ) : (
-          <div className="w-full flex flex-col gap-4">
-            <GameGrid
-              puzzle={puzzle}
-              cells={cells}
-              gameOver={gameOver}
-              onCellClick={handleCellClick}
-            />
-            <div className="flex items-center justify-between text-sm text-gray-500 px-1">
+          /* ── Game screen ── */
+          <div className="w-full flex flex-col gap-3">
+            <GameGrid puzzle={puzzle} cells={cells} gameOver={gameOver} onCellClick={handleCellClick} />
+            <div className="flex items-center justify-between px-1" style={{ fontSize: '0.8rem', color: 'var(--text-lo)' }}>
               <span>{t('cellsCorrect', { count: correctCount })}</span>
               {gameOver && (
                 <button
                   onClick={() => setGameOver(true)}
-                  className="text-orange-400 hover:text-orange-300 transition-colors"
+                  style={{ color: 'var(--accent)', fontWeight: 600 }}
+                  className="hover:underline transition-colors"
                 >
                   {t('viewResults')} →
                 </button>
@@ -258,7 +281,7 @@ export default function Home() {
         )}
       </main>
 
-      {/* Cell answer modal */}
+      {/* ── Cell answer modal ── */}
       {isModalOpen && (
         <CellModal
           isOpen={isModalOpen}
@@ -274,39 +297,33 @@ export default function Home() {
         />
       )}
 
-      {/* Line complete prompt */}
+      {/* ── Line complete prompt ── */}
       {lineCompletePrompt && !gameOver && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
-          <div className="bg-gray-800 border border-gray-600 rounded-2xl p-6 max-w-sm w-full text-center shadow-2xl">
-            <div className="text-4xl mb-3">🎯</div>
-            <h2 className="text-xl font-bold text-white mb-2">{t('lineComplete')}</h2>
-            <p className="text-gray-400 text-sm mb-6">{t('lineCompleteMsg')}</p>
-            <div className="flex gap-3">
-              <button
-                onClick={handleGameOver}
-                className="flex-1 bg-orange-500 hover:bg-orange-400 active:scale-95 text-white font-bold py-3 rounded-xl transition-all"
-              >
-                {t('finishGame')}
-              </button>
-              <button
-                onClick={() => setLineCompletePrompt(false)}
-                className="flex-1 bg-gray-700 hover:bg-gray-600 active:scale-95 text-white font-semibold py-3 rounded-xl transition-all"
-              >
-                {t('keepPlaying')}
-              </button>
+        <div className="modal-backdrop">
+          <div className="modal-panel" style={{ maxWidth: '360px', textAlign: 'center', alignItems: 'center' }}>
+            <div style={{ fontSize: '2.5rem' }}>🎯</div>
+            <div>
+              <h2 className="font-display" style={{ fontSize: '1.6rem', color: 'var(--text-hi)', marginBottom: '6px' }}>
+                {t('lineComplete')}
+              </h2>
+              <p style={{ fontSize: '0.875rem', color: 'var(--text-mid)' }}>{t('lineCompleteMsg')}</p>
+            </div>
+            <div className="flex gap-3 w-full">
+              <button onClick={handleGameOver} className="btn-accent" style={{ flex: 1 }}>{t('finishGame')}</button>
+              <button onClick={() => setLineCompletePrompt(false)} className="btn-ghost" style={{ flex: 1 }}>{t('keepPlaying')}</button>
             </div>
           </div>
         </div>
       )}
 
-      {/* Results screen */}
+      {/* ── Results ── */}
       {gameOver && (
         <ResultsScreen
           score={finalScore}
           cells={cells}
           puzzle={puzzle}
           onClose={() => setGameOver(false)}
-        onNewGame={handleNewGame}
+          onNewGame={handleNewGame}
         />
       )}
     </div>

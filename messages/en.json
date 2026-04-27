@@ -37,5 +37,10 @@
   "lineCompleteMsg": "You completed a row, column, or diagonal. Finish here or keep going for the full grid?",
   "finishGame": "Finish Game",
   "keepPlaying": "Keep Playing",
-  "playAgain": "Play Again"
+  "playAgain": "Play Again",
+  "pauseTimer": "Pause timer",
+  "resumeTimer": "Resume timer",
+  "hideTimer": "Hide timer",
+  "showTimer": "Show timer",
+  "timerPaused": "Paused"
 }

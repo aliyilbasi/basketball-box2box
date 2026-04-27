@@ -9,10 +9,7 @@ interface PlayerSearchProps {
   placeholder?: string;
 }
 
-export default function PlayerSearch({
-  onSelect,
-  placeholder = 'Search for a player…',
-}: PlayerSearchProps) {
+export default function PlayerSearch({ onSelect, placeholder = 'Search for a player…' }: PlayerSearchProps) {
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState<Player[]>([]);
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -21,78 +18,48 @@ export default function PlayerSearch({
   const listRef = useRef<HTMLUListElement>(null);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Focus input on mount
-  useEffect(() => {
-    inputRef.current?.focus();
-  }, []);
+  useEffect(() => { inputRef.current?.focus(); }, []);
 
   useEffect(() => {
     if (debounceRef.current) clearTimeout(debounceRef.current);
-
     if (query.trim().length < 2) {
-      setSuggestions([]);
-      setIsOpen(false);
-      setActiveIndex(-1);
-      return;
+      debounceRef.current = setTimeout(() => {
+        setSuggestions([]);
+        setIsOpen(false);
+        setActiveIndex(-1);
+      }, 0);
+      return () => { if (debounceRef.current) clearTimeout(debounceRef.current); };
     }
-
-    // Capture query at scheduling time to detect staleness
-    const currentQuery = query;
+    const q = query;
     debounceRef.current = setTimeout(() => {
-      const results = searchPlayers(currentQuery);
-      // Only apply if query hasn't changed since we scheduled
+      const results = searchPlayers(q);
       setSuggestions(results);
       setIsOpen(results.length > 0);
       setActiveIndex(-1);
     }, 200);
-
-    return () => {
-      if (debounceRef.current) clearTimeout(debounceRef.current);
-    };
+    return () => { if (debounceRef.current) clearTimeout(debounceRef.current); };
   }, [query]);
 
   function handleSelect(player: Player) {
-    setSuggestions([]);
-    setIsOpen(false);
-    setQuery('');
-    setActiveIndex(-1);
+    setSuggestions([]); setIsOpen(false); setQuery(''); setActiveIndex(-1);
     onSelect(player);
   }
 
   function handleKeyDown(e: KeyboardEvent<HTMLInputElement>) {
-    if (!isOpen || suggestions.length === 0) return;
-
-    switch (e.key) {
-      case 'ArrowDown':
-        e.preventDefault();
-        setActiveIndex(prev => Math.min(prev + 1, suggestions.length - 1));
-        break;
-      case 'ArrowUp':
-        e.preventDefault();
-        setActiveIndex(prev => Math.max(prev - 1, 0));
-        break;
-      case 'Enter':
-        e.preventDefault();
-        if (activeIndex >= 0 && suggestions[activeIndex]) {
-          handleSelect(suggestions[activeIndex]);
-        }
-        break;
-      case 'Escape':
-        setIsOpen(false);
-        setActiveIndex(-1);
-        break;
-    }
+    if (!isOpen || !suggestions.length) return;
+    if (e.key === 'ArrowDown') { e.preventDefault(); setActiveIndex(p => Math.min(p + 1, suggestions.length - 1)); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); setActiveIndex(p => Math.max(p - 1, 0)); }
+    else if (e.key === 'Enter') { e.preventDefault(); if (activeIndex >= 0) handleSelect(suggestions[activeIndex]); }
+    else if (e.key === 'Escape') { setIsOpen(false); setActiveIndex(-1); }
   }
 
-  // Scroll active item into view
   useEffect(() => {
     if (activeIndex < 0 || !listRef.current) return;
-    const item = listRef.current.children[activeIndex] as HTMLElement | undefined;
-    item?.scrollIntoView({ block: 'nearest' });
+    (listRef.current.children[activeIndex] as HTMLElement)?.scrollIntoView({ block: 'nearest' });
   }, [activeIndex]);
 
   return (
-    <div className="relative w-full">
+    <div style={{ position: 'relative', width: '100%' }}>
       <input
         ref={inputRef}
         type="text"
@@ -102,51 +69,41 @@ export default function PlayerSearch({
         placeholder={placeholder}
         autoComplete="off"
         spellCheck={false}
-        className="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-colors"
+        className="search-input"
         aria-autocomplete="list"
         aria-expanded={isOpen}
         aria-haspopup="listbox"
+        aria-controls="player-search-listbox"
         role="combobox"
       />
 
       {isOpen && suggestions.length > 0 && (
-        <ul
-          ref={listRef}
-          role="listbox"
-          className="absolute z-50 w-full mt-1 rounded-lg bg-gray-800 border border-gray-600 shadow-xl max-h-64 overflow-y-auto"
-        >
+        <ul id="player-search-listbox" ref={listRef} role="listbox" className="search-dropdown">
           {suggestions.map((player, idx) => {
             const imgUrl = getPlayerImageUrl(player);
             const initials = getPlayerInitials(player.name);
+            const isActive = idx === activeIndex;
             return (
               <li
                 key={player.id}
                 role="option"
-                aria-selected={idx === activeIndex}
-                onMouseDown={e => {
-                  // Prevent input blur before click registers
-                  e.preventDefault();
-                  handleSelect(player);
-                }}
+                aria-selected={isActive}
+                onMouseDown={e => { e.preventDefault(); handleSelect(player); }}
                 onMouseEnter={() => setActiveIndex(idx)}
-                className={`px-4 py-3 cursor-pointer transition-colors flex items-center gap-3 ${
-                  idx === activeIndex
-                    ? 'bg-orange-500 text-white'
-                    : 'text-gray-200 hover:bg-gray-700'
-                } ${idx < suggestions.length - 1 ? 'border-b border-gray-700' : ''}`}
+                className={`search-item ${isActive ? 'search-item--active' : ''}`}
               >
                 {/* Avatar */}
-                <div className="w-9 h-9 rounded-full overflow-hidden flex-shrink-0 bg-gray-700 flex items-center justify-center">
+                <div style={{ width: 36, height: 36, borderRadius: '50%', overflow: 'hidden', flexShrink: 0, background: 'var(--bg-raised)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   {imgUrl ? (
-                    <img src={imgUrl} alt={player.name} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display='none'; }} />
+                    <img src={imgUrl} alt={player.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={e => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                   ) : (
-                    <span className="text-xs font-bold text-gray-400">{initials}</span>
+                    <span style={{ fontSize: '0.7rem', fontWeight: 700, color: 'var(--text-lo)' }}>{initials}</span>
                   )}
                 </div>
-                {/* Name + info */}
-                <div className="flex-1 min-w-0">
-                  <span className="font-medium block truncate">{player.name}</span>
-                  <span className="text-xs text-gray-400">{player.position} · {player.nationality}</span>
+                {/* Info */}
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <span className="search-item-name" style={{ fontWeight: 600, display: 'block', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{player.name}</span>
+                  <span style={{ fontSize: '0.75rem', color: 'var(--text-lo)' }}>{player.position} · {player.nationality}</span>
                 </div>
               </li>
             );

@@ -6,12 +6,7 @@ import PlayerSearch from './PlayerSearch';
 import { useI18n } from '@/lib/i18n';
 
 const CRITERION_ICONS: Record<string, string> = {
-  team: '🏀',
-  award: '🏆',
-  nationality: '🌍',
-  draft: '📋',
-  position: '📍',
-  era: '📅',
+  team: '🏀', award: '🏆', nationality: '🌍', draft: '📋', position: '📍', era: '📅',
 };
 
 interface CellModalProps {
@@ -27,131 +22,92 @@ interface CellModalProps {
   onRevealHint?: () => void;
 }
 
-export default function CellModal({
-  isOpen,
-  onClose,
-  rowCriterion,
-  colCriterion,
-  onAnswer,
-  isCorrect,
-  validCount,
-  firstLetter,
-  hintRevealed,
-  onRevealHint,
-}: CellModalProps) {
+export default function CellModal({ isOpen, onClose, rowCriterion, colCriterion, onAnswer, isCorrect, validCount, firstLetter, hintRevealed, onRevealHint }: CellModalProps) {
   const { t } = useI18n();
   const backdropRef = useRef<HTMLDivElement>(null);
-  // Track whether feedback (isCorrect) has been set so we can show it
   const hasFeedback = isCorrect !== undefined;
 
-  // Escape key handler
   useEffect(() => {
     if (!isOpen) return;
-
-    function handleKeyDown(e: KeyboardEvent) {
-      if (e.key === 'Escape') onClose();
-    }
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', handler);
+    return () => document.removeEventListener('keydown', handler);
   }, [isOpen, onClose]);
 
-  // Prevent body scroll while modal is open
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
   }, [isOpen]);
 
   if (!isOpen) return null;
 
-  function handleBackdropClick(e: React.MouseEvent<HTMLDivElement>) {
-    if (e.target === backdropRef.current) onClose();
-  }
-
-  const rowIcon = CRITERION_ICONS[rowCriterion.type] ?? '•';
-  const colIcon = CRITERION_ICONS[colCriterion.type] ?? '•';
-
   return (
     <div
       ref={backdropRef}
-      onClick={handleBackdropClick}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+      onClick={e => { if (e.target === backdropRef.current) onClose(); }}
+      className="modal-backdrop"
       role="dialog"
       aria-modal="true"
       aria-labelledby="cell-modal-title"
     >
-      <div className="relative w-full max-w-md rounded-2xl bg-gray-800 border border-gray-700 shadow-2xl p-6 flex flex-col gap-5">
-        {/* Close button */}
+      <div className="modal-panel">
+        {/* Close */}
         <button
           onClick={onClose}
           aria-label={t('closeModal')}
-          className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors text-xl leading-none"
+          style={{ position: 'absolute', top: 16, right: 16, background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-lo)', fontSize: '1.1rem', lineHeight: 1, padding: 4 }}
+          onMouseEnter={e => (e.currentTarget.style.color = 'var(--text-hi)')}
+          onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-lo)')}
         >
           ✕
         </button>
 
         {/* Title */}
-        <h2 id="cell-modal-title" className="text-lg font-bold text-white pr-8">
+        <h2 id="cell-modal-title" className="font-display" style={{ fontSize: '1.4rem', color: 'var(--text-hi)', paddingRight: 32 }}>
           {t('nameAPlayer')}
         </h2>
 
-        {/* Criteria requirement */}
-        <div className="flex flex-col gap-2 rounded-xl bg-gray-900 border border-gray-700 p-4">
-          <p className="text-xs text-gray-400 uppercase tracking-wider">{t('mustSatisfy')}</p>
-          <div className="flex flex-col gap-2 mt-1">
-            <div className="flex items-center gap-2">
-              <span className="text-base" aria-hidden="true">{rowIcon}</span>
-              <span className="text-white font-medium">{rowCriterion.label}</span>
-              <span className="ml-auto text-xs text-gray-500 capitalize">{rowCriterion.type}</span>
-            </div>
-            <div className="h-px bg-gray-700" />
-            <div className="flex items-center gap-2">
-              <span className="text-base" aria-hidden="true">{colIcon}</span>
-              <span className="text-white font-medium">{colCriterion.label}</span>
-              <span className="ml-auto text-xs text-gray-500 capitalize">{colCriterion.type}</span>
-            </div>
+        {/* Criteria */}
+        <div className="criteria-block">
+          <div style={{ fontSize: '0.65rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--text-lo)', marginBottom: 2 }}>
+            {t('mustSatisfy')}
+          </div>
+          <div className="criteria-row">
+            <span style={{ fontSize: '1rem' }}>{CRITERION_ICONS[rowCriterion.type] ?? '•'}</span>
+            <span style={{ fontWeight: 600, color: 'var(--text-hi)', fontSize: '0.9375rem' }}>{rowCriterion.label}</span>
+            <span className="criteria-type-badge">{rowCriterion.type}</span>
+          </div>
+          <div className="criteria-divider" />
+          <div className="criteria-row">
+            <span style={{ fontSize: '1rem' }}>{CRITERION_ICONS[colCriterion.type] ?? '•'}</span>
+            <span style={{ fontWeight: 600, color: 'var(--text-hi)', fontSize: '0.9375rem' }}>{colCriterion.label}</span>
+            <span className="criteria-type-badge">{colCriterion.type}</span>
           </div>
         </div>
 
-        {/* Feedback banner */}
+        {/* Feedback */}
         {hasFeedback && (
-          <div
-            className={`flex items-center gap-3 rounded-lg px-4 py-3 text-sm font-semibold transition-all ${
-              isCorrect
-                ? 'bg-green-500/20 border border-green-500/40 text-green-400'
-                : 'bg-red-500/20 border border-red-500/40 text-red-400'
-            }`}
-            role="status"
-            aria-live="polite"
-          >
-            <span className="text-lg">{isCorrect ? '✅' : '❌'}</span>
-            {isCorrect
-              ? t('correctFeedback')
-              : t('wrongFeedback')}
+          <div className={isCorrect ? 'feedback-correct' : 'feedback-wrong'} role="status" aria-live="polite">
+            <span style={{ fontSize: '1.1rem' }}>{isCorrect ? '✅' : '❌'}</span>
+            {isCorrect ? t('correctFeedback') : t('wrongFeedback')}
           </div>
         )}
 
-        {/* Hint section */}
+        {/* Hint */}
         {isCorrect === false && validCount !== undefined && (
-          <div className="flex items-center gap-2 text-xs text-gray-400 flex-wrap">
+          <div style={{ fontSize: '0.8125rem', color: 'var(--text-mid)', display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
             <span>💡 {t('hintCount', { count: validCount })}</span>
             {!hintRevealed && onRevealHint && (
               <button
                 onClick={onRevealHint}
-                className="text-orange-400 hover:text-orange-300 underline transition-colors"
+                style={{ color: 'var(--accent)', fontWeight: 600, background: 'none', border: 'none', cursor: 'pointer', padding: 0, textDecoration: 'underline' }}
               >
                 {t('revealHint')}
               </button>
             )}
             {hintRevealed && firstLetter && (
-              <span className="text-orange-300">
-                {t('firstLetter')} <strong className="text-white">{firstLetter}</strong>
+              <span style={{ color: 'var(--accent)' }}>
+                {t('firstLetter')} <strong style={{ color: 'var(--text-hi)' }}>{firstLetter}</strong>
               </span>
             )}
           </div>
@@ -160,11 +116,10 @@ export default function CellModal({
         {/* Search */}
         {!isCorrect && (
           <div>
-            <label className="block text-sm text-gray-400 mb-2">{t('searchLabel')}</label>
-            <PlayerSearch
-              onSelect={onAnswer}
-              placeholder={t('searchPlaceholder')}
-            />
+            <label style={{ display: 'block', fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--text-lo)', marginBottom: 8 }}>
+              {t('searchLabel')}
+            </label>
+            <PlayerSearch onSelect={onAnswer} placeholder={t('searchPlaceholder')} />
           </div>
         )}
       </div>

@@ -37,5 +37,10 @@
   "lineCompleteMsg": "Completaste una fila, columna o diagonal. ¿Terminar aquí o seguir llenando toda la cuadrícula?",
   "finishGame": "Terminar",
   "keepPlaying": "Seguir jugando",
-  "playAgain": "Jugar de nuevo"
+  "playAgain": "Jugar de nuevo",
+  "pauseTimer": "Pausar temporizador",
+  "resumeTimer": "Reanudar temporizador",
+  "hideTimer": "Ocultar temporizador",
+  "showTimer": "Mostrar temporizador",
+  "timerPaused": "Pausado"
 }

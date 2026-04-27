@@ -37,5 +37,10 @@
   "lineCompleteMsg": "Vous avez complété une ligne, colonne ou diagonale. Terminer ici ou continuer pour remplir toute la grille ?",
   "finishGame": "Terminer",
   "keepPlaying": "Continuer",
-  "playAgain": "Rejouer"
+  "playAgain": "Rejouer",
+  "pauseTimer": "Mettre en pause",
+  "resumeTimer": "Reprendre",
+  "hideTimer": "Masquer le chrono",
+  "showTimer": "Afficher le chrono",
+  "timerPaused": "En pause"
 }

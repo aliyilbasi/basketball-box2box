@@ -1,5 +1,5 @@
 import { Criterion, DailyPuzzle } from '@/types/game';
-import { validateGrid } from './gameLogic';
+import { getValidPlayers, satisfiesCriterion } from './gameLogic';
 import playersData from '@/data/players.json';
 import { Player } from '@/types/game';
 
@@ -43,6 +43,11 @@ const CRITERIA_POOL: Criterion[] = [
   { id: 'team_olympiacos', type: 'team', label: 'Olympiacos', value: 'Olympiacos' },
   { id: 'team_panathinaikos', type: 'team', label: 'Panathinaikos', value: 'Panathinaikos' },
   { id: 'team_maccabi', type: 'team', label: 'Maccabi', value: 'Maccabi Tel Aviv' },
+  { id: 'team_virtus', type: 'team', label: 'Virtus Bologna', value: 'Virtus Bologna' },
+  { id: 'team_zalgiris', type: 'team', label: 'Zalgiris', value: 'Zalgiris Kaunas' },
+  { id: 'team_partizan', type: 'team', label: 'Partizan', value: 'Partizan Belgrade' },
+  { id: 'team_olimpia', type: 'team', label: 'Olimpia Milano', value: 'Olimpia Milano' },
+  { id: 'team_baskonia', type: 'team', label: 'Baskonia', value: 'Baskonia' },
   // Awards
   { id: 'award_mvp', type: 'award', label: 'NBA MVP', value: 'NBA MVP' },
   { id: 'award_champion', type: 'award', label: 'NBA Champion', value: 'NBA Champion' },
@@ -81,6 +86,45 @@ const CRITERIA_POOL: Criterion[] = [
   { id: 'era_2010s', type: 'era', label: '2010s Player', value: '2010s' },
 ];
 
+function getCriterionEras(players: Player[], criterion: Criterion): Set<string> {
+  const eras = new Set<string>();
+  players
+    .filter(p => satisfiesCriterion(p, criterion))
+    .forEach(p => (p.era || []).forEach(e => eras.add(e)));
+  return eras;
+}
+
+function scorePuzzle(
+  players: Player[],
+  rowCriteria: Criterion[],
+  colCriteria: Criterion[],
+  eraCache: Map<string, Set<string>>
+): number {
+  let minCell = Infinity;
+  let cellScore = 0;
+
+  for (let r = 0; r < 3; r++) {
+    for (let c = 0; c < 3; c++) {
+      const count = getValidPlayers(players, rowCriteria[r], colCriteria[c]).length;
+      if (count === 0) return -Infinity;
+      minCell = Math.min(minCell, count);
+      cellScore += Math.min(count, 8);
+    }
+  }
+
+  // Prefer row/col pairs that share eras — avoids e.g. 1960s player × 2020s team
+  let eraScore = 0;
+  for (let r = 0; r < 3; r++) {
+    const rowEras = eraCache.get(rowCriteria[r].id) ?? getCriterionEras(players, rowCriteria[r]);
+    for (let c = 0; c < 3; c++) {
+      const colEras = eraCache.get(colCriteria[c].id) ?? getCriterionEras(players, colCriteria[c]);
+      eraScore += [...rowEras].filter(e => colEras.has(e)).length;
+    }
+  }
+
+  return minCell * 100 + eraScore * 10 + cellScore;
+}
+
 function shuffle<T>(arr: T[], rng: () => number): T[] {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -90,51 +134,47 @@ function shuffle<T>(arr: T[], rng: () => number): T[] {
   return a;
 }
 
-export function getRandomPuzzle(): DailyPuzzle {
-  const players = playersData as Player[];
-  const baseSeed = Math.floor(Math.random() * 2147483647);
+function findBestPuzzle(players: Player[], baseSeed: number, attempts: number, date: string): DailyPuzzle | null {
+  // Precompute era coverage for all criteria once
+  const eraCache = new Map<string, Set<string>>();
+  CRITERIA_POOL.forEach(c => eraCache.set(c.id, getCriterionEras(players, c)));
 
-  let offset = 0;
-  while (offset < 200) {
+  let bestPuzzle: DailyPuzzle | null = null;
+  let bestScore = -Infinity;
+
+  for (let offset = 0; offset < attempts; offset++) {
     const rng = mulberry32(baseSeed + offset);
     const shuffled = shuffle(CRITERIA_POOL, rng);
     const rowCriteria = shuffled.slice(0, 3);
     const colCriteria = shuffled.slice(3, 6);
+
     const rowIds = new Set(rowCriteria.map(c => c.id));
     const colIds = new Set(colCriteria.map(c => c.id));
-    const overlap = [...rowIds].some(id => colIds.has(id));
-    if (!overlap && validateGrid(players, rowCriteria, colCriteria)) {
-      return { date: new Date().toISOString().slice(0, 10).replace(/-/g, ''), rowCriteria, colCriteria };
+    if ([...rowIds].some(id => colIds.has(id))) continue;
+
+    const score = scorePuzzle(players, rowCriteria, colCriteria, eraCache);
+    if (score > bestScore) {
+      bestScore = score;
+      bestPuzzle = { date, rowCriteria, colCriteria };
     }
-    offset++;
   }
-  return getDailyPuzzle();
+
+  return bestPuzzle;
+}
+
+export function getRandomPuzzle(): DailyPuzzle {
+  const players = Object.values(playersData) as Player[];
+  const date = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+  const baseSeed = Math.floor(Math.random() * 2147483647);
+  return findBestPuzzle(players, baseSeed, 200, date) ?? getDailyPuzzle();
 }
 
 export function getDailyPuzzle(dateStr?: string): DailyPuzzle {
   const today = dateStr || new Date().toISOString().slice(0, 10).replace(/-/g, '');
-  const players = playersData as Player[];
+  const players = Object.values(playersData) as Player[];
 
-  let offset = 0;
-  while (offset < 100) {
-    const seed = dateToSeed(today) + offset;
-    const rng = mulberry32(seed);
-    const shuffled = shuffle(CRITERIA_POOL, rng);
-
-    // Pick first 3 as row, next 3 as col (ensure different types where possible)
-    const rowCriteria = shuffled.slice(0, 3);
-    const colCriteria = shuffled.slice(3, 6);
-
-    // Ensure no same criterion appears in both row and col
-    const rowIds = new Set(rowCriteria.map(c => c.id));
-    const colIds = new Set(colCriteria.map(c => c.id));
-    const overlap = [...rowIds].some(id => colIds.has(id));
-
-    if (!overlap && validateGrid(players, rowCriteria, colCriteria)) {
-      return { date: today, rowCriteria, colCriteria };
-    }
-    offset++;
-  }
+  const best = findBestPuzzle(players, dateToSeed(today), 200, today);
+  if (best) return best;
 
   // Fallback hardcoded puzzle
   return {

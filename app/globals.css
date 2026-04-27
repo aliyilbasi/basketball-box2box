@@ -279,6 +279,10 @@ body {
   gap: 8px;
   transition: background 0.2s, border-color 0.2s;
 }
+.timer-wrap--compact {
+  min-width: 78px;
+  justify-content: center;
+}
 .timer-wrap--paused  { border-color: var(--accent); background: var(--accent-lo); }
 .timer-wrap--urgent  { border-color: rgba(248,113,113,0.5); }
 .timer-label { font-size: 0.625rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-lo); line-height: 1; }
@@ -432,11 +436,13 @@ body {
 /* ── Rule list ── */
 .rule-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
   font-size: 0.875rem;
   color: var(--text-mid);
   line-height: 1.5;
+  text-align: center;
 }
 
 /* ── Inline score badge (header) ── */
@@ -490,9 +496,11 @@ body {
   align-items: center;
   gap: 4px;
   flex-shrink: 0;
+  min-width: 0;
 }
 .header-score-badge {
   flex-shrink: 0;
+  white-space: nowrap;
 }
 .header-select-wrap {
   position: relative;

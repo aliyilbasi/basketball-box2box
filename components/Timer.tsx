@@ -7,9 +7,10 @@ interface TimerProps {
   timeLeft: number;
   onExpire: () => void;
   paused?: boolean;
+  compact?: boolean;
 }
 
-export default function Timer({ timeLeft: initialTimeLeft, onExpire, paused = false }: TimerProps) {
+export default function Timer({ timeLeft: initialTimeLeft, onExpire, paused = false, compact = false }: TimerProps) {
   const { t } = useI18n();
   const [timeLeft, setTimeLeft] = useState(initialTimeLeft);
   const onExpireRef = useRef(onExpire);
@@ -42,15 +43,18 @@ export default function Timer({ timeLeft: initialTimeLeft, onExpire, paused = fa
 
   return (
     <div
-      className={`timer-wrap ${paused ? 'timer-wrap--paused' : ''} ${isUrgent ? 'timer-wrap--urgent' : ''}`}
+      className={`timer-wrap ${compact ? 'timer-wrap--compact' : ''} ${paused ? 'timer-wrap--paused' : ''} ${isUrgent ? 'timer-wrap--urgent' : ''}`}
       role="timer"
       aria-live="polite"
       aria-atomic="true"
+      aria-label={`${paused ? t('timerPaused') : t('timeLeft')}: ${display}`}
     >
       <div className="flex flex-col items-center" style={{ minWidth: '52px' }}>
-        <span className="timer-label">
-          {paused ? t('timerPaused') : t('timeLeft')}
-        </span>
+        {!compact && (
+          <span className="timer-label">
+            {paused ? t('timerPaused') : t('timeLeft')}
+          </span>
+        )}
         <span className={`timer-digits ${isUrgent ? 'timer-digits--urgent' : ''} ${paused ? 'timer-digits--paused' : ''}`}>
           {display}
         </span>

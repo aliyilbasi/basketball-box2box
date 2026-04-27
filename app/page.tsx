@@ -167,7 +167,7 @@ export default function Home() {
             {/* Timer */}
             {started && !gameOver && timerEnabled && (
               <div className="header-timer-group">
-                <Timer timeLeft={GAME_DURATION} onExpire={handleGameOver} paused={timerPaused} />
+                <Timer timeLeft={GAME_DURATION} onExpire={handleGameOver} paused={timerPaused} compact />
                 <button
                   onClick={() => setTimerPaused(p => !p)}
                   className="btn-icon"

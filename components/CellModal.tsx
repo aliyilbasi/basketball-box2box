@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import { Criterion, Player } from '@/types/game';
 import PlayerSearch from './PlayerSearch';
 import { useI18n } from '@/lib/i18n';
+import { getCriterionLabel, getCriterionTypeLabel } from '@/lib/criterionI18n';
 
 const CRITERION_ICONS: Record<string, string> = {
   team: '🏀', award: '🏆', nationality: '🌍', draft: '📋', position: '📍', era: '📅',
@@ -26,6 +27,10 @@ export default function CellModal({ isOpen, onClose, rowCriterion, colCriterion,
   const { t } = useI18n();
   const backdropRef = useRef<HTMLDivElement>(null);
   const hasFeedback = isCorrect !== undefined;
+  const rowLabel = getCriterionLabel(rowCriterion, t);
+  const colLabel = getCriterionLabel(colCriterion, t);
+  const rowTypeLabel = getCriterionTypeLabel(rowCriterion.type, t);
+  const colTypeLabel = getCriterionTypeLabel(colCriterion.type, t);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -74,14 +79,14 @@ export default function CellModal({ isOpen, onClose, rowCriterion, colCriterion,
           </div>
           <div className="criteria-row">
             <span style={{ fontSize: '1rem' }}>{CRITERION_ICONS[rowCriterion.type] ?? '•'}</span>
-            <span style={{ fontWeight: 600, color: 'var(--text-hi)', fontSize: '0.9375rem' }}>{rowCriterion.label}</span>
-            <span className="criteria-type-badge">{rowCriterion.type}</span>
+            <span style={{ fontWeight: 600, color: 'var(--text-hi)', fontSize: '0.9375rem' }}>{rowLabel}</span>
+            <span className="criteria-type-badge">{rowTypeLabel}</span>
           </div>
           <div className="criteria-divider" />
           <div className="criteria-row">
             <span style={{ fontSize: '1rem' }}>{CRITERION_ICONS[colCriterion.type] ?? '•'}</span>
-            <span style={{ fontWeight: 600, color: 'var(--text-hi)', fontSize: '0.9375rem' }}>{colCriterion.label}</span>
-            <span className="criteria-type-badge">{colCriterion.type}</span>
+            <span style={{ fontWeight: 600, color: 'var(--text-hi)', fontSize: '0.9375rem' }}>{colLabel}</span>
+            <span className="criteria-type-badge">{colTypeLabel}</span>
           </div>
         </div>
 

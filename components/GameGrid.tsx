@@ -1,6 +1,8 @@
 'use client';
 
 import { DailyPuzzle, GridCell, CriterionType } from '@/types/game';
+import { useI18n } from '@/lib/i18n';
+import { getCriterionLabel } from '@/lib/criterionI18n';
 
 const CRITERION_ICONS: Record<CriterionType, string> = {
   team: '🏀', award: '🏆', nationality: '🌍', draft: '📋', position: '📍', era: '📅',
@@ -105,6 +107,7 @@ function CriterionCell({ id, type, label, role }: { id: string; type: CriterionT
 }
 
 export default function GameGrid({ puzzle, cells, gameOver, onCellClick }: GameGridProps) {
+  const { t } = useI18n();
   const { rowCriteria, colCriteria } = puzzle;
 
   return (
@@ -121,7 +124,7 @@ export default function GameGrid({ puzzle, cells, gameOver, onCellClick }: GameG
 
       {/* Column headers */}
       {colCriteria.map((c) => (
-        <CriterionCell key={c.id} id={c.id} type={c.type} label={c.label} role={`columnheader`} />
+        <CriterionCell key={c.id} id={c.id} type={c.type} label={getCriterionLabel(c, t)} role={`columnheader`} />
       ))}
 
       {/* Rows */}
@@ -131,7 +134,7 @@ export default function GameGrid({ puzzle, cells, gameOver, onCellClick }: GameG
             key={`rh-${rowIdx}`}
             id={rowCriteria[rowIdx].id}
             type={rowCriteria[rowIdx].type}
-            label={rowCriteria[rowIdx].label}
+            label={getCriterionLabel(rowCriteria[rowIdx], t)}
             role="rowheader"
           />
           {Array.from({ length: 3 }, (_, colIdx) => {

@@ -152,21 +152,21 @@ export default function Home() {
 
       {/* ── Header ── */}
       <header style={{ borderBottom: '1px solid var(--border-dim)', background: 'var(--bg-surface)' }} className="px-4 py-3 relative z-10">
-        <div className="max-w-2xl mx-auto w-full flex items-center justify-between gap-3">
+        <div className="max-w-2xl mx-auto w-full header-shell">
 
           {/* Logo */}
-          <div className="flex items-center gap-2 flex-shrink-0">
-            <span className="text-xl">🏀</span>
-            <h1 className="font-display" style={{ fontSize: '1.35rem', color: 'var(--text-hi)', letterSpacing: '0.05em' }}>
+          <div className="header-brand">
+            <span className="text-xl header-brand-mark">🏀</span>
+            <h1 className="font-display header-brand-title" style={{ fontSize: '1.35rem', color: 'var(--text-hi)', letterSpacing: '0.05em' }}>
               HOOPS<span style={{ color: 'var(--accent)' }}>BOX</span>
             </h1>
           </div>
 
           {/* Right controls */}
-          <div className="flex items-center gap-2 flex-wrap justify-end">
+          <div className="header-actions">
             {/* Timer */}
             {started && !gameOver && timerEnabled && (
-              <div className="flex items-center gap-1">
+              <div className="header-timer-group">
                 <Timer timeLeft={GAME_DURATION} onExpire={handleGameOver} paused={timerPaused} />
                 <button
                   onClick={() => setTimerPaused(p => !p)}
@@ -191,7 +191,7 @@ export default function Home() {
 
             {/* Score */}
             {started && (
-              <div className="score-badge flex items-center gap-1.5">
+              <div className="score-badge header-score-badge flex items-center gap-1.5">
                 <span>{t('score')}</span>
                 <span className="score-badge-value">{score}</span>
               </div>
